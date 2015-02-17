@@ -19,10 +19,9 @@ w_GP = win*ones(N_inp,1);           % weight from Granule Cells to Purkinje
 T_pat = floor(1000/0.6);            % Time of a cycles [ms]
 day = 50;                           % time of day training [unit of cycles]
 Ntot = day*5+nit*5;                 % total simulating time
-D_P = zeros(Ntot);                  % recording phase of the eye movement
-D_G = zeros(Ntot);                  % recording gain of the eye movement
+D_P = zeros(1,Ntot);                % recording phase of the eye movement
+D_G = zeros(1,Ntot);                % recording gain of the eye movement
 D_W = zeros(N_inp,Ntot);
-D_M = zeros(N_inp,1);
 previous_t = 1;                     % start simulating time at 1
 
 % Learning rates
@@ -78,7 +77,7 @@ VOR
 
 % Day 2
 light = 1;
-gain =-0.5;
+gain = -1;
 Simul_t = day;
 VOR
 
@@ -90,7 +89,7 @@ VOR
 
 % Day 3
 light = 1;
-gain =-1;
+gain = -1;
 Simul_t = day;
 VOR
 
@@ -102,7 +101,7 @@ VOR
 
 % Day 4
 light = 1;
-gain =-1;
+gain = -1;
 Simul_t = day;
 VOR
 

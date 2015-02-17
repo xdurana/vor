@@ -29,7 +29,6 @@ for t = previous_t:Simul_t+ previous_t
     w_MD = w_MD*(w_MD>0);                   % lower bound at zero
     
     D_W(:,t) = w_GP;
-    D_M(t) = w_MD;
     
     % record phase and gain of D
     [D_G( t), D_P(t)]=max(D); 
