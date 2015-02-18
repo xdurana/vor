@@ -1,0 +1,13 @@
+\select@language {catalan}
+\select@language {english}
+\select@language {english}
+\select@language {catalan}
+\contentsline {chapter}{\~A\GenericError {(inputenc) }{Package inputenc Error: Keyboard character used is undefined\MessageBreak in inputencoding `latin1'}{See the inputenc package documentation for explanation.}{You need to provide a definition with \def \relax \vadjust {\def \par {\let \par \@@par \par }\hrule height\z@ \penalty \@M \vskip 1 \vskip \z@skip }\relax ${}\def \relax \vadjust {\def \par {\let \par \@@par \par }\vskip o \vskip \z@skip }\relax \@inpenc@test \bgroup \uccode `\~\MessageBreak \uppercase {\egroup \def ~}{\IeC {o}}r \@inpenc@test \bgroup \uccode `\~b\uppercase {\egroup \def ~}efore using this key.}ndex de figures}{xiii}
+\contentsline {chapter}{\~A\GenericError {(inputenc) }{Package inputenc Error: Keyboard character used is undefined\MessageBreak in inputencoding `latin1'}{See the inputenc package documentation for explanation.}{You need to provide a definition with \def \relax \vadjust {\def \par {\let \par \@@par \par }\hrule height\z@ \penalty \@M \vskip 1 \vskip \z@skip }\relax ${}\def \relax \vadjust {\def \par {\let \par \@@par \par }\vskip o \vskip \z@skip }\relax \@inpenc@test \bgroup \uccode `\~\MessageBreak \uppercase {\egroup \def ~}{\IeC {o}}r \@inpenc@test \bgroup \uccode `\~b\uppercase {\egroup \def ~}efore using this key.}ndex de taules}{xv}
+\select@language {english}
+\select@language {english}
+\contentsline {chapter}{\MakeUppercase { El primer cap\~A\discretionary {-}{}{}tol}}{5}
+\contentsline {section}{\numberline {0.1}Una secci\~A{^3}}{5}
+\contentsline {subsection}{\numberline {0.1.1}Una subsecci\~A{^3}}{5}
+\contentsline {section}{\numberline {0.2}Una altra secci\~A{^3}}{5}
+\contentsline {chapter}{\MakeUppercase { El segon cap\~A\discretionary {-}{}{}tol}}{7}
