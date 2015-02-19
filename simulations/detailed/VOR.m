@@ -20,8 +20,8 @@ for t = previous_t:Simul_t+ previous_t
     
     % plasticity of G to P synapses
     w_GP = w_GP + alphai * (-1)*sum(((ones(N_inp,1)*Cf)+CF_noise*randn(N_inp, T_pat)).* G,2); % update 
-    w_GP = (w_GP-(BL/N_inp)).*((w_GP-(BL/N_inp))>0) +(BL/N_inp);    % lower bound on the weights
-    w_GP = (w_GP-(BH/N_inp)).*((w_GP-(BH/N_inp))<0)+(BH/N_inp);     % upper bound on the weights
+    %w_GP = (w_GP-(BL/N_inp)).*((w_GP-(BL/N_inp))>0) +(BL/N_inp);    % lower bound on the weights
+    %w_GP = (w_GP-(BH/N_inp)).*((w_GP-(BH/N_inp))<0)+(BH/N_inp);     % upper bound on the weights
     w_GP =  w_GP + alphaf *(win-w_GP);                              % update of decay
     
     % plasticity of MF to MVM synapses

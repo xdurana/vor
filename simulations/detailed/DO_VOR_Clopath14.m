@@ -14,10 +14,10 @@ w_IP = 1;                           % fixed weight from interneuron to Purkinje 
 w_MD = 0.88;                        % initial Mossy Fiber to MVN weight
 win = 1.85/N_inp;                   % initial weight from Granule Cells to Purkinje
 w_GP = win*ones(N_inp,1);           % weight from Granule Cells to Purkinje
+day = 50;
 
 % Simulation parameters
 T_pat = floor(1000/0.6);            % Time of a cycles [ms]
-day = 50;                           % time of day training [unit of cycles]
 Ntot = day*5+nit*5;                 % total simulating time
 D_P = zeros(Ntot);                  % recording phase of the eye movement
 D_G = zeros(Ntot);                  % recording gain of the eye movement
@@ -27,7 +27,6 @@ previous_t = 1;                     % start simulating time at 1
 
 % Learning rates
 alphai = 3.5000e-07;                % learning rate for w_GP learning term
-alphaf = 7.4697e-05;                % learning rate for w_GP forgetting term 
 alphad = 5.6022e-06;                % learning rate for w_MD
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Generate neuronal firing rates %%%%%%%%%%%

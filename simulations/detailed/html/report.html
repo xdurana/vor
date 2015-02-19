@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-02-17"><meta name="DC.source" content="report.m"><style type="text/css">
+      --><title>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-02-18"><meta name="DC.source" content="report.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,79 +66,76 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Detailed model with 100ms delay and k=10^-1</a></li><li><a href="#2">Detailed model with 100ms delay and k=10^-2</a></li><li><a href="#3">Detailed model with 100ms delay and k=10^-3</a></li><li><a href="#4">Detailed model with 100ms delay and k=10^-4</a></li><li><a href="#5">Detailed model with 100ms delay and k=10^-5</a></li><li><a href="#6">Detailed model with 100ms delay and k=0</a></li><li><a href="#7">Detailed model with 100ms delay and k=-10^-1</a></li><li><a href="#8">Detailed model with 100ms delay and k=-10^-2</a></li><li><a href="#9">Detailed model with 100ms delay and k=-10^-3</a></li><li><a href="#10">Detailed model with 100ms delay and cf_vest=0.03 (original)</a></li></ul></div><h2>Detailed model with 100ms delay and k=10^-1<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = 10^-1;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_01.png" alt=""> <img vspace="5" hspace="5" src="report_02.png" alt=""> <img vspace="5" hspace="5" src="report_03.png" alt=""> <img vspace="5" hspace="5" src="report_04.png" alt=""> <img vspace="5" hspace="5" src="report_05.png" alt=""> <img vspace="5" hspace="5" src="report_06.png" alt=""> <img vspace="5" hspace="5" src="report_07.png" alt=""> <img vspace="5" hspace="5" src="report_08.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-2<a name="2"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = 10^-2;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_09.png" alt=""> <img vspace="5" hspace="5" src="report_10.png" alt=""> <img vspace="5" hspace="5" src="report_11.png" alt=""> <img vspace="5" hspace="5" src="report_12.png" alt=""> <img vspace="5" hspace="5" src="report_13.png" alt=""> <img vspace="5" hspace="5" src="report_14.png" alt=""> <img vspace="5" hspace="5" src="report_15.png" alt=""> <img vspace="5" hspace="5" src="report_16.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-3<a name="3"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = 10^-3;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_17.png" alt=""> <img vspace="5" hspace="5" src="report_18.png" alt=""> <img vspace="5" hspace="5" src="report_19.png" alt=""> <img vspace="5" hspace="5" src="report_20.png" alt=""> <img vspace="5" hspace="5" src="report_21.png" alt=""> <img vspace="5" hspace="5" src="report_22.png" alt=""> <img vspace="5" hspace="5" src="report_23.png" alt=""> <img vspace="5" hspace="5" src="report_24.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-4<a name="4"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = 10^-4;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_25.png" alt=""> <img vspace="5" hspace="5" src="report_26.png" alt=""> <img vspace="5" hspace="5" src="report_27.png" alt=""> <img vspace="5" hspace="5" src="report_28.png" alt=""> <img vspace="5" hspace="5" src="report_29.png" alt=""> <img vspace="5" hspace="5" src="report_30.png" alt=""> <img vspace="5" hspace="5" src="report_31.png" alt=""> <img vspace="5" hspace="5" src="report_32.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-5<a name="5"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = 10^-5;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_33.png" alt=""> <img vspace="5" hspace="5" src="report_34.png" alt=""> <img vspace="5" hspace="5" src="report_35.png" alt=""> <img vspace="5" hspace="5" src="report_36.png" alt=""> <img vspace="5" hspace="5" src="report_37.png" alt=""> <img vspace="5" hspace="5" src="report_38.png" alt=""> <img vspace="5" hspace="5" src="report_39.png" alt=""> <img vspace="5" hspace="5" src="report_40.png" alt=""> <h2>Detailed model with 100ms delay and k=0<a name="6"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = 0;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_41.png" alt=""> <img vspace="5" hspace="5" src="report_42.png" alt=""> <img vspace="5" hspace="5" src="report_43.png" alt=""> <img vspace="5" hspace="5" src="report_44.png" alt=""> <img vspace="5" hspace="5" src="report_45.png" alt=""> <img vspace="5" hspace="5" src="report_46.png" alt=""> <img vspace="5" hspace="5" src="report_47.png" alt=""> <img vspace="5" hspace="5" src="report_48.png" alt=""> <h2>Detailed model with 100ms delay and k=-10^-1<a name="7"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = -10^-1;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_49.png" alt=""> <img vspace="5" hspace="5" src="report_50.png" alt=""> <img vspace="5" hspace="5" src="report_51.png" alt=""> <img vspace="5" hspace="5" src="report_52.png" alt=""> <img vspace="5" hspace="5" src="report_53.png" alt=""> <img vspace="5" hspace="5" src="report_54.png" alt=""> <img vspace="5" hspace="5" src="report_55.png" alt=""> <img vspace="5" hspace="5" src="report_56.png" alt=""> <h2>Detailed model with 100ms delay and k=-10^-2<a name="8"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = -10^-2;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_57.png" alt=""> <img vspace="5" hspace="5" src="report_58.png" alt=""> <img vspace="5" hspace="5" src="report_59.png" alt=""> <img vspace="5" hspace="5" src="report_60.png" alt=""> <img vspace="5" hspace="5" src="report_61.png" alt=""> <img vspace="5" hspace="5" src="report_62.png" alt=""> <img vspace="5" hspace="5" src="report_63.png" alt=""> <img vspace="5" hspace="5" src="report_64.png" alt=""> <h2>Detailed model with 100ms delay and k=-10^-3<a name="9"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
-delay = 100;
-cf_vest = 0;
-k = -10^-3;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_65.png" alt=""> <img vspace="5" hspace="5" src="report_66.png" alt=""> <img vspace="5" hspace="5" src="report_67.png" alt=""> <img vspace="5" hspace="5" src="report_68.png" alt=""> <img vspace="5" hspace="5" src="report_69.png" alt=""> <img vspace="5" hspace="5" src="report_70.png" alt=""> <img vspace="5" hspace="5" src="report_71.png" alt=""> <img vspace="5" hspace="5" src="report_72.png" alt=""> <h2>Detailed model with 100ms delay and cf_vest=0.03 (original)<a name="10"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+  </style></head><body><div class="content"><h1>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Detailed model with 100ms delay and cf_vest=0.03 (original)</a></li><li><a href="#2">Detailed model with 100ms delay and k=10^-1</a></li><li><a href="#3">Detailed model with 100ms delay and k=10^-2</a></li><li><a href="#4">Detailed model with 100ms delay and k=10^-3</a></li><li><a href="#5">Detailed model with 100ms delay and k=10^-4</a></li><li><a href="#6">Detailed model with 100ms delay and k=10^-5</a></li><li><a href="#7">Detailed model with 100ms delay and k=0</a></li></ul></div><h2>Detailed model with 100ms delay and cf_vest=0.03 (original)<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
 delay = 100;
 cf_vest = 0.03;
 k = 0;
 nit = 1440;
+alphaf = 7.4697e-05;
 DO_VOR_Clopath14;
 VOR_plot;
-</pre><img vspace="5" hspace="5" src="report_73.png" alt=""> <img vspace="5" hspace="5" src="report_74.png" alt=""> <img vspace="5" hspace="5" src="report_75.png" alt=""> <img vspace="5" hspace="5" src="report_76.png" alt=""> <img vspace="5" hspace="5" src="report_77.png" alt=""> <img vspace="5" hspace="5" src="report_78.png" alt=""> <img vspace="5" hspace="5" src="report_79.png" alt=""> <img vspace="5" hspace="5" src="report_80.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="report_01.png" alt=""> <img vspace="5" hspace="5" src="report_02.png" alt=""> <img vspace="5" hspace="5" src="report_03.png" alt=""> <img vspace="5" hspace="5" src="report_04.png" alt=""> <img vspace="5" hspace="5" src="report_05.png" alt=""> <img vspace="5" hspace="5" src="report_06.png" alt=""> <img vspace="5" hspace="5" src="report_07.png" alt=""> <img vspace="5" hspace="5" src="report_08.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-1<a name="2"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+delay = 100;
+cf_vest = 0;
+k = 10^-1;
+nit = 1440;
+alphaf = 0;
+DO_VOR_Clopath14;
+VOR_plot;
+</pre><img vspace="5" hspace="5" src="report_09.png" alt=""> <img vspace="5" hspace="5" src="report_10.png" alt=""> <img vspace="5" hspace="5" src="report_11.png" alt=""> <img vspace="5" hspace="5" src="report_12.png" alt=""> <img vspace="5" hspace="5" src="report_13.png" alt=""> <img vspace="5" hspace="5" src="report_14.png" alt=""> <img vspace="5" hspace="5" src="report_15.png" alt=""> <img vspace="5" hspace="5" src="report_16.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-2<a name="3"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+delay = 100;
+cf_vest = 0;
+k = 10^-2;
+nit = 1440;
+alphaf = 0;
+DO_VOR_Clopath14;
+VOR_plot;
+</pre><img vspace="5" hspace="5" src="report_17.png" alt=""> <img vspace="5" hspace="5" src="report_18.png" alt=""> <img vspace="5" hspace="5" src="report_19.png" alt=""> <img vspace="5" hspace="5" src="report_20.png" alt=""> <img vspace="5" hspace="5" src="report_21.png" alt=""> <img vspace="5" hspace="5" src="report_22.png" alt=""> <img vspace="5" hspace="5" src="report_23.png" alt=""> <img vspace="5" hspace="5" src="report_24.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-3<a name="4"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+delay = 100;
+cf_vest = 0;
+k = 10^-3;
+nit = 1440;
+alphaf = 0;
+DO_VOR_Clopath14;
+VOR_plot;
+</pre><img vspace="5" hspace="5" src="report_25.png" alt=""> <img vspace="5" hspace="5" src="report_26.png" alt=""> <img vspace="5" hspace="5" src="report_27.png" alt=""> <img vspace="5" hspace="5" src="report_28.png" alt=""> <img vspace="5" hspace="5" src="report_29.png" alt=""> <img vspace="5" hspace="5" src="report_30.png" alt=""> <img vspace="5" hspace="5" src="report_31.png" alt=""> <img vspace="5" hspace="5" src="report_32.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-4<a name="5"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+delay = 100;
+cf_vest = 0;
+k = 10^-4;
+nit = 1440;
+alphaf = 0;
+DO_VOR_Clopath14;
+VOR_plot;
+</pre><img vspace="5" hspace="5" src="report_33.png" alt=""> <img vspace="5" hspace="5" src="report_34.png" alt=""> <img vspace="5" hspace="5" src="report_35.png" alt=""> <img vspace="5" hspace="5" src="report_36.png" alt=""> <img vspace="5" hspace="5" src="report_37.png" alt=""> <img vspace="5" hspace="5" src="report_38.png" alt=""> <img vspace="5" hspace="5" src="report_39.png" alt=""> <img vspace="5" hspace="5" src="report_40.png" alt=""> <h2>Detailed model with 100ms delay and k=10^-5<a name="6"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+delay = 100;
+cf_vest = 0;
+k = 10^-5;
+nit = 1440;
+alphaf = 0;
+DO_VOR_Clopath14;
+VOR_plot;
+</pre><img vspace="5" hspace="5" src="report_41.png" alt=""> <img vspace="5" hspace="5" src="report_42.png" alt=""> <img vspace="5" hspace="5" src="report_43.png" alt=""> <img vspace="5" hspace="5" src="report_44.png" alt=""> <img vspace="5" hspace="5" src="report_45.png" alt=""> <img vspace="5" hspace="5" src="report_46.png" alt=""> <img vspace="5" hspace="5" src="report_47.png" alt=""> <img vspace="5" hspace="5" src="report_48.png" alt=""> <h2>Detailed model with 100ms delay and k=0<a name="7"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+delay = 100;
+cf_vest = 0;
+k = 0;
+nit = 1440;
+alphaf = 0;
+DO_VOR_Clopath14;
+VOR_plot;
+</pre><img vspace="5" hspace="5" src="report_49.png" alt=""> <img vspace="5" hspace="5" src="report_50.png" alt=""> <img vspace="5" hspace="5" src="report_51.png" alt=""> <img vspace="5" hspace="5" src="report_52.png" alt=""> <img vspace="5" hspace="5" src="report_53.png" alt=""> <img vspace="5" hspace="5" src="report_54.png" alt=""> <img vspace="5" hspace="5" src="report_55.png" alt=""> <img vspace="5" hspace="5" src="report_56.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Reproducing results of Clopath et al. model of the vestibulo-ocular reflex
+
+%% Detailed model with 100ms delay and cf_vest=0.03 (original)
+
+clear all;
+delay = 100;
+cf_vest = 0.03;
+k = 0;
+nit = 1440;
+alphaf = 7.4697e-05;
+DO_VOR_Clopath14;
+VOR_plot;
 
 %% Detailed model with 100ms delay and k=10^-1
 
@@ -147,6 +144,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-1;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -157,6 +155,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-2;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -167,6 +166,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-3;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -177,6 +177,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-4;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -187,6 +188,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-5;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -197,46 +199,7 @@ delay = 100;
 cf_vest = 0;
 k = 0;
 nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-
-%% Detailed model with 100ms delay and k=-10^-1
-
-clear all;
-delay = 100;
-cf_vest = 0;
-k = -10^-1;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-
-%% Detailed model with 100ms delay and k=-10^-2
-
-clear all;
-delay = 100;
-cf_vest = 0;
-k = -10^-2;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-
-%% Detailed model with 100ms delay and k=-10^-3
-
-clear all;
-delay = 100;
-cf_vest = 0;
-k = -10^-3;
-nit = 1440;
-DO_VOR_Clopath14;
-VOR_plot;
-
-%% Detailed model with 100ms delay and cf_vest=0.03 (original)
-
-clear all;
-delay = 100;
-cf_vest = 0.03;
-k = 0;
-nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 

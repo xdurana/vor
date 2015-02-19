@@ -7,6 +7,7 @@ delay = 100;
 cf_vest = 0.03;
 k = 0;
 nit = 1440;
+alphaf = 7.4697e-05;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -17,6 +18,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-1;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -27,6 +29,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-2;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -37,6 +40,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-3;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -47,6 +51,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-4;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -57,6 +62,7 @@ delay = 100;
 cf_vest = 0;
 k = 10^-5;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
 
@@ -67,5 +73,6 @@ delay = 100;
 cf_vest = 0;
 k = 0;
 nit = 1440;
+alphaf = 0;
 DO_VOR_Clopath14;
 VOR_plot;
