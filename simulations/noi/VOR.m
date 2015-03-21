@@ -11,13 +11,7 @@ for t = previous_t:Simul_t+ previous_t
     D = w_MD* 2*(M-Mmean)+Dmean -M -P;      % Medial Vestibular Nuclei (MVN) cells 
     Cf = light*(Dt-D)+(M-Mmean)*cf_vest+k*P;% Climbing Fibers (CF)
     Cf = circshift(Cf,[0,delay]);           % Delay in the CF
-    
-%     figure; hold on;
-%     plot(M, 'r');
-%     plot(P, 'g');
-%     plot(D, 'b');
-%     plot(Cf, 'y');
-    
+        
     % plasticity of G to P synapses
     w_GP = w_GP + alphai * (-1)*sum(((ones(N_inp,1)*Cf)+CF_noise*randn(N_inp, T_pat)).* G,2); % update 
     w_GP = (w_GP-(BL/N_inp)).*((w_GP-(BL/N_inp))>0) +(BL/N_inp);    % lower bound on the weights
@@ -34,12 +28,15 @@ for t = previous_t:Simul_t+ previous_t
     % record phase and gain of D
     [D_G(t), D_P(t)]=max(D); 
     D_G(t) = D_G(t)-mean(D);
+
+    % record phase and gain of Cf
+    [Cf_G(t), Cf_P(t)]=max(Cf); 
+    Cf_G(t) = Cf_G(t)-mean(Cf);
+
+    % record phase and gain of P
+    [P_G(t), P_P(t)]=max(P); 
+    P_G(t) = P_G(t)-mean(P);
+    
 end
 
-% if (light > 0)
-%     figure; hold on;
-%     plot(Dt, 'b');
-%     plot(Cf, 'y');
-% end
-
-previous_t = t; 
+previous_t = t;

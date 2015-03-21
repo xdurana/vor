@@ -24,6 +24,55 @@ nit1 = start_train + ((1*day+0*nit+1):(1*day + 1*nit));
 nit2 = start_train + ((2*day+1*nit+1):(2*day + 2*nit));
 nit3 = start_train + ((3*day+2*nit+1):(3*day + 3*nit));
 
+figure;
+% Polar plot
+h1 = polar(P_P(day1)*2*pi/360, P_G(day1));
+set(h1, 'color', 'y', 'linewidth', 2);
+hold all;
+n1 = polar(P_P(nit1)*2*pi/360, P_G(nit1));
+set(n1, 'color', 'm', 'linewidth', 2);
+hold all;
+h2 = polar(P_P(day2)*2*pi/360, P_G(day2));
+set(h2, 'color', 'g', 'linewidth', 2);
+hold all;
+n2 = polar(P_P(nit2)*2*pi/360, P_G(nit2));
+set(n2, 'color', 'm', 'linewidth', 2);
+hold all;
+h3 = polar(P_P(day3)*2*pi/360, P_G(day3));
+set(h3, 'color', 'r', 'linewidth', 2);
+hold all;
+n3 = polar(P_P(nit3)*2*pi/360, P_G(nit3));
+set(n3, 'color', 'm', 'linewidth', 2);
+hold all;
+h4 = polar(P_P(day4)*2*pi/360, P_G(day4));
+set(h4, 'color', 'b', 'linewidth', 2);
+legend('day1','nit1','day2','nit2','day3','nit3','day4');
+title('Training sessions and blind cycles');
+
+figure;
+% Polar plot
+h1 = polar(Cf_P(day1)*2*pi/360, Cf_G(day1));
+set(h1, 'color', 'y', 'linewidth', 2);
+hold all;
+n1 = polar(Cf_P(nit1)*2*pi/360, Cf_G(nit1));
+set(n1, 'color', 'm', 'linewidth', 2);
+hold all;
+h2 = polar(Cf_P(day2)*2*pi/360, Cf_G(day2));
+set(h2, 'color', 'g', 'linewidth', 2);
+hold all;
+n2 = polar(Cf_P(nit2)*2*pi/360, Cf_G(nit2));
+set(n2, 'color', 'm', 'linewidth', 2);
+hold all;
+h3 = polar(Cf_P(day3)*2*pi/360, Cf_G(day3));
+set(h3, 'color', 'r', 'linewidth', 2);
+hold all;
+n3 = polar(Cf_P(nit3)*2*pi/360, Cf_G(nit3));
+set(n3, 'color', 'm', 'linewidth', 2);
+hold all;
+h4 = polar(Cf_P(day4)*2*pi/360, Cf_G(day4));
+set(h4, 'color', 'b', 'linewidth', 2);
+legend('day1','nit1','day2','nit2','day3','nit3','day4');
+title('Training sessions and blind cycles');
 
 figure;
 % Polar plot
@@ -88,7 +137,7 @@ plot(((3*day+1):(4*day)), D_G(day4)', 'g', 'linewidth',2)
 plot(1*day+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
 plot(2*day+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
 plot(3*day+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
-xlim([-1 201])
+%xlim([-1 201])
 ylabel('gain','fontsize',20);
 xlabel('time [min]','fontsize',20);
 title('day 1       day 2       day 3       day 4      ','fontsize',20);
@@ -115,8 +164,8 @@ plot(((3*day+1):(4*day)), D_P(day4)', 'g', 'linewidth',2)
 plot(1*day+(-5:355)*0,-5:355, '--k')
 plot(2*day+(-5:355)*0,-5:355, '--k')
 plot(3*day+(-5:355)*0,-5:355, '--k')
-xlim([-1 201])
-ylim([-5 180])
+%xlim([-1 201])
+%ylim([-5 180])
 ylabel('phase [deg]','fontsize',20);
 xlabel('time  [min]','fontsize',20);
 title('day 1       day 2       day 3       day 4      ','fontsize',20);
