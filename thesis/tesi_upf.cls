@@ -221,12 +221,12 @@
       \end{tabular}\par}%
       \rule{\linewidth}{1mm} \par
       \vskip 1cm%
-    {\large TESI DOCTORAL UPF / ANY \@thyear}\\[2cm]
-    {\normalsize DIRECTOR DE LA TESI}\par
-    {\large \@supervisor} {\large Departament \@department} \par
+    {\large MASTER THESIS UPF / \@thyear}\\[2cm]
+    {\normalsize THESIS SUPERVISOR}\par
+    {\large \@supervisor}\par
+    {\large \@department} \par
     \vspace{3cm}
-   \centering  
-    \fbox{\includegraphics[scale=0.4]{logo_upf.png}}
+    \includegraphics[scale=4]{logo_upf.png}
    \end{flushleft}\par
 %  \@thanks
 % \vfil\null
@@ -756,7 +756,7 @@
     \parindent 1em%
     \noindent
     \hb@xt@1.8em{\hss\@makefnmark}#1}
-\newcommand\contentsname{Contents}
+\newcommand\contentsname{Table of Contents}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
 \newcommand\bibname{Bibliography}
