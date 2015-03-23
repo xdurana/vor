@@ -1,65 +1,181 @@
 ---
-title: "Applying a biological model of the vestibulo-ocular reflex to control gaze
-  stabilitzation in a humanoid robot"
-author: "Xavier Duran, supervised by Ivan Herreros"
-institute: "Master in Cognitive Systems and Interactive Media"
+title: Applying a biological model of the vestibulo-ocular reflex to control gaze
+  stabilitzation in a humanoid robot
+author: "Xavier Duran, supervised by Ivan Herreros and Paul Verschure"
 date: "March 25, 2015"
 output:
-  beamer_presentation
+  beamer_presentation:
+    keep_tex: yes
+bibliography: vor.bib
+institute: Master in Cognitive Systems and Interactive Media
 ---
 
-# Vestibulo-ocular reflex
+# Motor learning
 
-# Nucleo-olivary inhibition
+**Vestibulo-ocular reflex** (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks. It is used to provide insight about the connections and the coding of the circuitry of the cerebellum.
 
-On the neuroanatomical circuitries and sites of cellular plasticity underlying adaptation of the vestibulo-ocular reflex there's a pathway that provides feedback for adjustment of the learning instruction.
+# Vestibulo-ocular reflex (VOR)
 
-It is formed by GABAergic neurons that innervate the neurons in the inferior olive from which the climbing fibres originate (De Zeeuw, Chris I, and Christopher H Yeo. 2005)
+![Vestibulo-ocular reflex](images/vor.png)^[http://bit.ly/19GjJOA]
+
+This reflex functions to **stabilize images** on the retinas during **head movement** by producing **eye movements** in the direction opposite to head movement, thus preserving the image on the center of the visual field.
+
+# Cerebellar cortex
+
+- Uniform structure throughout the cerebellum
+- Composed of repeated modules or microzones
+- Same cell types and connectivity
+- Functional units
+- Different inputs, different targets
+- Cerebellar algorithm
+
+# Flocculus
+
+<!-- ![Flocculus](images/cerebellum.png)^[http://bit.ly/1CJEXGv] -->
+
+- Main cerebellar region that is responsible of the control of eye movements
+- Small lobe situated on the vestibulocerebellum
+- Optimize ocular motor performance
+- Image still enough on the fovea to interpret the scene in real time
 
 # Problem statement
 
-Computational models of the vestibulo-ocular reflex don't take into account the role of the nucleo-olivar inhibition although the
+> Computational models of the vestibulo-ocular reflex don't take into account the role of the nucleo-olivar inhibition
+
+# Cerebellar microcircuit
+
+![Cerebellar microcircuit](images/nrn2332-f3.jpg)^[http://bit.ly/1AVg1qX]
+
+# Nucleo-olivary inhibition (NOI)
+
+On the neuroanatomical circuitries and sites of cellular plasticity underlying adaptation of the vestibulo-ocular reflex there's a pathway that provides feedback for adjustment of the learning instruction.
+
+It is formed by GABAergic neurons that innervate the neurons in the inferior olive from which the climbing fibres originate [@DeZeeuw2005]
+
+* NOI __is not__ present on computational models of the VOR
+* NOI __is__ present on __eye-blink__ reflex computational models
 
 # Trade-offs in avoidance actions
 
-![Ali vs Foreman](images/ali-vs-foreman-scaled.jpg)
+![Ali vs Foreman](images/ali.png)
 
 # Extinction and NOI
 
-Extinction in the dark of the vestibulo-ocular reflex adaptation task has been modeled as in-phase with vestibular information, but this predicts a linear decay of the adaptation when an exponential decay has shown experimentally.
+- Cost-optimization
+- Error-based learning
+- Control the gain of the cerebellar output
+- Acquired conditioned responses are extinguished once they become no longer necessary
 
-Nucleo-olivary inhibition does this job in the eye-blink reflex.
-
-# State of the art
-
-* From Marr-Albus-Ito to Clopath's model
-* Nucleo-olivary inhibition in the eye-blink reflex
+[@Herreros2013b]
 
 # Research question
 
-Is there nucleo-olivary inhibition (NOI) in the vestibulo-cerebellum?
+What's the role of the nucleo-olivary inhibition in the vestibulo-ocular reflex?
 
-## Hints
-- Existence of NOI in the eye-blink reflex
+## Fingerprints
+- NOI has a role in the eye-blink reflex
 - There is extinction of the adaptive response in the absence of peripheral error
 - VOR has a non-perfect performance, with a residual error proportional to the amount of cerebellar action required
+
+[@Herreros2013b]
 
 # Hypothesis
 
 Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains extinction in the state of the art vestibulo-ocular reflex computational models.
 
+# Computational models of the VOR
+
+Marr-Albus classical models
+
+# Computational models of the VOR
+
+The cerebellum as an adaptive filter
+
+# Computational models of the VOR
+
+Plasticity in the brainstem
+
+# Computational models of the VOR
+
+A detailed model
+
 # Methods
 
-- Implementation of the detailed model (Clopath, 2014) of the VOR
+- Implementation of the detailed model [@Clopath2014] of the VOR
 - Reproduction of the results of the paper
 - Add the NOI to the detailed model
 - Simulation of adaptation, extinction and readaptation of the VOR
+
+# Implementation of the detailed model
+
+- Simple model without delay
+- Simple model with delay
+- Detailed model
+
+# Experimental setup
+
+\begin{columns}[T] % contents are top vertically aligned
+\begin{column}[T]{5cm} % alternative top-align that's better for graphics
+\includegraphics[height=3cm]{images/vvor.png}
+\end{column}
+\begin{column}[T]{5cm} % each column can also be its own environment
+\begin{itemize}
+\item Day 0: Normal VOR
+\item Day 1: VOR cancelation (gain decrease)
+\item Day 2 to 4: Phase-reversal learning
+\end{itemize}
+\end{column}
+\end{columns}
+
+[@Wulff2009a]
+
+# Reproduction of the results
+
+![Gain](images/gain.png)
+
+[@Wulff2009a]
+
+# Reproduction of the results
+
+Evolution of the gain of the VOR on the different training sessions
+
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/report_03.png}
+\end{column}
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/report_06.png}
+\end{column}
+\end{columns}
+
+# Adding the NOI to the detailed mode
+
+Modulation in the dark of the teaching signal
+
+- Modulated by vestibular information
+$$C(t) = \nu_{CF} - L(V(t- \delta) - V_t(t-\delta)) - H(M(t) - M_0)$$
+
+- Modulated by cortical information
+$$C(t) = \nu_{CF} - L(V(t- \delta) - V_t(t-\delta)) - H(kP(t))$$
+
+# Preliminary results
+
+Evolution of the gain of the VOR on the different training sessions (arbitrary *k*)
+
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/report_11.png}
+\end{column}
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/report_14.png}
+\end{column}
+\end{columns}
 
 # Project planning
 
 # Where we are now
 
-- Detailed model (Clopath, 2014) implemented in Matlab
+- Detailed model [@Clopath2014] implemented in Matlab
 - Results reproduced as on the article
 - NOI added to the model
 
@@ -71,14 +187,5 @@ Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains extinction
 * Comparing detailed and NOI models
     + Do they show linear or exponential decay after one week light deprivation?
     + What does maintaining the training to the cortex-nuclei memory balance?
-    + Use PCA to describe granule cells learning
 
-# References
-
-Clopath, Claudia, Aleksandra Badura, Chris I De Zeeuw, and Nicolas Brunel. 2014. “A Cerebellar Learning Model of Vestibulo-Ocular Reflex Adaptation in Wild-Type and Mutant Mice.” The Journal of Neuroscience : The Official Journal of the Society for Neuroscience 34 (21): 7203–15. doi:10.1523/JNEUROSCI.2791-13.2014.
-
-Herreros, Ivan, and Paul F M J Verschure. 2013. “Nucleo-Olivary Inhibition Balances the Interaction between the Reactive and Adaptive Layers in Motor Control.” Neural Networks : The Official Journal of the International Neural Network Society 47 (November). Elsevier Ltd: 64–71. doi:10.1016/j.neunet.2013.01.026.
-
-Wulff, Peer, Martijn Schonewille, Massimiliano Renzi, Laura Viltono, Marco Sassoè-Pognetto, Aleksandra Badura, Zhenyu Gao, et al. 2009. “Synaptic Inhibition of Purkinje Cells Mediates Consolidation of Vestibulo-Cerebellar Motor Learning.” Nature Neuroscience 12 (8): 1042–49. doi:10.1038/nn.2348.
-
-De Zeeuw, Chris I, and Christopher H Yeo. 2005. “Time and Tide in Cerebellar Memory Formation.” Current Opinion in Neurobiology 15 (6): 667–74. doi:10.1016/j.conb.2005.10.008.
+# References {.smaller}
