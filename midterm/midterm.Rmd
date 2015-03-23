@@ -6,11 +6,40 @@ date: "March 25, 2015"
 output:
   beamer_presentation:
     keep_tex: yes
-bibliography: vor.bib
 institute: Master in Cognitive Systems and Interactive Media
+bibliography: vor.bib
 ---
 
-# Motor learning
+# Cerebellum
+
+- Central role in motor learning
+- Reflexes
+
+![Cerebellum](images/cerebellum2.png)^[http://bit.ly/18Th2bA]
+
+# Cerebellar cortex
+
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/tmp15F112.jpg}
+\end{column}
+\begin{column}[T]{5cm} % each column can also be its own environment
+\begin{itemize}
+\item Uniform structure throughout the cerebellum
+\item Composed of repeated modules or microzones
+\item Same cell types and connectivity
+\item Functional units
+\item Different inputs, different targets
+\item Cerebellar algorithm
+\end{itemize}
+\end{column}
+\end{columns}
+
+^[http://bit.ly/1CioLvp]
+
+# Vestibulo-ocular reflex (VOR)
+
+![Vestibulo-ocular reflex](images/vor.png)^[http://bit.ly/19GjJOA]
 
 **Vestibulo-ocular reflex** (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks. It is used to provide insight about the connections and the coding of the circuitry of the cerebellum.
 
@@ -20,29 +49,27 @@ institute: Master in Cognitive Systems and Interactive Media
 
 This reflex functions to **stabilize images** on the retinas during **head movement** by producing **eye movements** in the direction opposite to head movement, thus preserving the image on the center of the visual field.
 
-# Cerebellar cortex
-
-- Uniform structure throughout the cerebellum
-- Composed of repeated modules or microzones
-- Same cell types and connectivity
-- Functional units
-- Different inputs, different targets
-- Cerebellar algorithm
-
 # Flocculus
 
-<!-- ![Flocculus](images/cerebellum.png)^[http://bit.ly/1CJEXGv] -->
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/cerebellum.png}
+\end{column}
+\begin{column}[T]{5cm} % each column can also be its own environment
+\begin{itemize}
+\item Main cerebellar region that is responsible of the control of eye movements
+\item Small lobe situated on the vestibulocerebellum
+\item Optimize ocular motor performance
+\item Image still enough on the fovea to interpret the scene in real time
+\end{itemize}
+\end{column}
+\end{columns}
 
-- Main cerebellar region that is responsible of the control of eye movements
-- Small lobe situated on the vestibulocerebellum
-- Optimize ocular motor performance
-- Image still enough on the fovea to interpret the scene in real time
+^[http://bit.ly/1CJEXGv]
 
 # Problem statement
 
-> Computational models of the vestibulo-ocular reflex don't take into account the role of the nucleo-olivar inhibition
-
-# Cerebellar microcircuit
+> Computational models of the vestibulo-ocular reflex don't take into account the role of the nucleo-olivary inhibition
 
 ![Cerebellar microcircuit](images/nrn2332-f3.jpg)^[http://bit.ly/1AVg1qX]
 
@@ -85,19 +112,28 @@ Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains extinction
 
 # Computational models of the VOR
 
-Marr-Albus classical models
+- Marr-Albus-Ito classical models
+- The cerebellum as an adaptive filter
+- Plasticity on the brainstem
+- A detailed model
 
-# Computational models of the VOR
+# Marr-Albus-Ito classical models
 
-The cerebellum as an adaptive filter
+![Marr-Albus-Ito](images/ito.png)^[http://bit.ly/1ED2SEc]
 
-# Computational models of the VOR
+[@Ito2006]
 
-Plasticity in the brainstem
+# The cerebellum as an adaptive filter
 
-# Computational models of the VOR
+[@Dean2010]
 
-A detailed model
+# Plasticity on the brainstem
+
+[@Porrill2007]
+
+# A detailed model
+
+[@Clopath2014]
 
 # Methods
 
@@ -188,4 +224,4 @@ Evolution of the gain of the VOR on the different training sessions (arbitrary *
     + Do they show linear or exponential decay after one week light deprivation?
     + What does maintaining the training to the cortex-nuclei memory balance?
 
-# References {.smaller}
+# References

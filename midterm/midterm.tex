@@ -57,13 +57,52 @@
 
 \title{Applying a biological model of the vestibulo-ocular reflex to control
 gaze stabilitzation in a humanoid robot}
-\author{Xavier Duran ewline, supervised by Ivan Herreros and Paul Verschure}
+\author{Xavier Duran, supervised by Ivan Herreros and Paul Verschure}
 \date{March 25, 2015}
 
 \begin{document}
 \frame{\titlepage}
 
-\begin{frame}{Motor learning}
+\begin{frame}{Cerebellum}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Central role in motor learning
+\item
+  Reflexes
+\end{itemize}
+
+\includegraphics{images/cerebellum2.png}\footnote{\url{http://bit.ly/18Th2bA}}
+
+\end{frame}
+
+\begin{frame}{Cerebellar cortex}
+
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/tmp15F112.jpg}
+\includegraphics[height=3cm]{images/chip.png}
+\end{column}
+\begin{column}[T]{5cm} % each column can also be its own environment
+\begin{itemize}
+\item Uniform structure throughout the cerebellum
+\item Composed of repeated modules or microzones
+\item Same cell types and connectivity
+\item Functional units
+\item Different inputs, different targets
+\item Cerebellar algorithm
+\end{itemize}
+\end{column}
+\end{columns}
+
+\footnote{\url{http://bit.ly/1CioLvp}}
+
+\end{frame}
+
+\begin{frame}{Vestibulo-ocular reflex (VOR)}
+
+\includegraphics{images/vor.png}\footnote{\url{http://bit.ly/19GjJOA}}
 
 \textbf{Vestibulo-ocular reflex} (VOR) adaptation is one of the most
 studied cerebellar dependent motor learning tasks. It is used to provide
@@ -83,40 +122,23 @@ center of the visual field.
 
 \end{frame}
 
-\begin{frame}{Cerebellar cortex}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Uniform structure throughout the cerebellum
-\item
-  Composed of repeated modules or microzones
-\item
-  Same cell types and connectivity
-\item
-  Functional units
-\item
-  Different inputs, different targets
-\item
-  Cerebellar algorithm
-\end{itemize}
-
-\end{frame}
-
 \begin{frame}{Flocculus}
 
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[height=3cm]{images/cerebellum.png}
+\end{column}
+\begin{column}[T]{5cm} % each column can also be its own environment
 \begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Main cerebellar region that is responsible of the control of eye
-  movements
-\item
-  Small lobe situated on the vestibulocerebellum
-\item
-  Optimize ocular motor performance
-\item
-  Image still enough on the fovea to interpret the scene in real time
+\item Main cerebellar region that is responsible of the control of eye movements
+\item Small lobe situated on the vestibulocerebellum
+\item Optimize ocular motor performance
+\item Image still enough on the fovea to interpret the scene in real time
 \end{itemize}
+\end{column}
+\end{columns}
+
+\footnote{\url{http://bit.ly/1CJEXGv}}
 
 \end{frame}
 
@@ -124,12 +146,8 @@ center of the visual field.
 
 \begin{quote}
 Computational models of the vestibulo-ocular reflex don't take into
-account the role of the nucleo-olivar inhibition
+account the role of the nucleo-olivary inhibition
 \end{quote}
-
-\end{frame}
-
-\begin{frame}{Cerebellar microcircuit}
 
 \includegraphics{images/nrn2332-f3.jpg}\footnote{\url{http://bit.ly/1AVg1qX}}
 
@@ -216,25 +234,43 @@ models.
 
 \begin{frame}{Computational models of the VOR}
 
-Marr-Albus classical models
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Marr-Albus-Ito classical models
+\item
+  The cerebellum as an adaptive filter
+\item
+  Plasticity on the brainstem
+\item
+  A detailed model
+\end{itemize}
 
 \end{frame}
 
-\begin{frame}{Computational models of the VOR}
+\begin{frame}{Marr-Albus-Ito classical models}
 
-The cerebellum as an adaptive filter
+\includegraphics{images/ito.png}\footnote{\url{http://bit.ly/1ED2SEc}}
 
-\end{frame}
-
-\begin{frame}{Computational models of the VOR}
-
-Plasticity in the brainstem
+(Ito 2006)
 
 \end{frame}
 
-\begin{frame}{Computational models of the VOR}
+\begin{frame}{The cerebellum as an adaptive filter}
 
-A detailed model
+(Dean et al. 2010)
+
+\end{frame}
+
+\begin{frame}{Plasticity on the brainstem}
+
+(Porrill and Dean 2007)
+
+\end{frame}
+
+\begin{frame}{A detailed model}
+
+(Clopath et al. 2014)
 
 \end{frame}
 
@@ -404,12 +440,30 @@ Cerebellar Memory Formation.'' \emph{Curr. Opin. Neurobiol.} 15 (6):
 doi:\href{http://dx.doi.org/10.1016/j.conb.2005.10.008}{10.1016/j.conb.2005.10.008}.
 \url{http://www.ncbi.nlm.nih.gov/pubmed/16271462}.
 
+Dean, Paul, John Porrill, Carl-Fredrik Ekerot, and Henrik Jörntell.
+2010. ``The Cerebellar Microcircuit as an Adaptive Filter: experimental
+and Computational Evidence.'' \emph{Nat. Rev. Neurosci.} 11 (1). Nature
+Publishing Group: 30--43.
+doi:\href{http://dx.doi.org/10.1038/nrn2756}{10.1038/nrn2756}.
+\url{http://www.ncbi.nlm.nih.gov/pubmed/19997115}.
+
 Herreros, Ivan, and Paul F M J Verschure. 2013. ``Nucleo-Olivary
 Inhibition Balances the Interaction Between the Reactive and Adaptive
 Layers in Motor Control.'' \emph{Neural Netw.} 47 (November). Elsevier
 Ltd: 64--71.
 doi:\href{http://dx.doi.org/10.1016/j.neunet.2013.01.026}{10.1016/j.neunet.2013.01.026}.
 \url{http://www.ncbi.nlm.nih.gov/pubmed/23535576}.
+
+Ito, Masao. 2006. ``Cerebellar Circuitry as a Neuronal Machine.''
+\emph{Prog. Neurobiol.} 78 (3-5): 272--303.
+doi:\href{http://dx.doi.org/10.1016/j.pneurobio.2006.02.006}{10.1016/j.pneurobio.2006.02.006}.
+\url{http://www.ncbi.nlm.nih.gov/pubmed/16759785}.
+
+Porrill, John, and Paul Dean. 2007. ``Cerebellar Motor Learning: when Is
+Cortical Plasticity Not Enough?'' \emph{PLoS Comput. Biol.} 3 (10):
+1935--50.
+doi:\href{http://dx.doi.org/10.1371/journal.pcbi.0030197}{10.1371/journal.pcbi.0030197}.
+\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2041974/\&tool=pmcentrez/\&rendertype=abstract}.
 
 Wulff, Peer, Martijn Schonewille, Massimiliano Renzi, Laura Viltono,
 Marco Sassoè-Pognetto, Aleksandra Badura, Zhenyu Gao, et al. 2009.
