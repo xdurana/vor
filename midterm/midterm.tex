@@ -82,7 +82,6 @@ gaze stabilitzation in a humanoid robot}
 \begin{columns}[T]
 \begin{column}[T]{5cm}
 \includegraphics[height=3cm]{images/tmp15F112.jpg}
-\includegraphics[height=3cm]{images/chip.png}
 \end{column}
 \begin{column}[T]{5cm} % each column can also be its own environment
 \begin{itemize}
@@ -256,19 +255,92 @@ models.
 
 \end{frame}
 
+\begin{frame}{Marr-Albus-Ito classical models}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Two very differents signals affect indirectly the output of the
+  cerebellum
+\item
+  Simple and complex spikes
+\item
+  Plasticity at the parallel fibre to Purkinje cell synapses
+\item
+  Climbing fibre (teaching signal or error): retinal slip
+\item
+  Long-term depression (LTD)
+\end{itemize}
+
+\end{frame}
+
 \begin{frame}{The cerebellum as an adaptive filter}
+
+\includegraphics{images/adfilt.png}
 
 (Dean et al. 2010)
 
 \end{frame}
 
+\begin{frame}{The cerebellum as an adaptive filter}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Feed-forward system
+\item
+  Motor error problem
+\item
+  Decorrelation rule
+\item
+  Minimizes correlations between eye movements as a predictor variable
+  and retinal slip as a target variable
+\item
+  Climbing fibre signal delayed, prevents perfect decorrelation
+\end{itemize}
+
+\end{frame}
+
 \begin{frame}{Plasticity on the brainstem}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Plasticity in both cerebellar cortex and the brainstem
+\item
+  Instructive signals in the climbing fibers are not necessary for
+  cerebellum-dependent learning
+\item
+  Instructive signals from climbing fibers or Purkinje cell simple
+  spikes may be sufficient to induce motor learning
+\end{itemize}
+
+(Ke, Guo, and Raymond 2009)
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Cortex-first
+\item
+  Simple gain
+\end{itemize}
 
 (Porrill and Dean 2007)
 
 \end{frame}
 
 \begin{frame}{A detailed model}
+
+\begin{itemize}
+\item
+  Contribution of interneurons are added
+\item
+  Plasticity on the cerebellar cortex
+  \[\dot{w}_{PG_i}(t) = [ \alpha_{PG}( \nu_{CF}-C(t)) +  \sqrt{ \alpha_{PG}}  \sigma  \xi (t)]G(t)\]
+\item
+  Plasticity on the brainstem
+  \[\dot{w}_{VM}(t) = \alpha_{VM}(M_0-M(t))(P(t)-P_ini(t))\]
+\end{itemize}
 
 (Clopath et al. 2014)
 
@@ -290,20 +362,6 @@ models.
 
 \end{frame}
 
-\begin{frame}{Implementation of the detailed model}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Simple model without delay
-\item
-  Simple model with delay
-\item
-  Detailed model
-\end{itemize}
-
-\end{frame}
-
 \begin{frame}{Experimental setup}
 
 \begin{columns}[T] % contents are top vertically aligned
@@ -313,8 +371,8 @@ models.
 \begin{column}[T]{5cm} % each column can also be its own environment
 \begin{itemize}
 \item Day 0: Normal VOR
-\item Day 1: VOR cancelation (gain decrease)
-\item Day 2 to 4: Phase-reversal learning
+\item Day 1 and 2: VOR cancelation (gain decrease)
+\item Day 3 and 4: Phase-reversal learning
 \end{itemize}
 \end{column}
 \end{columns}
@@ -335,6 +393,8 @@ models.
 
 Evolution of the gain of the VOR on the different training sessions
 
+(Clopath et al. 2014)
+
 \begin{columns}[T]
 \begin{column}[T]{5cm}
 \includegraphics[height=3cm]{images/report_03.png}
@@ -352,7 +412,7 @@ Modulation in the dark of the teaching signal
 
 \begin{itemize}
 \item
-  Modulated by vestibular information
+  Modulated by vestibular information (Clopath et al. 2014)
   \[C(t) = \nu_{CF} - L(V(t- \delta) - V_t(t-\delta)) - H(M(t) - M_0)\]
 \item
   Modulated by cortical information
@@ -378,6 +438,26 @@ Evolution of the gain of the VOR on the different training sessions
 \end{frame}
 
 \begin{frame}{Project planning}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  10/2014 to 02/2015: State of the art review
+\item
+  10/2014 to 11/2014: Implement Clopath's minimal model
+\item
+  11/2014 to 12/2014: Implement Clopath's detailed model
+\item
+  12/2014 to 02/2015: Reproducing experimental results
+\item
+  02/2015 to 03/2015: Add NOI to the model
+\item
+  03/2015 to 04/2015: Validating the model
+\item
+  04/2015 to 05/2015: Analyze results
+\item
+  03/2015 to 06/2015: Writing the report
+\end{itemize}
 
 \end{frame}
 
@@ -458,6 +538,12 @@ Ito, Masao. 2006. ``Cerebellar Circuitry as a Neuronal Machine.''
 \emph{Prog. Neurobiol.} 78 (3-5): 272--303.
 doi:\href{http://dx.doi.org/10.1016/j.pneurobio.2006.02.006}{10.1016/j.pneurobio.2006.02.006}.
 \url{http://www.ncbi.nlm.nih.gov/pubmed/16759785}.
+
+Ke, Michael C, Cong C Guo, and Jennifer L Raymond. 2009. ``Elimination
+of Climbing Fiber Instructive Signals During Motor Learning.''
+\emph{Nat. Neurosci.} 12 (9). Nature Publishing Group: 1171--9.
+doi:\href{http://dx.doi.org/10.1038/nn.2366}{10.1038/nn.2366}.
+\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3864777/\&tool=pmcentrez/\&rendertype=abstract}.
 
 Porrill, John, and Paul Dean. 2007. ``Cerebellar Motor Learning: when Is
 Cortical Plasticity Not Enough?'' \emph{PLoS Comput. Biol.} 3 (10):

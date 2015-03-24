@@ -123,15 +123,50 @@ Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains extinction
 
 [@Ito2006]
 
+# Marr-Albus-Ito classical models
+
+- Two very differents signals affect indirectly the output of the cerebellum
+- Simple and complex spikes
+- Plasticity at the parallel fibre to Purkinje cell synapses
+- Climbing fibre (teaching signal or error): retinal slip
+- Long-term depression (LTD)
+
 # The cerebellum as an adaptive filter
+
+![](images/adfilt.png)
 
 [@Dean2010]
 
+# The cerebellum as an adaptive filter
+
+- Feed-forward system
+- Motor error problem
+- Decorrelation rule
+- Minimizes correlations between eye movements as a predictor variable and retinal slip as a target variable
+- Climbing fibre signal delayed, prevents perfect decorrelation
+
 # Plasticity on the brainstem
+
+- Plasticity in both cerebellar cortex and the brainstem
+- Instructive signals in the climbing fibers are not necessary for cerebellum-dependent learning
+- Instructive signals from climbing fibers or Purkinje cell simple spikes may be sufficient to induce motor learning
+
+[@Ke2009a]
+
+- Cortex-first
+- Simple gain
 
 [@Porrill2007]
 
 # A detailed model
+
+- Contribution of interneurons are added
+
+- Plasticity on the cerebellar cortex
+$$\dot{w}_{PG_i}(t) = [ \alpha_{PG}( \nu_{CF}-C(t)) +  \sqrt{ \alpha_{PG}}  \sigma  \xi (t)]G(t)$$
+
+- Plasticity on the brainstem
+$$\dot{w}_{VM}(t) = \alpha_{VM}(M_0-M(t))(P(t)-P_ini(t))$$
 
 [@Clopath2014]
 
@@ -142,12 +177,6 @@ Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains extinction
 - Add the NOI to the detailed model
 - Simulation of adaptation, extinction and readaptation of the VOR
 
-# Implementation of the detailed model
-
-- Simple model without delay
-- Simple model with delay
-- Detailed model
-
 # Experimental setup
 
 \begin{columns}[T] % contents are top vertically aligned
@@ -157,8 +186,8 @@ Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains extinction
 \begin{column}[T]{5cm} % each column can also be its own environment
 \begin{itemize}
 \item Day 0: Normal VOR
-\item Day 1: VOR cancelation (gain decrease)
-\item Day 2 to 4: Phase-reversal learning
+\item Day 1 and 2: VOR cancelation (gain decrease)
+\item Day 3 and 4: Phase-reversal learning
 \end{itemize}
 \end{column}
 \end{columns}
@@ -175,6 +204,8 @@ Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains extinction
 
 Evolution of the gain of the VOR on the different training sessions
 
+[@Clopath2014]
+
 \begin{columns}[T]
 \begin{column}[T]{5cm}
 \includegraphics[height=3cm]{images/report_03.png}
@@ -188,7 +219,7 @@ Evolution of the gain of the VOR on the different training sessions
 
 Modulation in the dark of the teaching signal
 
-- Modulated by vestibular information
+- Modulated by vestibular information [@Clopath2014]
 $$C(t) = \nu_{CF} - L(V(t- \delta) - V_t(t-\delta)) - H(M(t) - M_0)$$
 
 - Modulated by cortical information
@@ -208,6 +239,15 @@ Evolution of the gain of the VOR on the different training sessions (arbitrary *
 \end{columns}
 
 # Project planning
+
+- 10/2014 to 02/2015: State of the art review
+- 10/2014 to 11/2014: Implement Clopath's minimal model
+- 11/2014 to 12/2014: Implement Clopath's detailed model
+- 12/2014 to 02/2015: Reproducing experimental results
+- 02/2015 to 03/2015: Add NOI to the model
+- 03/2015 to 04/2015: Validating the model
+- 04/2015 to 05/2015: Analyze results
+- 03/2015 to 06/2015: Writing the report
 
 # Where we are now
 
