@@ -55,25 +55,179 @@
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \setcounter{secnumdepth}{0}
 
-\title{Applying a biological model of the vestibulo-ocular reflex to control
-gaze stabilitzation in a humanoid robot}
+\title{Adding nucleo-olivary inhibition to a bottom-up computational model of
+the vestibulo-ocular reflex to control gaze stabilization}
 \author{Xavier Duran, supervised by Ivan Herreros and Paul Verschure}
 \date{March 25, 2015}
 
 \begin{document}
 \frame{\titlepage}
 
-\begin{frame}{Cerebellum}
+\begin{frame}{Trade-offs in avoidance actions}
+
+\includegraphics{images/ali.png}\footnote{\url{http://bit.ly/1OyIoEI}}
+
+\end{frame}
+
+\begin{frame}{Optimization of aversive reflexes}
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  Central role in motor learning
+  Avoid aversive stimuli with minimum necessary effort
 \item
-  Reflexes
+  How we behave carries a cost: What we fail to prevent + preventing
+  action itself
+\item
+  The ideal actions are those that minimize the overall cost
 \end{itemize}
 
-\includegraphics{images/cerebellum2.png}\footnote{\url{http://bit.ly/18Th2bA}}
+(Brandi, Herreros, and Verschure 2014)
+
+\end{frame}
+
+\begin{frame}{Nucleo-olivary inhibition (NOI)}
+
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[]{images/nrn2332-f3.jpg}
+\end{column}
+\begin{column}[T]{5cm} % each column can also be its own environment
+\begin{itemize}
+\item Cost-optimization
+\item Error-based learning
+\item Acquired conditioned responses are extinguished once they become no longer necessary
+\item The gain of the NOI is what determines the amplitude of the response on adaptive reflexes
+\end{itemize}
+\end{column}
+\end{columns}
+
+\footnote{\url{http://bit.ly/1AVg1qX}}
+
+(Herreros and Verschure 2013)
+
+\end{frame}
+
+\begin{frame}{Eye-blink reflex conditioning}
+
+\includegraphics{images/eyeblink.png}
+
+\footnote{\url{http://bit.ly/1CXvsoK}}
+
+\end{frame}
+
+\begin{frame}{NOI on eye-blink reflex}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Perceiving an air-puff in the unprotected cornea has a cost
+\item
+  Two types of costs
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Failing to avoid: error-based learning
+  \item
+    Avoiding when not necessary
+  \end{itemize}
+\item
+  Extinction of unnecessary conditioned responses
+\end{itemize}
+
+(Herreros and Verschure 2013)
+
+\end{frame}
+
+\begin{frame}{Vestibulo-ocular reflex (VOR)}
+
+\includegraphics{images/vor.png}\footnote{\url{http://bit.ly/19GjJOA}}
+
+This reflex functions to \textbf{stabilize images} on the retinas during
+\textbf{head movement} by producing \textbf{eye movements} in the
+direction opposite to head movement, thus preserving the image on the
+center of the visual field.
+
+\end{frame}
+
+\begin{frame}{Vestibulo-ocular reflex (VOR) adaptation}
+
+\begin{columns}[T]
+\begin{column}[T]{5cm}
+\includegraphics[]{images/13.jpg}
+\end{column}
+\begin{column}[T]{5cm} % each column can also be its own environment
+\begin{itemize}
+\item VOR adaptation is one of the most studied cerebellar dependent motor learning tasks
+\item It is used to provide insight about the connections and the coding of the circuitry of the cerebellum
+\end{itemize}
+\end{column}
+\end{columns}
+
+\footnote{\url{http://bit.ly/1Ox3Qd6}}
+
+\end{frame}
+
+\begin{frame}{Problem statement}
+
+\begin{quote}
+Computational models of the vestibulo-ocular reflex don't take into
+account the role of the nucleo-olivary inhibition
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Research question}
+
+\begin{quote}
+What's the role of the nucleo-olivary inhibition in the vestibulo-ocular
+reflex?
+\end{quote}
+
+\begin{block}{Fingerprints}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  NOI has a role in the eye-blink reflex
+\item
+  There is extinction of the adaptive response in the absence of
+  peripheral error
+\item
+  VOR adaptation has a non-perfect performance, with a residual error
+  proportional to the amount of cerebellar action required
+\end{itemize}
+
+(Herreros and Verschure 2013)
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Hypothesis}
+
+\begin{quote}
+Adding nucleo-olivary inhibition on a detailed bottom-up state of the
+art vestibulo-ocular reflex computational model would offer a more
+parsimonious explanation of the experimental behavior of the reflex.
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Computational models of the VOR}
+
+Models of the cerebellar microcircuit
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Marr-Albus-Ito classical models
+\item
+  Plasticity on the brainstem
+\item
+  A detailed bottom-up model
+\end{itemize}
 
 \end{frame}
 
@@ -99,205 +253,11 @@ gaze stabilitzation in a humanoid robot}
 
 \end{frame}
 
-\begin{frame}{Vestibulo-ocular reflex (VOR)}
-
-\includegraphics{images/vor.png}\footnote{\url{http://bit.ly/19GjJOA}}
-
-\textbf{Vestibulo-ocular reflex} (VOR) adaptation is one of the most
-studied cerebellar dependent motor learning tasks. It is used to provide
-insight about the connections and the coding of the circuitry of the
-cerebellum.
-
-\end{frame}
-
-\begin{frame}{Vestibulo-ocular reflex (VOR)}
-
-\includegraphics{images/vor.png}\footnote{\url{http://bit.ly/19GjJOA}}
-
-This reflex functions to \textbf{stabilize images} on the retinas during
-\textbf{head movement} by producing \textbf{eye movements} in the
-direction opposite to head movement, thus preserving the image on the
-center of the visual field.
-
-\end{frame}
-
-\begin{frame}{Flocculus}
-
-\begin{columns}[T]
-\begin{column}[T]{5cm}
-\includegraphics[height=3cm]{images/cerebellum.png}
-\end{column}
-\begin{column}[T]{5cm} % each column can also be its own environment
-\begin{itemize}
-\item Main cerebellar region that is responsible of the control of eye movements
-\item Small lobe situated on the vestibulocerebellum
-\item Optimize ocular motor performance
-\item Image still enough on the fovea to interpret the scene in real time
-\end{itemize}
-\end{column}
-\end{columns}
-
-\footnote{\url{http://bit.ly/1CJEXGv}}
-
-\end{frame}
-
-\begin{frame}{Problem statement}
-
-\begin{quote}
-Computational models of the vestibulo-ocular reflex don't take into
-account the role of the nucleo-olivary inhibition
-\end{quote}
-
-\includegraphics{images/nrn2332-f3.jpg}\footnote{\url{http://bit.ly/1AVg1qX}}
-
-\end{frame}
-
-\begin{frame}{Nucleo-olivary inhibition (NOI)}
-
-On the neuroanatomical circuitries and sites of cellular plasticity
-underlying adaptation of the vestibulo-ocular reflex there's a pathway
-that provides feedback for adjustment of the learning instruction.
-
-It is formed by GABAergic neurons that innervate the neurons in the
-inferior olive from which the climbing fibres originate ({De Zeeuw} and
-Yeo 2005)
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  NOI \textbf{is not} present on computational models of the VOR
-\item
-  NOI \textbf{is} present on \textbf{eye-blink} reflex computational
-  models
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{Trade-offs in avoidance actions}
-
-\includegraphics{images/ali.png}
-
-\end{frame}
-
-\begin{frame}{Extinction and NOI}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Cost-optimization
-\item
-  Error-based learning
-\item
-  Control the gain of the cerebellar output
-\item
-  Acquired conditioned responses are extinguished once they become no
-  longer necessary
-\end{itemize}
-
-(Herreros and Verschure 2013)
-
-\end{frame}
-
-\begin{frame}{Research question}
-
-What's the role of the nucleo-olivary inhibition in the vestibulo-ocular
-reflex?
-
-\begin{block}{Fingerprints}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  NOI has a role in the eye-blink reflex
-\item
-  There is extinction of the adaptive response in the absence of
-  peripheral error
-\item
-  VOR has a non-perfect performance, with a residual error proportional
-  to the amount of cerebellar action required
-\end{itemize}
-
-(Herreros and Verschure 2013)
-
-\end{block}
-
-\end{frame}
-
-\begin{frame}{Hypothesis}
-
-Adding nucleo-olivary inhibition in the vestibulo-cerebellum explains
-extinction in the state of the art vestibulo-ocular reflex computational
-models.
-
-\end{frame}
-
-\begin{frame}{Computational models of the VOR}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Marr-Albus-Ito classical models
-\item
-  The cerebellum as an adaptive filter
-\item
-  Plasticity on the brainstem
-\item
-  A detailed model
-\end{itemize}
-
-\end{frame}
-
 \begin{frame}{Marr-Albus-Ito classical models}
 
 \includegraphics{images/ito.png}\footnote{\url{http://bit.ly/1ED2SEc}}
 
 (Ito 2006)
-
-\end{frame}
-
-\begin{frame}{Marr-Albus-Ito classical models}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Two very differents signals affect indirectly the output of the
-  cerebellum
-\item
-  Simple and complex spikes
-\item
-  Plasticity at the parallel fibre to Purkinje cell synapses
-\item
-  Climbing fibre (teaching signal or error): retinal slip
-\item
-  Long-term depression (LTD)
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{The cerebellum as an adaptive filter}
-
-\includegraphics{images/adfilt.png}
-
-(Dean et al. 2010)
-
-\end{frame}
-
-\begin{frame}{The cerebellum as an adaptive filter}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Feed-forward system
-\item
-  Motor error problem
-\item
-  Decorrelation rule
-\item
-  Minimizes correlations between eye movements as a predictor variable
-  and retinal slip as a target variable
-\item
-  Climbing fibre signal delayed, prevents perfect decorrelation
-\end{itemize}
 
 \end{frame}
 
@@ -308,38 +268,34 @@ models.
 \item
   Plasticity in both cerebellar cortex and the brainstem
 \item
-  Instructive signals in the climbing fibers are not necessary for
-  cerebellum-dependent learning
+  Cerebellar cortex for quick adaptation
 \item
-  Instructive signals from climbing fibers or Purkinje cell simple
-  spikes may be sufficient to induce motor learning
+  Brainstem as long-term memory
+\item
+  Brainstem learns a simple gain
 \end{itemize}
 
 (Ke, Guo, and Raymond 2009)
 
+\end{frame}
+
+\begin{frame}{A detailed bottom-up model}
+
+This computational model is made bottom-up from physiological and
+behavioral observations.
+
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  Cortex-first
-\item
-  Simple gain
-\end{itemize}
-
-(Porrill and Dean 2007)
-
-\end{frame}
-
-\begin{frame}{A detailed model}
-
-\begin{itemize}
-\item
-  Contribution of interneurons are added
-\item
   Plasticity on the cerebellar cortex
-  \[\dot{w}_{PG_i}(t) = [ \alpha_{PG}( \nu_{CF}-C(t)) +  \sqrt{ \alpha_{PG}}  \sigma  \xi (t)]G(t)\]
 \item
   Plasticity on the brainstem
-  \[\dot{w}_{VM}(t) = \alpha_{VM}(M_0-M(t))(P(t)-P_ini(t))\]
+\item
+  Delayed error signal
+\item
+  White noise on the signals
+\item
+  Contribution of interneurons
 \end{itemize}
 
 (Clopath et al. 2014)
@@ -371,7 +327,7 @@ models.
 \begin{column}[T]{5cm} % each column can also be its own environment
 \begin{itemize}
 \item Day 0: Normal VOR
-\item Day 1 and 2: VOR cancelation (gain decrease)
+\item Day 1 and 2: VOR cancellation (gain decrease)
 \item Day 3 and 4: Phase-reversal learning
 \end{itemize}
 \end{column}
@@ -461,20 +417,6 @@ Evolution of the gain of the VOR on the different training sessions
 
 \end{frame}
 
-\begin{frame}{Where we are now}
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  Detailed model (Clopath et al. 2014) implemented in Matlab
-\item
-  Results reproduced as on the article
-\item
-  NOI added to the model
-\end{itemize}
-
-\end{frame}
-
 \begin{frame}{Future work}
 
 \begin{itemize}
@@ -507,25 +449,18 @@ Evolution of the gain of the VOR on the different training sessions
 
 \begin{frame}{References}
 
+\fontsize{6}{10} \selectfont
+
+Brandi, Santiago, Ivan Herreros, and Paul F M J Verschure. 2014.
+``Optimization of the Anticipatory Reflexes of a Computational Model of
+the Cerebellum,'' no. 1: 11--22.
+
 Clopath, Claudia, Aleksandra Badura, Chris I {De Zeeuw}, and Nicolas
 Brunel. 2014. ``A Cerebellar Learning Model of Vestibulo-Ocular Reflex
 Adaptation in Wild-Type and Mutant Mice.'' \emph{J. Neurosci.} 34 (21):
 7203--15.
 doi:\href{http://dx.doi.org/10.1523/JNEUROSCI.2791-13.2014}{10.1523/JNEUROSCI.2791-13.2014}.
 \url{http://www.ncbi.nlm.nih.gov/pubmed/24849355}.
-
-{De Zeeuw}, Chris I, and Christopher H Yeo. 2005. ``Time and Tide in
-Cerebellar Memory Formation.'' \emph{Curr. Opin. Neurobiol.} 15 (6):
-667--74.
-doi:\href{http://dx.doi.org/10.1016/j.conb.2005.10.008}{10.1016/j.conb.2005.10.008}.
-\url{http://www.ncbi.nlm.nih.gov/pubmed/16271462}.
-
-Dean, Paul, John Porrill, Carl-Fredrik Ekerot, and Henrik Jörntell.
-2010. ``The Cerebellar Microcircuit as an Adaptive Filter: experimental
-and Computational Evidence.'' \emph{Nat. Rev. Neurosci.} 11 (1). Nature
-Publishing Group: 30--43.
-doi:\href{http://dx.doi.org/10.1038/nrn2756}{10.1038/nrn2756}.
-\url{http://www.ncbi.nlm.nih.gov/pubmed/19997115}.
 
 Herreros, Ivan, and Paul F M J Verschure. 2013. ``Nucleo-Olivary
 Inhibition Balances the Interaction Between the Reactive and Adaptive
@@ -544,12 +479,6 @@ of Climbing Fiber Instructive Signals During Motor Learning.''
 \emph{Nat. Neurosci.} 12 (9). Nature Publishing Group: 1171--9.
 doi:\href{http://dx.doi.org/10.1038/nn.2366}{10.1038/nn.2366}.
 \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3864777/\&tool=pmcentrez/\&rendertype=abstract}.
-
-Porrill, John, and Paul Dean. 2007. ``Cerebellar Motor Learning: when Is
-Cortical Plasticity Not Enough?'' \emph{PLoS Comput. Biol.} 3 (10):
-1935--50.
-doi:\href{http://dx.doi.org/10.1371/journal.pcbi.0030197}{10.1371/journal.pcbi.0030197}.
-\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2041974/\&tool=pmcentrez/\&rendertype=abstract}.
 
 Wulff, Peer, Martijn Schonewille, Massimiliano Renzi, Laura Viltono,
 Marco Sassoè-Pognetto, Aleksandra Badura, Zhenyu Gao, et al. 2009.
