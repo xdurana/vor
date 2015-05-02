@@ -13,6 +13,7 @@ classdef VOR < handle
         GCPCWeight;                 % Weight from Granule Cells to Purkinje
         MFVNWeight;                 % Weight from Mossy Fibers to Medial Vestibular Nuclei 
         PCMean;                     % Purkinje Cell signal mean value
+        DError;                     % Error difference between D and Dtarget
 
         GCNumber = 100;             % Number of Granule Cells (GC)
         DMean = 2.25;               % Medial Vestibular Nuclei cells signal mean value
@@ -38,6 +39,11 @@ classdef VOR < handle
 
     methods
 
+        function obj = VOR(Delay, PCNOIK)
+           obj.Delay = Delay;
+           obj.PCNOIK = PCNOIK;
+        end
+        
         function obj = Initialize(obj)
             obj.GC = zeros(obj.GCNumber, obj.Period);
             dist = (0.1886*cos((1+obj.GCNumber:2*obj.GCNumber)*2*pi/obj.GCNumber))+(1:obj.GCNumber)*2*pi/obj.GCNumber;
@@ -61,10 +67,11 @@ classdef VOR < handle
                 obj.PC = obj.GCPCWeight' * obj.GC - obj.INPCWeight' * obj.IN;
 
                 % Medial Vestibular Nuclei cells
-                obj.D = obj.MFVNWeightInitial*2*(obj.MF-obj.MFMean) + obj.DMean - obj.MF - obj.PC;
+                obj.D = obj.MFVNWeight*2*(obj.MF-obj.MFMean) + obj.DMean - obj.MF - obj.PC;
 
                 % Climbing Fibers
-                obj.CF = trial.Light*(trial.Dt() - obj.D);
+                obj.DError = trial.Dt() - obj.D;
+                obj.CF = trial.Light*obj.DError;
                 obj.CF = obj.CF + (obj.MF - obj.MFMean)*obj.CFVestibular;
                 obj.CF = obj.CF + obj.PCNOIK*obj.PC;
                 obj.CF = circshift(obj.CF,[0,obj.Delay]);
@@ -82,8 +89,10 @@ classdef VOR < handle
                 % Plasticity of MF to MVM synapses
                 obj.MFVNWeight = obj.MFVNWeight + obj.MFVNAlpha * sum((-obj.MF + obj.MFMean).*(obj.PC - obj.PCMean));
                 obj.MFVNWeight = obj.MFVNWeight * (obj.MFVNWeight > 0);
-                
-            end          
+               
+                % Save current state for tracking
+                trial.Record(obj)
+            end
         end
     end
 end
