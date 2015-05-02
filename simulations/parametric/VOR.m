@@ -59,7 +59,7 @@ classdef VOR < handle
             obj.MF = 0.25*cos((1+obj.Period*3/4:obj.Period+obj.Period*3/4)*2*pi/obj.Period)+obj.MFMean;
         end
 
-        function obj = Train(obj, trial)
+        function obj = train(obj, trial)
 
             for t = 1:trial.Duration
 
