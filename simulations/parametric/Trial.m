@@ -1,16 +1,16 @@
 classdef Trial < handle
     properties
-        Light;
-        TargetGain;
-        Duration;
-        Period;
+        Light
+        TargetGain
+        Duration
+        Period
         
-        GCPCWeight;
-        MFVNWeight;
-        DError;
-        CF;
-        Gain;
-        Phase;
+        GCPCWeight
+        MFVNWeight
+        DError
+        CF
+        Gain
+        Phase
     end
     methods
         function obj = Trial(light, targetgain, duration, period)
