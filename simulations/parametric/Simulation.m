@@ -10,11 +10,18 @@ nit = 1440;
 session = Session(vor);
 session.InitialTrials = 2;
 
-session.add(Trial(1, 1, 200, vor.Period))
-session.add(Trial(0, 1, 200, vor.Period))
-session.add(Trial(1, 0, 200, vor.Period))
-session.add(Trial(0, 1, 200, vor.Period))
+session.add(Trial(1, 1, day, vor.Period))
+session.add(Trial(0, 1, nit, vor.Period))
+session.add(Trial(1, 0, day, vor.Period))
+session.add(Trial(0, 1, nit, vor.Period))
+session.add(Trial(1, -0.5, day, vor.Period))
+session.add(Trial(0, 1, nit, vor.Period))
+session.add(Trial(1, -1, day, vor.Period))
+session.add(Trial(0, 1, nit, vor.Period))
+session.add(Trial(1, -1, day, vor.Period))
 
 session.simulate()
-session.polar()
+session.polarplot()
+session.gainplot()
 session.wpc()
+%session.pca()
