@@ -1,4 +1,13 @@
 doc/
-presentations/mtheme/
 .Rproj.user
+.Rhistory
+.RData
+.dropbox.attr
+*.out
+*.vrb
+*.nav
+*.aux
+*.fdb_latexmk
+*.idx
+* log
 *.m~
