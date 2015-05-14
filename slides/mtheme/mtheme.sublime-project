@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/xavier/Dropbox/workspace/vor/midterm"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/xavier/Dropbox/uoc/la"
+		}
+	]
+}

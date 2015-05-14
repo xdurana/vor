@@ -2,7 +2,9 @@ classdef VOR < handle
 
     properties
         
-        D;                          % Medial Vestibular Nuclei cells signal
+        D;                          % Motor signal
+        DPC;                        % Contribution of PC to motor signal
+        DVN;                        % Contribution of VN to motor signal
         GC;                         % Granule Cells signal
         IN;                         % Interneurons signal
         MF;                         % Mossy Fibers signal
@@ -39,9 +41,10 @@ classdef VOR < handle
 
     methods
 
-        function obj = VOR(Delay, PCNOIK)
+        function obj = VOR(Delay, PCNOIK, CFVestibular)
            obj.Delay = Delay;
            obj.PCNOIK = PCNOIK;
+           obj.CFVestibular = CFVestibular;
         end
         
         function obj = Initialize(obj)
@@ -67,7 +70,9 @@ classdef VOR < handle
                 obj.PC = obj.GCPCWeight' * obj.GC - obj.INPCWeight' * obj.IN;
 
                 % Medial Vestibular Nuclei cells
-                obj.D = obj.MFVNWeight*2*(obj.MF-obj.MFMean) + obj.DMean - obj.MF - obj.PC;
+                obj.DPC = obj.DMean - obj.PC - obj.MF;
+                obj.DVN = obj.MFVNWeight*2*(obj.MF-obj.MFMean);
+                obj.D = obj.DVN + obj.DPC;
 
                 % Climbing Fibers
                 obj.DError = trial.Dt() - obj.D;
@@ -91,7 +96,7 @@ classdef VOR < handle
                 obj.MFVNWeight = obj.MFVNWeight * (obj.MFVNWeight > 0);
                
                 % Save current state for tracking
-                trial.Record(obj)
+                trial.Record(obj);
             end
         end
     end

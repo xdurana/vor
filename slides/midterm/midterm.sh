@@ -1,0 +1,1 @@
+pandoc -t beamer --latex-engine=xelatex -V theme:m -o output.pdf midterm.Rmd

@@ -8,6 +8,10 @@ classdef Session < handle
         
         Gain
         Phase
+        DPCGain
+        DPCPhase
+        DVNGain
+        DVNPhase
         GCPCWeight
         MFVNWeight
     end
@@ -31,27 +35,39 @@ classdef Session < handle
         end
         
         function obj = simulate(obj)
+
             for trial = obj.Trials
                 obj.VOR.train(trial);
             end
             
             GainReference = obj.Trials(obj.InitialTrials).Gain(end);
             for trial = obj.Trials(obj.InitialTrials+1:end)
+                
                 trial.Gain = trial.Gain/GainReference;
+                trial.DPCGain = trial.DPCGain/GainReference;
+                trial.DVNGain = trial.DVNGain/GainReference;
+                
                 obj.Gain = [obj.Gain trial.Gain];                
                 obj.Phase = [obj.Phase trial.Phase];
+                obj.DPCGain = [obj.DPCGain trial.DPCGain];                
+                obj.DVNGain = [obj.DVNGain trial.DVNGain];                
                 obj.GCPCWeight = [obj.GCPCWeight, trial.GCPCWeight];
                 obj.MFVNWeight = [obj.MFVNWeight, trial.MFVNWeight];
             end
         end
         
         function polarplot(session)
-            figure
-            colors = ['y','g','r','b'];
+            figure;
+            colors = ['g','g','g','g'];
             for i = session.InitialTrials+1:length(session.Trials)
-                set(polar(session.Trials(i).Phase*2*pi/360, session.Trials(i).Gain), 'color', colors(mod(i-session.InitialTrials+1,length(colors))+1), 'linewidth', 2)
+                if session.Trials(i).Light
+                    set(polar(session.Trials(i).Phase*2*pi/360, session.Trials(i).Gain), 'color', colors(mod(i-session.InitialTrials+1,length(colors))+1), 'linewidth', 2, 'DisplayName', sprintf('train %.1f', session.Trials(i).TargetGain))
+                else
+                    set(polar(session.Trials(i).Phase*2*pi/360, session.Trials(i).Gain), 'color', 'r', 'linewidth', 2, 'DisplayName', 'rest')
+                end
                 hold on
             end
+            legend('-DynamicLegend');
             title('Training sessions')
             hold off
         end
@@ -64,9 +80,29 @@ classdef Session < handle
                 if (session.Trials(i).Light)
                     plot(start:start+length(session.Trials(i).Gain)-1, session.Trials(i).Gain, 'g', 'linewidth', 2)
                     start = start + length(session.Trials(i).Gain);
-                    plot(start+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
+                    plot(start-1+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
                 end
             end
+            ylabel('gain','fontsize',20);
+            xlabel('time [min]','fontsize',20);
+            title('Training sessions')
+            hold off
+        end
+        
+        function gainplotdecomposed(session)
+            figure
+            hold on
+            start = 1;            
+            for i = session.InitialTrials+1:length(session.Trials)
+                if (1 || session.Trials(i).Light)
+                    plot(start:start+length(session.Trials(i).Gain)-1, session.Trials(i).Gain, 'g', 'linewidth', 2)
+                    plot(start:start+length(session.Trials(i).DPCGain)-1, session.Trials(i).DPCGain, 'g--', 'linewidth', 2)
+                    plot(start:start+length(session.Trials(i).DVNGain)-1, session.Trials(i).DVNGain, 'g:', 'linewidth', 2)
+                    start = start + length(session.Trials(i).Gain);
+                    plot(start-1+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
+                end
+            end
+            legend('total', 'cortical', 'vestibular');
             ylabel('gain','fontsize',20);
             xlabel('time [min]','fontsize',20);
             title('Training sessions')
