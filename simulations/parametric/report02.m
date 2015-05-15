@@ -4,7 +4,7 @@
 
 clear all;
 
-vor = VOR(100, 0.01, 0.00);
+vor = VOR(100, 2, 0.00);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 

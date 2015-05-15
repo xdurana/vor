@@ -30,12 +30,12 @@ classdef Trial < handle
             r = obj.TargetGain*0.25*cos((1+obj.Period*3/4:obj.Period+obj.Period*3/4)*2*pi/obj.Period)+1;
         end
 
-        function [gain, phase, g1, g2] = decompose(obj, signal, s1, s2)
+        function [gain, phase, g1, g2] = decompose(obj, signal, vn, pc)
             [gain, position] = max(signal);
-            gain = gain - mean(signal);
+            %gain = gain - mean(signal);
             phase = obj.getphase(position);
-            g1 = s1(position);
-            g2 = s2(position) - mean(signal);
+            g1 = vn(position);
+            g2 = pc(position);
         end
 
         function phase = getphase(obj, position)
@@ -47,9 +47,17 @@ classdef Trial < handle
         function obj = Record(obj, vor)
             obj.GCPCWeight = [obj.GCPCWeight, vor.GCPCWeight];
             obj.MFVNWeight = [obj.MFVNWeight, vor.MFVNWeight];
+            
+%             figure;
+%             hold on;
+%             plot(vor.D, 'g');
+%             plot(vor.DMean - vor.PC - vor.MF, 'r');
+%             plot(vor.MFVNWeight*2*(vor.MF-vor.MFMean), 'b');
+%             hold off;          
+            
             obj.DError = [obj.DError, norm(vor.DError)];
             obj.CF = [obj.CF, norm(vor.CF)];
-          
+                
             [gain, phase, g1, g2] = obj.decompose(vor.D, vor.DVN, vor.DPC);
             obj.Gain = [obj.Gain, gain];
             obj.Phase = [obj.Phase, phase];

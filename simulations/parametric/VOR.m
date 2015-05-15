@@ -73,7 +73,7 @@ classdef VOR < handle
                 obj.DPC = obj.DMean - obj.PC - obj.MF;
                 obj.DVN = obj.MFVNWeight*2*(obj.MF-obj.MFMean);
                 obj.D = obj.DVN + obj.DPC;
-
+                
                 % Climbing Fibers
                 obj.DError = trial.Dt() - obj.D;
                 obj.CF = trial.Light*obj.DError;
