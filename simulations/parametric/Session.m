@@ -54,6 +54,16 @@ classdef Session < handle
             session.add(Trial(0, 1, 7*nit, session.VOR.Period));
         end
         
+        function LongerDarkExperiment(session)
+            day = 50;
+            nit = 1440;
+            session.InitialTrials = 2;
+            session.add(Trial(1, 1, 7*day, session.VOR.Period));
+            session.add(Trial(0, 1, 7*nit, session.VOR.Period));
+            session.add(Trial(1, 0, 7*day, session.VOR.Period));
+            session.add(Trial(0, 1, 7*nit, session.VOR.Period));
+        end
+        
         function obj = add(obj, trial)
             obj.Trials = [obj.Trials, trial];
             obj.Duration = obj.Duration + trial.Duration;
