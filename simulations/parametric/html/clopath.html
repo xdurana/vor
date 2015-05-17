@@ -66,35 +66,21 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Detailed model with 100ms delay and NOI with k=0.05</a></li></ul></div><h2>Detailed model with 100ms delay and NOI with k=0.05<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+  </style></head><body><div class="content"><h1>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Detailed model with 100ms delay and vestibular decay constant = 0.03</a></li></ul></div><h2>Detailed model with 100ms delay and vestibular decay constant = 0.03<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
 
 vor = VOR(100, 0, 0.03);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 
-day = 50;
-nit = 1440;
-
 session = Session(vor);
-session.InitialTrials = 2;
-
-session.add(Trial(1, 1, day, vor.Period));
-session.add(Trial(0, 1, 2*nit, vor.Period));
-session.add(Trial(1, 0, day, vor.Period));
-session.add(Trial(0, 1, nit, vor.Period));
-session.add(Trial(1, -0.5, day, vor.Period));
-session.add(Trial(0, 1, nit, vor.Period));
-session.add(Trial(1, -1, day, vor.Period));
-session.add(Trial(0, 1, nit, vor.Period));
-session.add(Trial(1, -1, day, vor.Period));
-
+session.WulffExperiment();
 session.simulate();
 session.report();
 </pre><img vspace="5" hspace="5" src="clopath_01.png" alt=""> <img vspace="5" hspace="5" src="clopath_02.png" alt=""> <img vspace="5" hspace="5" src="clopath_03.png" alt=""> <img vspace="5" hspace="5" src="clopath_04.png" alt=""> <img vspace="5" hspace="5" src="clopath_05.png" alt=""> <img vspace="5" hspace="5" src="clopath_06.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Reproducing results of Clopath et al. model of the vestibulo-ocular reflex
 
-%% Detailed model with 100ms delay and NOI with k=0.05
+%% Detailed model with 100ms delay and vestibular decay constant = 0.03
 
 clear all;
 
@@ -102,22 +88,8 @@ vor = VOR(100, 0, 0.03);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 
-day = 50;
-nit = 1440;
-
 session = Session(vor);
-session.InitialTrials = 2;
-
-session.add(Trial(1, 1, day, vor.Period));
-session.add(Trial(0, 1, 2*nit, vor.Period));
-session.add(Trial(1, 0, day, vor.Period));
-session.add(Trial(0, 1, nit, vor.Period));
-session.add(Trial(1, -0.5, day, vor.Period));
-session.add(Trial(0, 1, nit, vor.Period));
-session.add(Trial(1, -1, day, vor.Period));
-session.add(Trial(0, 1, nit, vor.Period));
-session.add(Trial(1, -1, day, vor.Period));
-
+session.WulffExperiment();
 session.simulate();
 session.report();
 ##### SOURCE END #####

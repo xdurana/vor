@@ -9,6 +9,6 @@ vor.Period = floor(1000/0.6);
 vor.Initialize();
 
 session = Session(vor);
-session.WulffExperiment();
+session.LongDarkExperiment();
 session.simulate();
 session.report();

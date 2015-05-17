@@ -1,6 +1,6 @@
 %% Reproducing results of Clopath et al. model of the vestibulo-ocular reflex
 
-%% Detailed model with 100ms delay and NOI with k=0.05
+%% Detailed model with 100ms delay, vestibular decay constant = 0.03 and NOI with k=0.01
 
 clear all;
 
