@@ -17,6 +17,10 @@ classdef VOR < handle
         PCMean;                     % Purkinje Cell signal mean value
         DError;                     % Error difference between D and Dtarget
 
+        CFVestibular;               % Climbing Fiber to Vestibular Nuclei
+        PCNOIK;                     % NOI
+        Delay;                      % Delay of Climbing Fibers signal
+
         GCNumber = 100;             % Number of Granule Cells (GC)
         DMean = 2.25;               % Medial Vestibular Nuclei cells signal mean value
         MFMean = 0.25;              % Mossy Fibers signal mean value
@@ -31,11 +35,8 @@ classdef VOR < handle
                 
         CFNoise = 3.5;              % Noise in Climbing Fibers
         CFNoiseAlpha = 7.4697e-05;  % Alpha of the noise in Climbing Fibers
-        CFVestibular = 0.03;        % Climbing Fiber to Vestibular Nuclei
-        PCNOIK =  0.05;             % NOI
 
         Period = floor(1000/0.6);   % Time of a cycles [ms]
-        Delay = 100;                % Delay of Climbing Fibers signal
 
     end
 

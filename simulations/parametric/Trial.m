@@ -32,10 +32,10 @@ classdef Trial < handle
 
         function [gain, phase, g1, g2] = decompose(obj, signal, vn, pc)
             [gain, position] = max(signal);
-            %gain = gain - mean(signal);
+            gain = gain - mean(signal);
             phase = obj.getphase(position);
-            g1 = vn(position);
-            g2 = pc(position);
+            g1 = vn(position) - 0*mean(signal)/2;
+            g2 = pc(position) - 2*mean(signal)/2;
         end
 
         function phase = getphase(obj, position)

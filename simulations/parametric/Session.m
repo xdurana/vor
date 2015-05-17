@@ -27,7 +27,22 @@ classdef Session < handle
             obj.Phase = [];
             obj.GCPCWeight= [];
             obj.MFVNWeight = [];
-        end        
+        end
+        
+        function WulffExperiment(session)            
+            day = 50;
+            nit = 1440;
+            session.InitialTrials = 2;
+            session.add(Trial(1, 1, day, session.VOR.Period));
+            session.add(Trial(0, 1, 2*nit, session.VOR.Period));
+            session.add(Trial(1, 0, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
+            session.add(Trial(1, -0.5, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
+            session.add(Trial(1, -1, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
+            session.add(Trial(1, -1, day, session.VOR.Period));
+        end
         
         function obj = add(obj, trial)
             obj.Trials = [obj.Trials, trial];
@@ -35,7 +50,6 @@ classdef Session < handle
         end
         
         function obj = simulate(obj)
-
             for trial = obj.Trials
                 obj.VOR.train(trial);
             end
@@ -85,7 +99,26 @@ classdef Session < handle
             end
             ylabel('gain','fontsize',20);
             xlabel('time [min]','fontsize',20);
-            title('Training sessions')
+            title('Gain evolution during the training sessions')
+            hold off
+        end
+        
+        function phaseplot(session)
+            figure
+            hold on
+            start = 1;           
+            for i = session.InitialTrials+1:length(session.Trials)
+                if (session.Trials(i).Light)
+                    plot(start:start+length(session.Trials(i).Phase)-1, session.Trials(i).Phase, 'g', 'linewidth', 2)
+                    start = start + length(session.Trials(i).Phase);
+                    plot(start-1+(-5:355)*0,(-5:355), '--k')
+                end
+            end
+            xlim([-1 201])
+            ylim([-5 180])
+            ylabel('phase','fontsize',20);
+            xlabel('time [min]','fontsize',20);
+            title('Phase evolution during the training sessions')
             hold off
         end
         
@@ -96,8 +129,8 @@ classdef Session < handle
             for i = session.InitialTrials+1:length(session.Trials)
                 if (1 || session.Trials(i).Light)
                     plot(start:start+length(session.Trials(i).Gain)-1, session.Trials(i).Gain, 'g', 'linewidth', 2)
-                    plot(start:start+length(session.Trials(i).DPCGain)-1, session.Trials(i).DPCGain, 'g--', 'linewidth', 2)
-                    plot(start:start+length(session.Trials(i).DVNGain)-1, session.Trials(i).DVNGain, 'g:', 'linewidth', 2)
+                    plot(start:start+length(session.Trials(i).DPCGain)-1, session.Trials(i).DPCGain, 'y', 'linewidth', 2)
+                    plot(start:start+length(session.Trials(i).DVNGain)-1, session.Trials(i).DVNGain, 'b', 'linewidth', 2)
                     start = start + length(session.Trials(i).Gain);
                     plot(start-1+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
                 end
@@ -105,7 +138,7 @@ classdef Session < handle
             legend('total', 'cortical', 'vestibular');
             ylabel('gain','fontsize',20);
             xlabel('time [min]','fontsize',20);
-            title('Training sessions')
+            title('Gain evolution')
             hold off
         end
         
@@ -115,6 +148,14 @@ classdef Session < handle
             ylabel('Granule cells', 'fontsize', 20)
             xlabel('time [min]', 'fontsize', 20)
             title('Weights on PF-PC synapses')
+        end
+        
+        function wvn(session)
+            figure
+            plot(session.MFVNWeight);
+            ylabel('Weight', 'fontsize', 20)
+            xlabel('time [min]', 'fontsize', 20)
+            title('Weight on MF-VN synapse')
         end
         
         function pca(obj)
@@ -131,6 +172,16 @@ classdef Session < handle
             imagesc(obj.GCPCWeight-s1)
             figure
             imagesc(obj.GCPCWeight-s2)
-        end        
+        end
+        
+        function report(session)
+            session.wpc();
+            session.wvn();
+            session.polarplot();
+            session.gainplot();
+            session.phaseplot();
+            session.gainplotdecomposed();
+            %session.pca();
+        end
     end
 end
