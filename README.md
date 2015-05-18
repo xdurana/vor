@@ -18,7 +18,7 @@ Reproducing results of Clopath et al. model of the vestibulo-ocular reflex
 - [Clopath detailed model with NOI](http://xdurana.github.io/vor/simulations/parametric/html/longnoi.html)
 - [Clopath detailed model with NOI but without vestibular-dependent decay](http://xdurana.github.io/vor/simulations/parametric/html/longclopathnoi.html)
 
-## Longer dark experiment
+### Longer dark experiment
 
 - [Clopath detailed model](http://xdurana.github.io/vor/simulations/parametric/html/longerclopath.html)
 - [Clopath detailed model with NOI](http://xdurana.github.io/vor/simulations/parametric/html/longernoi.html)
