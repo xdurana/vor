@@ -1,53 +1,102 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>VOR by xdurana</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>VOR</h1>
-        <p>Computational models of the vestibulo-ocular reflex</p>
+    <section class="page-header">
+      <h1 class="project-name">VOR</h1>
+      <h2 class="project-tagline">Computational models of the vestibulo-ocular reflex</h2>
+      <a href="https://github.com/xdurana/vor" class="btn">View on GitHub</a>
+      <a href="https://github.com/xdurana/vor/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/xdurana/vor/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <p class="view"><a href="https://github.com/xdurana/vor">View the Project on GitHub <small>xdurana/vor</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/xdurana/vor/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/xdurana/vor/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/xdurana/vor">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h2>
+    <section class="main-content">
+      <h2>
 <a id="computational-models-of-the-vestibulo-ocular-reflex" class="anchor" href="#computational-models-of-the-vestibulo-ocular-reflex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computational models of the vestibulo-ocular reflex</h2>
 
 <p>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</p>
 
+<ol>
+<li><p>Clopath, C., Badura, A., De Zeeuw, C. I. &amp; Brunel, N. A cerebellar learning model of vestibulo-ocular reflex adaptation in wild-type and mutant mice. J. Neurosci. 34, 7203–15 (2014).</p></li>
+<li><p>Wulff, P., Schonewille, M., Renzi, M., Viltono, L., Sassoè-Pognetto, M., Badura, A., … De Zeeuw, C. I. (2009). Synaptic inhibition of Purkinje cells mediates consolidation of vestibulo-cerebellar motor learning. Nature Neuroscience, 12(8), 1042–9. <a href="http://doi.org/10.1038/nn.2348">http://doi.org/10.1038/nn.2348</a></p></li>
+</ol>
+
+<h3>
+<a id="wulff-experiment" class="anchor" href="#wulff-experiment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wulff experiment</h3>
+
+<p>This is a phase-reversal VOR adaptation experiment. It consists of 9 sessions: 5 training sessions and 4 light deprivation sessions. Gain 1 is defined as the amplitude at the end of the second session.</p>
+
+<ol>
+<li>50-cycles training session with light and target gain 1</li>
+<li>2 sessions of 1440-cycles of light deprivation</li>
+<li>50-cycles training session with light and target gain 0</li>
+<li>1440-cycles of light deprivation</li>
+<li>50-cycles training session with light and target gain -0.5</li>
+<li>1440-cycles of light deprivation</li>
+<li>50-cycles training session with light and target gain -1</li>
+<li>1440-cycles of light deprivation</li>
+<li><p>50-cycles training session with light and target gain -1</p></li>
+</ol>
+
 <ul>
-<li><a href="http://xdurana.github.io/vor/simulations/minimal/html/report.html">Minimal model</a></li>
-<li>
-<a href="http://xdurana.github.io/vor/simulations/detailed/html/report.html">Detailed model 1</a>, <a href="http://xdurana.github.io/vor/simulations/detailed/html/long.html">2</a> &amp; <a href="http://xdurana.github.io/vor/simulations/detailed/html/report.html">3</a>
-</li>
-<li><a href="http://xdurana.github.io/vor/simulations/noi/html/report.html">Detailed model with NOI</a></li>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/clopath.html">Clopath detailed model</a></li>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/noi.html">Clopath detailed model with NOI</a></li>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/clopathnoi.html">Clopath detailed model with NOI but without vestibular-dependent decay</a></li>
 </ul>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/xdurana">xdurana</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
+<h3>
+<a id="vor-cancellation-experiment-with-long-period-of-light-deprivation" class="anchor" href="#vor-cancellation-experiment-with-long-period-of-light-deprivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>VOR cancellation experiment with long period of light deprivation</h3>
+
+<p>This is a VOR cancellation adaptation experiment. It consists of 4 sessions: 2 training sessions and 2 light deprivation sessions. The last light deprivation session is much longer than the first one. Gain 1 is defined as the amplitude at the end of the second session.</p>
+
+<ol>
+<li>50-cycles training session with light and target gain 1</li>
+<li>2 sessions of 1440-cycles of light deprivation</li>
+<li>50-cycles training session with light and target gain 0</li>
+<li><p>7 sessions of 1440-cycles of light deprivation</p></li>
+</ol>
+
+<ul>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/longclopath.html">Clopath detailed model</a></li>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/longnoi.html">Clopath detailed model with NOI</a></li>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/longclopathnoi.html">Clopath detailed model with NOI but without vestibular-dependent decay</a></li>
+</ul>
+
+<h3>
+<a id="vor-cancellation-experiment-with-a-longer-period-of-light-deprivation" class="anchor" href="#vor-cancellation-experiment-with-a-longer-period-of-light-deprivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>VOR cancellation experiment with a longer period of light deprivation</h3>
+
+<p>This is like the previous VOR cancellation adaptation experiment but with a longer training and light deprivation periods.</p>
+
+<ol>
+<li>7 sessions of 50-cycle training with light and target gain 1</li>
+<li>7 sessions of 1440-cycles of light deprivation</li>
+<li>7 sessions of 50-cycle training with light and target gain 0</li>
+<li><p>7 sessions of 1440-cycles of light deprivation</p></li>
+</ol>
+
+<ul>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/longerclopath.html">Clopath detailed model</a></li>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/longernoi.html">Clopath detailed model with NOI</a></li>
+<li><a href="http://xdurana.github.io/vor/simulations/parametric/html/longerclopathnoi.html">Clopath detailed model with NOI but without vestibular-dependent decay</a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/xdurana/vor">VOR</a> is maintained by <a href="https://github.com/xdurana">xdurana</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
+
+    </section>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -60,3 +109,4 @@
 
   </body>
 </html>
+
