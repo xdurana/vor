@@ -50,19 +50,6 @@ This is like the previous VOR cancellation adaptation experiment but with a long
 - [Clopath detailed model with NOI](http://xdurana.github.io/vor/simulations/parametric/html/longernoi.html)
 - [Clopath detailed model with NOI and vestibular-dependent decay](http://xdurana.github.io/vor/simulations/parametric/html/longerclopathnoi.html)
 
-### VOR cancellation experiment with a longer period of light deprivation
-
-This is like the previous VOR cancellation adaptation experiment but with a longer training and light deprivation periods.
-
-1. 7 sessions of 50-cycle training with light and target gain 1
-2. 7 sessions of 1440-cycles of light deprivation
-3. 7 sessions of 50-cycle training with light and target gain 0
-4. 7 sessions of 1440-cycles of light deprivation
-
-- [Clopath detailed model](http://xdurana.github.io/vor/simulations/parametric/html/longerclopath.html)
-- [Clopath detailed model with NOI](http://xdurana.github.io/vor/simulations/parametric/html/longernoi.html)
-- [Clopath detailed model with NOI and vestibular-dependent decay](http://xdurana.github.io/vor/simulations/parametric/html/longerclopathnoi.html)
-
 ### Long training VOR adaptation
 
 This is a VOR cancellation long adaptation and then a return to normal VOR. Gain 1 is defined as the amplitude at the end of the second session.
