@@ -28,6 +28,16 @@ classdef Session < handle
             obj.GCPCWeight= [];
             obj.MFVNWeight = [];
         end
+
+        function MinimalExperiment(session)            
+            day = 50;
+            nit = 100;
+            session.InitialTrials = 2;
+            session.add(Trial(1, 1, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
+            session.add(Trial(1, 0, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
+        end        
         
         function WulffExperiment(session)            
             day = 50;
@@ -62,6 +72,18 @@ classdef Session < handle
             session.add(Trial(0, 1, 7*nit, session.VOR.Period));
             session.add(Trial(1, 0, 7*day, session.VOR.Period));
             session.add(Trial(0, 1, 7*nit, session.VOR.Period));
+        end
+        
+        function LongTrainingExperiment(session)
+            day = 1440;
+            nit = 1440;
+            session.InitialTrials = 2;
+            session.add(Trial(1, 1, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
+            session.add(Trial(1, 0, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
+            session.add(Trial(1, 1, day, session.VOR.Period));
+            session.add(Trial(0, 1, nit, session.VOR.Period));
         end
         
         function obj = add(obj, trial)
@@ -134,7 +156,6 @@ classdef Session < handle
                     plot(start-1+(-5:355)*0,(-5:355), '--k')
                 end
             end
-            xlim([-1 201])
             ylim([-5 180])
             ylabel('phase','fontsize',20);
             xlabel('time [min]','fontsize',20);
@@ -199,7 +220,7 @@ classdef Session < handle
             session.wvn();
             session.polarplot();
             session.gainplot();
-            session.phaseplot();
+            %session.phaseplot();
             session.gainplotdecomposed();
             %session.pca();
         end

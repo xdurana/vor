@@ -41,7 +41,7 @@ classdef Trial < handle
         function phase = getphase(obj, position)
             phase = (position/obj.Period)*360;
             phase = mod(360-phase-269, 360);
-            phase = mod(phase +10, 360)-10;
+            phase = mod(phase + 10, 360) - 10;
         end
 
         function obj = Record(obj, vor)
