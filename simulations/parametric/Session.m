@@ -14,6 +14,8 @@ classdef Session < handle
         DVNPhase
         GCPCWeight
         MFVNWeight
+        DError
+        CF
     end
     
     methods
@@ -86,6 +88,22 @@ classdef Session < handle
             session.add(Trial(0, 1, nit, session.VOR.Period));
         end
         
+        function SavingsExperiment(session)
+            short = 50;
+            longs = 1440;
+            session.InitialTrials = 2;
+            session.add(Trial(1, 1, short, session.VOR.Period));
+            session.add(Trial(0, 1, short, session.VOR.Period));
+            session.add(Trial(1, 1, short, session.VOR.Period));
+            session.add(Trial(0, 1, longs, session.VOR.Period));
+            session.add(Trial(1, 0, longs, session.VOR.Period));
+            session.add(Trial(0, 1, longs, session.VOR.Period));
+            session.add(Trial(1, 1, longs, session.VOR.Period));
+            session.add(Trial(0, 1, longs, session.VOR.Period));
+            session.add(Trial(1, 1, longs, session.VOR.Period));
+            session.add(Trial(0, 1, longs, session.VOR.Period));
+        end        
+        
         function obj = add(obj, trial)
             obj.Trials = [obj.Trials, trial];
             obj.Duration = obj.Duration + trial.Duration;
@@ -108,7 +126,9 @@ classdef Session < handle
                 obj.DPCGain = [obj.DPCGain trial.DPCGain];                
                 obj.DVNGain = [obj.DVNGain trial.DVNGain];                
                 obj.GCPCWeight = [obj.GCPCWeight, trial.GCPCWeight];
-                obj.MFVNWeight = [obj.MFVNWeight, trial.MFVNWeight];
+                obj.MFVNWeight = [obj.MFVNWeight, trial.MFVNWeight];                
+                obj.DError = [obj.DError, trial.DError];
+                obj.CF = [obj.CF, trial.CF];
             end
         end
         

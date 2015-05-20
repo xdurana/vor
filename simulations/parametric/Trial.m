@@ -34,8 +34,8 @@ classdef Trial < handle
             [gain, position] = max(signal);
             gain = gain - mean(signal);
             phase = obj.getphase(position);
-            g1 = vn(position) - 0*mean(signal)/2;
-            g2 = pc(position) - 2*mean(signal)/2;
+            g1 = vn(position) - mean(vn);
+            g2 = pc(position) - mean(pc);
         end
 
         function phase = getphase(obj, position)

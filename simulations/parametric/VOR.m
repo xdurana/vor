@@ -73,7 +73,8 @@ classdef VOR < handle
                 % Medial Vestibular Nuclei cells
                 obj.DPC = obj.DMean - obj.PC - obj.MF;
                 obj.DVN = obj.MFVNWeight*2*(obj.MF-obj.MFMean);
-                obj.D = obj.DVN + obj.DPC;
+                
+                obj.D = obj.DMean - obj.PC - obj.MF + obj.MFVNWeight*2*(obj.MF-obj.MFMean);
                 
                 % Climbing Fibers
                 obj.DError = trial.Dt() - obj.D;
