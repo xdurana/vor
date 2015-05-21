@@ -64,3 +64,21 @@ This is a VOR cancellation long adaptation and then a return to normal VOR. Gain
 - [Clopath detailed model](http://xdurana.github.io/vor/simulations/parametric/html/longtrainingclopath.html)
 - [Clopath detailed model with NOI](http://xdurana.github.io/vor/simulations/parametric/html/longtrainingnoi.html)
 - [Clopath detailed model with NOI and vestibular-dependent decay](http://xdurana.github.io/vor/simulations/parametric/html/longtrainingclopathnoi.html)
+
+### Savings experiment
+
+This experiment does a VOR cancellation following two VOR normal adaptation long trials. Gain 1 is defined as the amplitude at the end of the second session.
+
+1. 50-cycles of training with light and target gain 1
+2. 50-cycles of light deprivation
+3. 50-cycles of training with light and target gain 1
+4. 1440-cycles of light deprivation
+5. 1440-cycles of training with light and target gain 0
+6. 1440-cycles of light deprivation
+7. 1440-cycles of training with light and target gain 1
+8. 1440-cycles of light deprivation
+9. 1440-cycles of training with light and target gain 1
+10. 1440-cycles of light deprivation
+
+- [Clopath detailed model](http://xdurana.github.io/vor/simulations/parametric/html/savingsclopath.html)
+- [Clopath detailed model with NOI](http://xdurana.github.io/vor/simulations/parametric/html/savingsnoi.html)
