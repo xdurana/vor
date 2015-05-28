@@ -15,6 +15,8 @@ Unfortunately, even though the presence of PN terminals on NO neurons is unquest
 
 In addition to being modulated by the inhibitory PN synapses, the firing of NO neurons is also likely to be modulated by the excitatory and at least partly reciprocally arranged olivary climbing fibre collaterals.
 
+![DCN and IO](figures/dcn-io.jpg)
+
 This pathway may form a negative feedback loop for synchronous IO activity. However, since nothing is known of the physio-logy of the olivo-nuclear pathway – synaptic responses to IO stimulation in NO neurons have not even been shown – this proposal remains speculative. The CF collateral feedback may have a stronger role in cerebellar computations related to vestibulo-ocular functions.
 
 The extent of possible complementary MF collateral innervation ofNO neurons is presently unclear. The terminal targets ofMFs in both cerebellar cortex and CN seem to be roughly linked to the topographically conserved corticonuclear projection (Shinoda et al. 2000), and thus convergence of cortical and nuclear MF pathways on single NO neurons would be anatomically possible. Currently the existence of MF collateral synapses on NO neurons remains to be demonstrated.
