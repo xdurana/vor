@@ -10,7 +10,7 @@ classdef VOR < handle
         MF;                         % Mossy Fibers signal
         CF;                         % Climbing Fibers signal
         PC;                         % Purkinje Cell signal
-        
+
         GCPCWeightInitial;          % Initial Weight from Granule Cells to Purkinje
         GCPCWeight;                 % Weight from Granule Cells to Purkinje
         MFVNWeight;                 % Weight from Mossy Fibers to Medial Vestibular Nuclei 
@@ -20,7 +20,8 @@ classdef VOR < handle
         CFVestibular;               % Climbing Fiber to Vestibular Nuclei
         PCNOIK;                     % NOI
         Delay;                      % Delay of Climbing Fibers signal
-
+        NOIBaseline;                % NOI from PC baseline
+        
         GCNumber = 100;             % Number of Granule Cells (GC)
         DMean = 2.25;               % Medial Vestibular Nuclei cells signal mean value
         MFMean = 0.25;              % Mossy Fibers signal mean value
@@ -42,10 +43,11 @@ classdef VOR < handle
 
     methods
 
-        function obj = VOR(Delay, PCNOIK, CFVestibular)
-           obj.Delay = Delay;
-           obj.PCNOIK = PCNOIK;
-           obj.CFVestibular = CFVestibular;
+        function obj = VOR(Delay, PCNOIK, CFVestibular, NOIBaseline)
+            obj.Delay = Delay;
+            obj.PCNOIK = PCNOIK;
+            obj.CFVestibular = CFVestibular;
+            obj.NOIBaseline = NOIBaseline;
         end
         
         function obj = Initialize(obj)
@@ -82,6 +84,13 @@ classdef VOR < handle
                 obj.CF = trial.Light*obj.DError;
                 obj.CF = obj.CF + (obj.MF - obj.MFMean)*obj.CFVestibular;
                 obj.CF = obj.CF + obj.PCNOIK*obj.PC;
+                
+                if obj.NOIBaseline
+                    obj.CF = obj.CF + obj.PCNOIK*(obj.PC - obj.PCMean);
+                else
+                    obj.CF = obj.CF + obj.PCNOIK*obj.PC;
+                end
+                
                 obj.CF = circshift(obj.CF,[0,obj.Delay]);
 
                 % Plasticity of GC to PC synapses

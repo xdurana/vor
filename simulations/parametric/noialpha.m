@@ -5,7 +5,7 @@
 
 clear all;
 
-vor = VOR(100, 0.005, 0);
+vor = VOR(100, 0.005, 0, false);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 
@@ -18,7 +18,7 @@ session.report();
 
 clear all;
 
-vor = VOR(100, 0.01, 0);
+vor = VOR(100, 0.01, 0, false);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 
@@ -31,7 +31,7 @@ session.report();
 
 clear all;
 
-vor = VOR(100, 0.025, 0);
+vor = VOR(100, 0.025, 0, false);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 
@@ -44,7 +44,7 @@ session.report();
 
 clear all;
 
-vor = VOR(100, 0.05, 0);
+vor = VOR(100, 0.05, 0, false);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 
@@ -57,7 +57,7 @@ session.report();
 
 clear all;
 
-vor = VOR(100, 0.1, 0);
+vor = VOR(100, 0.1, 0, false);
 vor.Period = floor(1000/0.6);
 vor.Initialize();
 
