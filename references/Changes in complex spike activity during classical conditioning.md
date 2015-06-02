@@ -1,0 +1,5 @@
+Rasmussen, A., Jirenhed, D.-A., Wetmore, D. Z. & Hesslow, G. Changes in complex spike activity during classical conditioning. Front. Neural Circuits 8, 1–13 (2014).
+
+Consistent with earlier reports, the evidence presented in this paper shows that the IO is suppressed following the emission of a CR. In addition, the evidence shows that this suppression is a consequence of training. This observation, together with the correspondence between the time course of the Purkinje cell CR and the complex spike suppression, supports the view that the suppression of the IO is caused by Purkinje cell CRs disinhibiting the CN and activating the N-O pathway.
+
+Keywords: inferior olive, nucleo-olivary pathway, complex spikes, purkinje cells, in vivo electrophysiology, eyeblink conditioning, oscillations, interstimulus interval

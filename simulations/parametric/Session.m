@@ -34,12 +34,14 @@ classdef Session < handle
         function MinimalExperiment(session)            
             day = 50;
             nit = 100;
-            session.InitialTrials = 2;
-            session.add(Trial(1, 1, day, session.VOR.Period));
-            session.add(Trial(0, 1, nit, session.VOR.Period));
-            session.add(Trial(1, 0, day, session.VOR.Period));
-            session.add(Trial(0, 1, nit, session.VOR.Period));
-        end        
+            session.InitialTrials = 1;            
+            for i=1:5
+                session.add(Trial(1, 1, 5*day, session.VOR.Period));
+                session.add(Trial(0, 1, 5*nit, session.VOR.Period));
+                session.add(Trial(1, 0, 5*day, session.VOR.Period));
+                session.add(Trial(0, 1, 5*nit, session.VOR.Period));
+            end
+        end
         
         function WulffExperiment(session)            
             day = 50;
@@ -148,6 +150,12 @@ classdef Session < handle
             hold off
         end
         
+        function polarplotpertrials(session)
+            for i = session.InitialTrials+1:length(session.Trials)
+                session.Trials(i).polar(i-session.InitialTrials)
+            end
+        end
+        
         function gainplot(session)
             figure
             hold on
@@ -155,10 +163,13 @@ classdef Session < handle
             for i = session.InitialTrials+1:length(session.Trials)
                 if (session.Trials(i).Light)
                     plot(start:start+length(session.Trials(i).Gain)-1, session.Trials(i).Gain, 'g', 'linewidth', 2)
+                    plot(start:start+length(session.Trials(i).DPCGain)-1, session.Trials(i).DPCGain, 'y', 'linewidth', 2)
+                    plot(start:start+length(session.Trials(i).DVNGain)-1, session.Trials(i).DVNGain, 'b', 'linewidth', 2)
                     start = start + length(session.Trials(i).Gain);
                     plot(start-1+(0:0.1:1.4)*0,0:0.1:1.4, '--k')
                 end
             end
+            legend('total', 'cortical', 'vestibular');
             ylabel('gain','fontsize',20);
             xlabel('time [min]','fontsize',20);
             title('Gain evolution during the training sessions')
@@ -239,6 +250,7 @@ classdef Session < handle
             session.wpc();
             session.wvn();
             session.polarplot();
+            session.polarplotpertrials();
             session.gainplot();
             %session.phaseplot();
             session.gainplotdecomposed();

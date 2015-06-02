@@ -34,7 +34,7 @@ classdef VOR < handle
         INPCWeight = 1;             % Fixed Interneurons Weight
                 
         CFNoise = 3.5;              % Noise in Climbing Fibers
-        CFNoiseAlpha = 7.4697e-05;  % Alpha of the noise in Climbing Fibers
+        GCPCForgettingAlpha = 7.4697e-05;  % learning rate for GCPCWeight forgetting term
 
         Period = floor(1000/0.6);   % Time of a cycles [ms]
 
@@ -71,8 +71,9 @@ classdef VOR < handle
                 obj.PC = obj.GCPCWeight' * obj.GC - obj.INPCWeight' * obj.IN;
 
                 % Medial Vestibular Nuclei cells
-                obj.DPC = obj.DMean - obj.PC - obj.MF;
-                obj.DVN = obj.MFVNWeight*2*(obj.MF-obj.MFMean);
+                obj.DPC = - obj.PC;
+                
+                obj.DVN = obj.DMean - obj.MF + obj.MFVNWeight*2*(obj.MF-obj.MFMean);
                 
                 obj.D = obj.DMean - obj.PC - obj.MF + obj.MFVNWeight*2*(obj.MF-obj.MFMean);
                 
@@ -91,7 +92,7 @@ classdef VOR < handle
                 obj.GCPCWeight = (obj.GCPCWeight - aux).*((obj.GCPCWeight - aux) < 0) + aux;
 
                 % Update decay on PF-PC synapses
-                obj.GCPCWeight = obj.GCPCWeight + obj.CFNoiseAlpha * (obj.GCPCWeightInitial - obj.GCPCWeight);
+                obj.GCPCWeight = obj.GCPCWeight + obj.GCPCForgettingAlpha * (obj.GCPCWeightInitial - obj.GCPCWeight);
 
                 % Plasticity of MF to MVM synapses
                 obj.MFVNWeight = obj.MFVNWeight + obj.MFVNAlpha * sum((-obj.MF + obj.MFMean).*(obj.PC - obj.PCMean));
@@ -101,5 +102,15 @@ classdef VOR < handle
                 trial.Record(obj);
             end
         end
+        
+        function plotcontribution(vor)                        
+            figure;
+            hold on;
+            plot(vor.D, 'g');
+            plot(vor.DMean - vor.PC - vor.MF, 'r');
+            plot(vor.MFVNWeight*2*(vor.MF-vor.MFMean), 'b');
+            hold off;
+        end
+        
     end
 end

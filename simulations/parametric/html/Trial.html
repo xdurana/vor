@@ -1,0 +1,268 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Trial</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-02"><meta name="DC.source" content="Trial.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">classdef</span> Trial &lt; handle
+    <span class="keyword">properties</span>
+        Light
+        TargetGain
+        Duration
+        Period
+
+        GCPCWeight
+        MFVNWeight
+        DError
+        CF
+        Gain
+        Phase
+        DPCGain
+        DPCPhase
+        DVNGain
+        DVNPhase
+    <span class="keyword">end</span>
+    <span class="keyword">methods</span>
+
+        <span class="keyword">function</span> obj = Trial(light, targetgain, duration, period)
+           obj.Light = light;
+           obj.TargetGain = targetgain;
+           obj.Duration = duration;
+           obj.Period = period;
+           obj.GCPCWeight = [];
+        <span class="keyword">end</span>
+
+        <span class="keyword">function</span> r = Dt(obj)
+            r = obj.TargetGain*0.25*cos((1+obj.Period*3/4:obj.Period+obj.Period*3/4)*2*pi/obj.Period)+1;
+        <span class="keyword">end</span>
+
+        <span class="keyword">function</span> [gain, phase, g1, g2] = decomposeVNPC(obj, signal, vn, pc)
+            [gain, position] = max(signal);
+            gain = gain - mean(signal);
+            phase = obj.getphase(position);
+            g1 = vn(position) - mean(vn);
+            g2 = pc(position) - mean(pc);
+        <span class="keyword">end</span>
+
+        <span class="keyword">function</span> [gain, phase] = decompose(obj, signal)
+            [gain, position] = max(signal);
+            gain = gain - mean(signal);
+            phase = obj.getphase(position);
+        <span class="keyword">end</span>
+
+        <span class="keyword">function</span> phase = getphase(obj, position)
+            phase = (position/obj.Period)*360;
+            phase = mod(360-phase-269, 360);
+            phase = mod(phase + 10, 360) - 10;
+        <span class="keyword">end</span>
+
+        <span class="keyword">function</span> polar(obj)
+            figure;
+            set(polar(obj.Phase*2*pi/360, obj.Gain), <span class="string">'color'</span>, <span class="string">'g'</span>, <span class="string">'linewidth'</span>, 2, <span class="string">'DisplayName'</span>, <span class="string">'Motor'</span>)
+            hold <span class="string">on</span>
+            set(polar(obj.DVNPhase*2*pi/360, obj.DVNGain), <span class="string">'color'</span>, <span class="string">'b'</span>, <span class="string">'linewidth'</span>, 2, <span class="string">'DisplayName'</span>, <span class="string">'Nuclear'</span>)
+            hold <span class="string">on</span>
+            set(polar(obj.DPCPhase*2*pi/360, obj.DPCGain), <span class="string">'color'</span>, <span class="string">'r'</span>, <span class="string">'linewidth'</span>, 2, <span class="string">'DisplayName'</span>, <span class="string">'Cortical'</span>)
+            hold <span class="string">on</span>
+            legend(<span class="string">'-DynamicLegend'</span>);
+            title(<span class="string">'Training sessions'</span>)
+            hold <span class="string">off</span>
+        <span class="keyword">end</span>
+
+        <span class="keyword">function</span> obj = Record(obj, vor)
+            obj.GCPCWeight = [obj.GCPCWeight, vor.GCPCWeight];
+            obj.MFVNWeight = [obj.MFVNWeight, vor.MFVNWeight];
+
+            obj.DError = [obj.DError, norm(vor.DError)];
+            obj.CF = [obj.CF, norm(vor.CF)];
+
+            <span class="comment">%[gain, phase, g1, g2] = obj.decomposeVNPC(vor.D, vor.DVN, vor.DPC);</span>
+
+            [gain, phase] = obj.decompose(vor.D);
+            obj.Gain = [obj.Gain, gain];
+            obj.Phase = [obj.Phase, phase];
+
+            [gain, phase] = obj.decompose(vor.DVN);
+            obj.DVNGain = [obj.DVNGain, gain];
+            obj.DVNPhase = [obj.DVNPhase, phase];
+
+            [gain, phase] = obj.decompose(vor.DPC);
+            obj.DPCGain = [obj.DPCGain, gain];
+            obj.DPCPhase = [obj.DPCPhase, phase];
+        <span class="keyword">end</span>
+
+        <span class="keyword">function</span> plotreflex(obj, vor)
+            figure
+            plot(obj.Dt(), <span class="string">'r'</span>)
+            hold <span class="string">on</span>
+            plot(vor.D, <span class="string">'b'</span>)
+            hold <span class="string">off</span>
+        <span class="keyword">end</span>
+
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><pre class="codeoutput error">Error using Trial (line 22)
+Not enough input arguments.
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+classdef Trial < handle
+    properties
+        Light
+        TargetGain
+        Duration
+        Period
+        
+        GCPCWeight
+        MFVNWeight
+        DError
+        CF
+        Gain
+        Phase
+        DPCGain
+        DPCPhase
+        DVNGain
+        DVNPhase
+    end
+    methods
+
+        function obj = Trial(light, targetgain, duration, period)
+           obj.Light = light;
+           obj.TargetGain = targetgain;
+           obj.Duration = duration;
+           obj.Period = period;
+           obj.GCPCWeight = [];
+        end
+
+        function r = Dt(obj)
+            r = obj.TargetGain*0.25*cos((1+obj.Period*3/4:obj.Period+obj.Period*3/4)*2*pi/obj.Period)+1;
+        end
+
+        function [gain, phase, g1, g2] = decomposeVNPC(obj, signal, vn, pc)
+            [gain, position] = max(signal);
+            gain = gain - mean(signal);
+            phase = obj.getphase(position);
+            g1 = vn(position) - mean(vn);
+            g2 = pc(position) - mean(pc);
+        end
+
+        function [gain, phase] = decompose(obj, signal)
+            [gain, position] = max(signal);
+            gain = gain - mean(signal);
+            phase = obj.getphase(position);
+        end
+
+        function phase = getphase(obj, position)
+            phase = (position/obj.Period)*360;
+            phase = mod(360-phase-269, 360);
+            phase = mod(phase + 10, 360) - 10;
+        end
+        
+        function polar(obj)
+            figure;
+            set(polar(obj.Phase*2*pi/360, obj.Gain), 'color', 'g', 'linewidth', 2, 'DisplayName', 'Motor')
+            hold on
+            set(polar(obj.DVNPhase*2*pi/360, obj.DVNGain), 'color', 'b', 'linewidth', 2, 'DisplayName', 'Nuclear')
+            hold on
+            set(polar(obj.DPCPhase*2*pi/360, obj.DPCGain), 'color', 'r', 'linewidth', 2, 'DisplayName', 'Cortical')
+            hold on
+            legend('-DynamicLegend');
+            title('Training sessions')
+            hold off
+        end
+
+        function obj = Record(obj, vor)
+            obj.GCPCWeight = [obj.GCPCWeight, vor.GCPCWeight];
+            obj.MFVNWeight = [obj.MFVNWeight, vor.MFVNWeight];  
+            
+            obj.DError = [obj.DError, norm(vor.DError)];
+            obj.CF = [obj.CF, norm(vor.CF)];
+                
+            %[gain, phase, g1, g2] = obj.decomposeVNPC(vor.D, vor.DVN, vor.DPC);
+
+            [gain, phase] = obj.decompose(vor.D);
+            obj.Gain = [obj.Gain, gain];
+            obj.Phase = [obj.Phase, phase];
+            
+            [gain, phase] = obj.decompose(vor.DVN);
+            obj.DVNGain = [obj.DVNGain, gain];
+            obj.DVNPhase = [obj.DVNPhase, phase];
+                        
+            [gain, phase] = obj.decompose(vor.DPC);
+            obj.DPCGain = [obj.DPCGain, gain];
+            obj.DPCPhase = [obj.DPCPhase, phase];
+        end
+        
+        function plotreflex(obj, vor)
+            figure
+            plot(obj.Dt(), 'r')
+            hold on
+            plot(vor.D, 'b')
+            hold off
+        end
+        
+    end
+end
+##### SOURCE END #####
+--></body></html>
