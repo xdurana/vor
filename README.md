@@ -21,5 +21,7 @@ This is a phase-reversal VOR adaptation experiment. It consists of 9 sessions: 5
 9. 50 minutes training session with light and target gain -1
 
 - [Clopath detailed model](http://xdurana.github.io/vor/simulations/parametric/html/clopath.html)
-- [Clopath detailed model with NOI and without vestibular decay (H=0) and with alpha_d=0](http://xdurana.github.io/vor/simulations/parametric/html/noi.html)
-- [Clopath detailed model with NOI and without vestibular decay (H=0) and with alpha_d>0](http://xdurana.github.io/vor/simulations/parametric/html/noialpha.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d>0](http://xdurana.github.io/vor/simulations/parametric/html/noialpha.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d=0](http://xdurana.github.io/vor/simulations/parametric/html/noi.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d>0 and with k*(PC-PC_ini)](http://xdurana.github.io/vor/simulations/parametric/html/noidifferencealpha.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d=0 and with k*(PC-PC_ini)](http://xdurana.github.io/vor/simulations/parametric/html/noidifference.html)
