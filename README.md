@@ -10,16 +10,16 @@ Reproducing results of Clopath et al. model of the vestibulo-ocular reflex
 
 This is a phase-reversal VOR adaptation experiment. It consists of 9 sessions: 5 training sessions and 4 light deprivation sessions. Gain 1 is defined as the amplitude at the end of the second session.
 
-1. 50-cycles training session with light and target gain 1
-2. 2 sessions of 1440-cycles of light deprivation
-3. 50-cycles training session with light and target gain 0
-4. 1440-cycles of light deprivation
-5. 50-cycles training session with light and target gain -0.5
-6. 1440-cycles of light deprivation
-7. 50-cycles training session with light and target gain -1
-8. 1440-cycles of light deprivation
-9. 50-cycles training session with light and target gain -1
+1. 50 minutes training session with light and target gain 1
+2. 2 sessions of 1440 minutes of light deprivation
+3. 50 minutes training session with light and target gain 0
+4. 1440 minutes of light deprivation
+5. 50 minutes training session with light and target gain -0.5
+6. 1440 minutes of light deprivation
+7. 50 minutes training session with light and target gain -1
+8. 1440 minutes of light deprivation
+9. 50 minutes training session with light and target gain -1
 
 - [Clopath detailed model](http://xdurana.github.io/vor/simulations/parametric/html/clopath.html)
-- [Clopath detailed model with NOI and without vestibular decay (H=0) and with alpha_d+0](http://xdurana.github.io/vor/simulations/parametric/html/noi.html)
+- [Clopath detailed model with NOI and without vestibular decay (H=0) and with alpha_d=0](http://xdurana.github.io/vor/simulations/parametric/html/noi.html)
 - [Clopath detailed model with NOI and without vestibular decay (H=0) and with alpha_d>0](http://xdurana.github.io/vor/simulations/parametric/html/noialpha.html)
