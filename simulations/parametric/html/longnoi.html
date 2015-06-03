@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-05-18"><meta name="DC.source" content="longnoi.m"><style type="text/css">
+      --><title>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-03"><meta name="DC.source" content="longnoi.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,63 +66,77 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Detailed model with 100ms delay and NOI with k=0.001</a></li><li><a href="#2">Detailed model with 100ms delay and NOI with k=0.05</a></li><li><a href="#3">Detailed model with 100ms delay and NOI with k=0.01</a></li></ul></div><h2>Detailed model with 100ms delay and NOI with k=0.001<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+  </style></head><body><div class="content"><h1>Reproducing results of Clopath et al. model of the vestibulo-ocular reflex</h1><!--introduction--><p>All the simulations are without vestibular decay (H=0) and with alpha_d=0</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Detailed model with 100ms delay and NOI with k=0.005</a></li><li><a href="#2">Detailed model with 100ms delay and NOI with k=0.01</a></li><li><a href="#3">Detailed model with 100ms delay and NOI with k=0.025</a></li><li><a href="#4">Detailed model with 100ms delay and NOI with k=0.05</a></li><li><a href="#5">Detailed model with 100ms delay and NOI with k=0.1</a></li></ul></div><h2>Detailed model with 100ms delay and NOI with k=0.005<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
 
-vor = VOR(100, 0.001, 0);
+vor = VOR(100, 0.005, 0, false);
 vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
 vor.Initialize();
 
 session = Session(vor);
-session.LongDarkExperiment();
+session.WulffExperimentLong();
 session.simulate();
 session.report();
-</pre><img vspace="5" hspace="5" src="longnoi_01.png" alt=""> <img vspace="5" hspace="5" src="longnoi_02.png" alt=""> <img vspace="5" hspace="5" src="longnoi_03.png" alt=""> <img vspace="5" hspace="5" src="longnoi_04.png" alt=""> <img vspace="5" hspace="5" src="longnoi_05.png" alt=""> <h2>Detailed model with 100ms delay and NOI with k=0.05<a name="2"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+</pre><img vspace="5" hspace="5" src="longnoi_01.png" alt=""> <img vspace="5" hspace="5" src="longnoi_02.png" alt=""> <img vspace="5" hspace="5" src="longnoi_03.png" alt=""> <img vspace="5" hspace="5" src="longnoi_04.png" alt=""> <img vspace="5" hspace="5" src="longnoi_05.png" alt=""> <img vspace="5" hspace="5" src="longnoi_06.png" alt=""> <img vspace="5" hspace="5" src="longnoi_07.png" alt=""> <img vspace="5" hspace="5" src="longnoi_08.png" alt=""> <img vspace="5" hspace="5" src="longnoi_09.png" alt=""> <img vspace="5" hspace="5" src="longnoi_10.png" alt=""> <img vspace="5" hspace="5" src="longnoi_11.png" alt=""> <img vspace="5" hspace="5" src="longnoi_12.png" alt=""> <img vspace="5" hspace="5" src="longnoi_13.png" alt=""> <h2>Detailed model with 100ms delay and NOI with k=0.01<a name="2"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
 
-vor = VOR(100, 0.05, 0);
+vor = VOR(100, 0.01, 0, false);
 vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
 vor.Initialize();
 
 session = Session(vor);
-session.LongDarkExperiment();
+session.WulffExperimentLong();
 session.simulate();
 session.report();
-</pre><img vspace="5" hspace="5" src="longnoi_06.png" alt=""> <img vspace="5" hspace="5" src="longnoi_07.png" alt=""> <img vspace="5" hspace="5" src="longnoi_08.png" alt=""> <img vspace="5" hspace="5" src="longnoi_09.png" alt=""> <img vspace="5" hspace="5" src="longnoi_10.png" alt=""> <h2>Detailed model with 100ms delay and NOI with k=0.01<a name="3"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+</pre><img vspace="5" hspace="5" src="longnoi_14.png" alt=""> <img vspace="5" hspace="5" src="longnoi_15.png" alt=""> <img vspace="5" hspace="5" src="longnoi_16.png" alt=""> <img vspace="5" hspace="5" src="longnoi_17.png" alt=""> <img vspace="5" hspace="5" src="longnoi_18.png" alt=""> <img vspace="5" hspace="5" src="longnoi_19.png" alt=""> <img vspace="5" hspace="5" src="longnoi_20.png" alt=""> <img vspace="5" hspace="5" src="longnoi_21.png" alt=""> <img vspace="5" hspace="5" src="longnoi_22.png" alt=""> <img vspace="5" hspace="5" src="longnoi_23.png" alt=""> <img vspace="5" hspace="5" src="longnoi_24.png" alt=""> <img vspace="5" hspace="5" src="longnoi_25.png" alt=""> <img vspace="5" hspace="5" src="longnoi_26.png" alt=""> <img vspace="5" hspace="5" src="longnoi_27.png" alt=""> <img vspace="5" hspace="5" src="longnoi_28.png" alt=""> <h2>Detailed model with 100ms delay and NOI with k=0.025<a name="3"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
 
-vor = VOR(100, 0.01, 0);
+vor = VOR(100, 0.025, 0, false);
 vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
 vor.Initialize();
 
 session = Session(vor);
-session.LongDarkExperiment();
+session.WulffExperimentLong();
 session.simulate();
 session.report();
-</pre><img vspace="5" hspace="5" src="longnoi_11.png" alt=""> <img vspace="5" hspace="5" src="longnoi_12.png" alt=""> <img vspace="5" hspace="5" src="longnoi_13.png" alt=""> <img vspace="5" hspace="5" src="longnoi_14.png" alt=""> <img vspace="5" hspace="5" src="longnoi_15.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+</pre><img vspace="5" hspace="5" src="longnoi_29.png" alt=""> <img vspace="5" hspace="5" src="longnoi_30.png" alt=""> <img vspace="5" hspace="5" src="longnoi_31.png" alt=""> <img vspace="5" hspace="5" src="longnoi_32.png" alt=""> <img vspace="5" hspace="5" src="longnoi_33.png" alt=""> <img vspace="5" hspace="5" src="longnoi_34.png" alt=""> <img vspace="5" hspace="5" src="longnoi_35.png" alt=""> <img vspace="5" hspace="5" src="longnoi_36.png" alt=""> <img vspace="5" hspace="5" src="longnoi_37.png" alt=""> <img vspace="5" hspace="5" src="longnoi_38.png" alt=""> <img vspace="5" hspace="5" src="longnoi_39.png" alt=""> <img vspace="5" hspace="5" src="longnoi_40.png" alt=""> <img vspace="5" hspace="5" src="longnoi_41.png" alt=""> <img vspace="5" hspace="5" src="longnoi_42.png" alt=""> <h2>Detailed model with 100ms delay and NOI with k=0.05<a name="4"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+
+vor = VOR(100, 0.05, 0, false);
+vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
+vor.Initialize();
+
+session = Session(vor);
+session.WulffExperimentLong();
+session.simulate();
+session.report();
+</pre><img vspace="5" hspace="5" src="longnoi_43.png" alt=""> <img vspace="5" hspace="5" src="longnoi_44.png" alt=""> <img vspace="5" hspace="5" src="longnoi_45.png" alt=""> <img vspace="5" hspace="5" src="longnoi_46.png" alt=""> <img vspace="5" hspace="5" src="longnoi_47.png" alt=""> <img vspace="5" hspace="5" src="longnoi_48.png" alt=""> <img vspace="5" hspace="5" src="longnoi_49.png" alt=""> <img vspace="5" hspace="5" src="longnoi_50.png" alt=""> <img vspace="5" hspace="5" src="longnoi_51.png" alt=""> <img vspace="5" hspace="5" src="longnoi_52.png" alt=""> <img vspace="5" hspace="5" src="longnoi_53.png" alt=""> <img vspace="5" hspace="5" src="longnoi_54.png" alt=""> <img vspace="5" hspace="5" src="longnoi_55.png" alt=""> <h2>Detailed model with 100ms delay and NOI with k=0.1<a name="5"></a></h2><pre class="codeinput">clear <span class="string">all</span>;
+
+vor = VOR(100, 0.1, 0, false);
+vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
+vor.Initialize();
+
+session = Session(vor);
+session.WulffExperimentLong();
+session.simulate();
+session.report();
+</pre><img vspace="5" hspace="5" src="longnoi_56.png" alt=""> <img vspace="5" hspace="5" src="longnoi_57.png" alt=""> <img vspace="5" hspace="5" src="longnoi_58.png" alt=""> <img vspace="5" hspace="5" src="longnoi_59.png" alt=""> <img vspace="5" hspace="5" src="longnoi_60.png" alt=""> <img vspace="5" hspace="5" src="longnoi_61.png" alt=""> <img vspace="5" hspace="5" src="longnoi_62.png" alt=""> <img vspace="5" hspace="5" src="longnoi_63.png" alt=""> <img vspace="5" hspace="5" src="longnoi_64.png" alt=""> <img vspace="5" hspace="5" src="longnoi_65.png" alt=""> <img vspace="5" hspace="5" src="longnoi_66.png" alt=""> <img vspace="5" hspace="5" src="longnoi_67.png" alt=""> <img vspace="5" hspace="5" src="longnoi_68.png" alt=""> <img vspace="5" hspace="5" src="longnoi_69.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Reproducing results of Clopath et al. model of the vestibulo-ocular reflex
+% All the simulations are without vestibular decay (H=0) and with alpha_d=0
 
-%% Detailed model with 100ms delay and NOI with k=0.001
-
-clear all;
-
-vor = VOR(100, 0.001, 0);
-vor.Period = floor(1000/0.6);
-vor.Initialize();
-
-session = Session(vor);
-session.LongDarkExperiment();
-session.simulate();
-session.report();
-
-%% Detailed model with 100ms delay and NOI with k=0.05
+%% Detailed model with 100ms delay and NOI with k=0.005
 
 clear all;
 
-vor = VOR(100, 0.05, 0);
+vor = VOR(100, 0.005, 0, false);
 vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
 vor.Initialize();
 
 session = Session(vor);
-session.LongDarkExperiment();
+session.WulffExperimentLong();
 session.simulate();
 session.report();
 
@@ -130,12 +144,55 @@ session.report();
 
 clear all;
 
-vor = VOR(100, 0.01, 0);
+vor = VOR(100, 0.01, 0, false);
 vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
 vor.Initialize();
 
 session = Session(vor);
-session.LongDarkExperiment();
+session.WulffExperimentLong();
+session.simulate();
+session.report();
+
+%% Detailed model with 100ms delay and NOI with k=0.025
+
+clear all;
+
+vor = VOR(100, 0.025, 0, false);
+vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
+vor.Initialize();
+
+session = Session(vor);
+session.WulffExperimentLong();
+session.simulate();
+session.report();
+
+%% Detailed model with 100ms delay and NOI with k=0.05
+
+clear all;
+
+vor = VOR(100, 0.05, 0, false);
+vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
+vor.Initialize();
+
+session = Session(vor);
+session.WulffExperimentLong();
+session.simulate();
+session.report();
+
+%% Detailed model with 100ms delay and NOI with k=0.1
+
+clear all;
+
+vor = VOR(100, 0.1, 0, false);
+vor.Period = floor(1000/0.6);
+vor.GCPCForgettingAlpha = 0;
+vor.Initialize();
+
+session = Session(vor);
+session.WulffExperimentLong();
 session.simulate();
 session.report();
 ##### SOURCE END #####
