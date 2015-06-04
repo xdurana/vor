@@ -25,3 +25,12 @@ This is a phase-reversal VOR adaptation experiment. It consists of 9 sessions: 5
 - [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d=0](http://xdurana.github.io/vor/simulations/parametric/html/noi.html)
 - [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d>0 and with k*(PC-PC_ini)](http://xdurana.github.io/vor/simulations/parametric/html/noidifferencealpha.html)
 - [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d=0 and with k*(PC-PC_ini)](http://xdurana.github.io/vor/simulations/parametric/html/noidifference.html)
+
+And with long session of light deprivation:
+10. 7*1440 minutes of light deprivation
+
+- [Clopath detailed model](http://xdurana.github.io/vor/simulations/parametric/html/longclopath.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d>0](http://xdurana.github.io/vor/simulations/parametric/html/longnoialpha.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d=0](http://xdurana.github.io/vor/simulations/parametric/html/longnoi.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d>0 and with k*(PC-PC_ini)](http://xdurana.github.io/vor/simulations/parametric/html/longnoidifferencealpha.html)
+- [Clopath detailed model with NOI, without vestibular decay (H=0) and with alpha_d=0 and with k*(PC-PC_ini)](http://xdurana.github.io/vor/simulations/parametric/html/longnoidifference.html)
