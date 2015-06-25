@@ -1,0 +1,277 @@
+{
+  "title": "Final presentation",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Definition of the project",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "Objective",
+          "id": 5,
+          "attr": {
+            "position": [
+              226,
+              -111,
+              1
+            ],
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Understanding the role of the NOI on the adaptation of the VOR",
+              "id": 29
+            }
+          }
+        },
+        "2": {
+          "title": "Context",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "VOR",
+              "id": 28,
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "There's a pathway between the cerebellar cortex and the inferior olive (NOI)",
+              "id": 27,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "OCNO loop",
+                  "id": 46
+                }
+              }
+            },
+            "12": {
+              "title": "NOI is not present on computational models of the VOR",
+              "id": 25,
+              "attr": {
+                "style": {}
+              }
+            },
+            "13": {
+              "title": "NOI is present on eye-blink reflex computational models",
+              "id": 30,
+              "ideas": {
+                "1": {
+                  "title": "extinction",
+                  "id": 47
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "title": "Research question",
+      "id": 8,
+      "ideas": {
+        "1": {
+          "title": "What's the role of the NOI on the adaptation of the VOR?",
+          "id": 23,
+          "attr": {
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "12": {
+      "title": "Hypothesis",
+      "id": 13,
+      "attr": {
+        "position": [
+          110,
+          103,
+          1
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "NOI is a cost minimization mechanism compatible with computational VOR models",
+          "id": 22,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "NOI can explain extinction in this models",
+              "id": 24,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "13": {
+      "title": "Conclusion",
+      "id": 64
+    },
+    "-1": {
+      "title": "State of the Art",
+      "id": 7,
+      "ideas": {
+        "2": {
+          "title": "Nucleo-olivary inhibition in the eye-blink reflex",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "Acquired conditioned responses are extinguished once they\nbecome no longer necessary",
+              "id": 18
+            },
+            "2": {
+              "title": "Inactivation of the NOI prevents extinction",
+              "id": 19
+            },
+            "3": {
+              "title": "cost minimization requires\nthat the cerebellum controls the amplitude of its\nresponses",
+              "id": 20
+            },
+            "4": {
+              "title": "The NOI may have have this role: it can indirectly\ncontrol the cerebellar output amplitude by controlling\nthe amplitude of its teaching signal",
+              "id": 21
+            },
+            "5": {
+              "title": "Tradeoff",
+              "id": 31,
+              "attr": {
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "Muhammad Ali",
+              "id": 32
+            },
+            "7": {
+              "title": "Control theory",
+              "id": 33
+            }
+          }
+        },
+        "4": {
+          "title": "VOR circuit",
+          "id": 48,
+          "ideas": {
+            "1": {
+              "title": "Cortical plasticity",
+              "id": 65,
+              "ideas": {}
+            },
+            "2": {
+              "title": "Brainstem plasticity",
+              "id": 68
+            }
+          }
+        }
+      }
+    },
+    "-2": {
+      "title": "Methods",
+      "id": 39,
+      "ideas": {
+        "13": {
+          "title": "Clopath model",
+          "id": 34,
+          "ideas": {
+            "3": {
+              "title": "extinction",
+              "id": 51,
+              "ideas": {
+                "1": {
+                  "title": "Second extinction component",
+                  "id": 50,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Extinction is vestibular modulated",
+                  "id": 38,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "implementation",
+              "id": 52,
+              "ideas": {
+                "1": {
+                  "title": "simple model",
+                  "id": 56,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "detailed model",
+                  "id": 59,
+                  "ideas": {}
+                },
+                "3": {
+                  "title": "NOI",
+                  "id": 75
+                }
+              }
+            },
+            "5": {
+              "title": "reproducibility",
+              "id": 69,
+              "ideas": {
+                "1": {
+                  "title": "phase reversal protocol",
+                  "id": 70,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "long light deprivation protocol",
+                  "id": 72
+                }
+              }
+            },
+            "6": {
+              "title": "assumptions",
+              "id": 73
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    },
+    "-3": {
+      "title": "Results",
+      "id": 62,
+      "ideas": {
+        "1": {
+          "title": "extinction",
+          "id": 76,
+          "ideas": {
+            "1": {
+              "title": "explained",
+              "id": 77
+            },
+            "2": {
+              "title": "converges to initial state",
+              "id": 78
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": []
+}
