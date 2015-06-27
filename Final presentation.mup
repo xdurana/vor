@@ -195,14 +195,14 @@
                   "id": 51,
                   "ideas": {
                     "1": {
-                      "title": "Second extinction component",
+                      "title": "cortical weight decay",
                       "id": 50,
                       "attr": {
                         "style": {}
                       }
                     },
-                    "2": {
-                      "title": "Extinction is vestibular modulated",
+                    "0.5": {
+                      "title": "vestibular modulated",
                       "id": 38,
                       "attr": {
                         "style": {}
@@ -211,6 +211,20 @@
                   },
                   "attr": {
                     "style": {}
+                  }
+                },
+                "3": {
+                  "title": "cortical plasticity",
+                  "id": 106,
+                  "ideas": {
+                    "1": {
+                      "title": "clipped weights",
+                      "id": 107
+                    },
+                    "2": {
+                      "title": "slow decay to initial value",
+                      "id": 108
+                    }
                   }
                 }
               }
@@ -306,21 +320,24 @@
       "title": "Results",
       "id": 62,
       "ideas": {
-        "3": {
-          "title": "NOI",
-          "id": 93,
+        "6": {
+          "title": "extinction",
+          "id": 76,
           "ideas": {
-            "4": {
-              "title": "extinction",
-              "id": 76,
+            "14": {
+              "title": "NOI",
+              "id": 93,
               "ideas": {
-                "3": {
-                  "title": "exponential decay",
-                  "id": 95
-                },
-                "13": {
+                "1": {
                   "title": "converges to initial state",
                   "id": 78,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "exponential decay",
+                  "id": 95,
                   "attr": {
                     "style": {}
                   }
@@ -329,33 +346,49 @@
               "attr": {
                 "style": {}
               }
+            },
+            "15": {
+              "title": "Clopath",
+              "id": 94,
+              "ideas": {
+                "3": {
+                  "title": "linear decay",
+                  "id": 97,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "not converges",
+                  "id": 99,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "16": {
+              "title": "NOI and vestibular",
+              "id": 102
             }
           },
           "attr": {
             "style": {}
           }
         },
-        "4": {
-          "title": "Clopath",
-          "id": 94,
-          "ideas": {
-            "2": {
-              "title": "extinction",
-              "id": 96,
-              "ideas": {
-                "1": {
-                  "title": "linear decay",
-                  "id": 97
-                },
-                "2": {
-                  "title": "not converges",
-                  "id": 99
-                }
-              }
-            }
-          },
+        "16": {
+          "title": "cortex-nuclei balance",
+          "id": 100,
           "attr": {
-            "style": {}
+            "style": {},
+            "position": [
+              86.5,
+              71.75,
+              1
+            ]
           }
         }
       }
