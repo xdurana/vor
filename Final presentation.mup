@@ -98,16 +98,25 @@
         "style": {}
       },
       "ideas": {
-        "1": {
-          "title": "NOI is a cost minimization mechanism compatible with computational VOR models",
-          "id": 22,
-          "attr": {
-            "style": {}
-          },
+        "2": {
+          "title": "NOI",
+          "id": 111,
           "ideas": {
             "1": {
-              "title": "NOI can explain extinction in this models",
-              "id": 24,
+              "title": "cost-minimization mechanism",
+              "id": 112
+            },
+            "4": {
+              "title": "extinction",
+              "id": 113,
+              "attr": {
+                "style": {}
+              }
+            },
+            "14": {
+              "title": "VOR",
+              "id": 114,
+              "ideas": {},
               "attr": {
                 "style": {}
               }
@@ -116,11 +125,7 @@
         }
       }
     },
-    "13": {
-      "title": "Conclusion",
-      "id": 64
-    },
-    "-1": {
+    "23": {
       "title": "State of the Art",
       "id": 7,
       "ideas": {
@@ -165,17 +170,54 @@
           "title": "VOR circuit",
           "id": 48,
           "ideas": {
-            "1": {
-              "title": "Cortical plasticity",
-              "id": 65,
-              "ideas": {}
+            "3": {
+              "title": "plasticity",
+              "id": 116,
+              "ideas": {
+                "1": {
+                  "title": "brainstem",
+                  "id": 68,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "others",
+                  "id": 117
+                },
+                "0.5": {
+                  "title": "cortex",
+                  "id": 65,
+                  "ideas": {},
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
             },
-            "2": {
-              "title": "Brainstem plasticity",
-              "id": 68
+            "4": {
+              "title": "NOI",
+              "id": 118,
+              "ideas": {
+                "1": {
+                  "title": "PC",
+                  "id": 119
+                }
+              }
             }
           }
         }
+      },
+      "attr": {
+        "position": [
+          130.5,
+          367,
+          2
+        ],
+        "style": {}
       }
     },
     "-2": {
@@ -226,16 +268,17 @@
                       "id": 108
                     }
                   }
-                }
-              }
-            },
-            "7": {
-              "title": "predictions",
-              "id": 79,
-              "ideas": {
-                "1": {
-                  "title": "gain less than one",
-                  "id": 80
+                },
+                "4": {
+                  "title": "interneurons",
+                  "id": 109,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "white noise",
+                  "id": 110
                 }
               }
             },
@@ -307,7 +350,8 @@
             },
             "3": {
               "title": "NOI",
-              "id": 75
+              "id": 75,
+              "ideas": {}
             }
           },
           "attr": {
@@ -338,6 +382,13 @@
                 "2": {
                   "title": "exponential decay",
                   "id": 95,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "knoi",
+                  "id": 120,
                   "attr": {
                     "style": {}
                   }
@@ -379,6 +430,22 @@
             "style": {}
           }
         },
+        "11": {
+          "title": "gain",
+          "id": 123,
+          "ideas": {
+            "1": {
+              "title": "less than one",
+              "id": 80,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
         "16": {
           "title": "cortex-nuclei balance",
           "id": 100,
@@ -389,8 +456,71 @@
               71.75,
               1
             ]
+          },
+          "ideas": {
+            "1": {
+              "title": "nuclei ",
+              "id": 125,
+              "ideas": {
+                "1": {
+                  "title": "long-term",
+                  "id": 129
+                },
+                "0.5": {
+                  "title": "slow",
+                  "id": 130,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  161,
+                  -56,
+                  1
+                ],
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "cortical",
+              "id": 126,
+              "ideas": {
+                "1": {
+                  "title": "quick",
+                  "id": 127
+                },
+                "2": {
+                  "title": "short-term",
+                  "id": 128
+                }
+              }
+            }
+          }
+        },
+        "17": {
+          "title": "granule cells learning",
+          "id": 121,
+          "ideas": {
+            "1": {
+              "title": "PCA",
+              "id": 122
+            }
           }
         }
+      }
+    },
+    "-13": {
+      "title": "Conclusion",
+      "id": 64,
+      "attr": {
+        "position": [
+          66.5,
+          357,
+          3
+        ],
+        "style": {}
       }
     }
   },
