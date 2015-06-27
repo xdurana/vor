@@ -1,0 +1,576 @@
+{
+  "title": "Thesis",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Cover",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Title",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "Adding nucleo-olivary inhibition to a bottom-up computational model of the vestibulo-ocular reflex to control gaze stabilization",
+              "id": 6,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Author",
+          "id": 7,
+          "ideas": {
+            "1": {
+              "title": "Xavier Duran Albareda",
+              "id": 9,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Supervisor",
+          "id": 10,
+          "ideas": {
+            "1": {
+              "title": "Ivan Herreros & Paul Verschure",
+              "id": 11,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "title": "Host Research group",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "SPECS",
+              "id": 14,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              68.28885438199984,
+              108.89442719099992,
+              1
+            ],
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "3": {
+      "title": "Methods",
+      "id": 20,
+      "ideas": {
+        "1": {
+          "title": "Research question",
+          "id": 21,
+          "ideas": {
+            "1": {
+              "title": "What's the role of the nucleo-olivary inhibition in the vestibulo-ocular reflex?",
+              "id": 37,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "Hypotheses",
+          "id": 22,
+          "ideas": {
+            "1": {
+              "title": "Adding nucleo-olivary inhibition on a detailed bottom-up state of the art vestibulo-ocular reflex computational model would offer a more parsimonious explanation of the experimental behavior of the reflex",
+              "id": 38,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "General methodology applied",
+          "id": 23,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Simulations",
+              "id": 58,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            },
+            "2": {
+              "title": "Compare results with experimental behavior",
+              "id": 59,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            },
+            "3": {
+              "title": "Generate predictions",
+              "id": 61,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            },
+            "0.5": {
+              "title": "Define and implement computational model of the VOR",
+              "id": 43,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              },
+              "ideas": {}
+            }
+          }
+        },
+        "4": {
+          "title": "Design & Development criteria and strategies of Artifact",
+          "id": 24,
+          "ideas": {
+            "1": {
+              "title": "Clopath's model",
+              "id": 54,
+              "attr": {
+                "style": {
+                  "background": "transparent"
+                }
+              },
+              "ideas": {
+                "1": {
+                  "title": "State of the art",
+                  "id": 67,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Bottom-up",
+                  "id": 66,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                },
+                "12": {
+                  "title": "Assumptions",
+                  "id": 65,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "CF modulated by vestibular input",
+                      "id": 70,
+                      "attr": {
+                        "style": {
+                          "background": "#F5F5DC"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Weights clipped on the PF-PC",
+                      "id": 71,
+                      "attr": {
+                        "style": {
+                          "background": "#F5F5DC"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Interneurons",
+                      "id": 74,
+                      "attr": {
+                        "style": {
+                          "background": "#F5F5DC"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "White noise",
+                      "id": 88,
+                      "attr": {
+                        "style": {
+                          "background": "#F5F5DC"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "Clopath + NOI model",
+              "id": 77,
+              "ideas": {}
+            },
+            "3": {
+              "title": "Predictions",
+              "id": 76,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "Gain less than one",
+                  "id": 87,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Experimental design and set-up",
+          "id": 25,
+          "ideas": {
+            "0.75": {
+              "title": "Parameter estimation",
+              "id": 89,
+              "attr": {
+                "style": {},
+                "position": [
+                  181,
+                  97.75,
+                  1
+                ]
+              },
+              "ideas": {
+                "1": {
+                  "title": "What if NOI is not only PC but also vestibular modulated?",
+                  "id": 81,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                }
+              }
+            },
+            "0.375": {
+              "title": "Tasks",
+              "id": 90,
+              "ideas": {
+                "1": {
+                  "title": "Wolff adaptation task",
+                  "id": 42,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  },
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "Long light deprivation decay",
+                  "id": 91,
+                  "ideas": {
+                    "1": {
+                      "title": "Does Clopath model show linear decay after one week light deprivation? ",
+                      "id": 82,
+                      "attr": {
+                        "style": {
+                          "background": "#F5F5DC"
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Continuous training task",
+                  "id": 92,
+                  "ideas": {
+                    "1": {
+                      "title": "What maintaining the training does to the cortex-nuclei memory balance?",
+                      "id": 83,
+                      "attr": {
+                        "style": {
+                          "background": "#F5F5DC"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "6": {
+          "title": "Procedures used to obtain data and results",
+          "id": 27,
+          "ideas": {
+            "1": {
+              "title": "Matlab modelling and simulations",
+              "id": 57,
+              "attr": {
+                "style": {
+                  "background": "transparent"
+                }
+              },
+              "ideas": {
+                "1": {
+                  "title": "Describe learning on GC by PCA",
+                  "id": 73,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Evolution of gain, cortical and brainstem",
+                  "id": 84,
+                  "ideas": {},
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "Model comparison",
+              "id": 93,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "position": [
+          72.28885438199984,
+          158,
+          1
+        ],
+        "style": {}
+      }
+    },
+    "-1": {
+      "title": "Abstract",
+      "id": 15
+    },
+    "-2": {
+      "title": "Introduction",
+      "id": 17,
+      "ideas": {
+        "1": {
+          "title": "Problem statement",
+          "id": 18,
+          "ideas": {
+            "1": {
+              "title": "Computational models of the vestibulo-ocular reflex don't take into account the role of the nucleo-olivary inhibition",
+              "id": 39,
+              "attr": {
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "State of the art",
+          "id": 19,
+          "ideas": {
+            "1": {
+              "title": "Nucleo-olivary inhibition",
+              "id": 40,
+              "attr": {
+                "position": [
+                  121.5,
+                  -60.375,
+                  1
+                ],
+                "style": {
+                  "background": "#F5F5DC"
+                }
+              },
+              "ideas": {}
+            },
+            "2": {
+              "title": "Vestibulo-ocular reflex computational models",
+              "id": 41,
+              "ideas": {
+                "1": {
+                  "title": "Marr-Albus-Ito",
+                  "id": 44,
+                  "ideas": {},
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Brainstem",
+                  "id": 49,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Delay",
+                  "id": 51,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Interneurons",
+                  "id": 52,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "Adaptive filter",
+                  "id": 50,
+                  "attr": {
+                    "style": {
+                      "background": "#F5F5DC"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "-0.5": {
+      "title": "Keywords",
+      "id": 16,
+      "ideas": {
+        "3": {
+          "title": "cerebellum",
+          "id": 32,
+          "ideas": {},
+          "attr": {
+            "style": {
+              "background": "#F5F5DC"
+            }
+          }
+        },
+        "4": {
+          "title": "motor control",
+          "id": 34,
+          "attr": {
+            "style": {
+              "background": "#F5F5DC"
+            }
+          }
+        },
+        "9": {
+          "title": "vestibulo-ocular reflex",
+          "id": 28,
+          "ideas": {},
+          "attr": {
+            "style": {
+              "background": "#F5F5DC"
+            }
+          }
+        },
+        "14": {
+          "title": "nuleo-olivary inhibition",
+          "id": 31,
+          "attr": {
+            "style": {
+              "background": "#F5F5DC"
+            }
+          }
+        },
+        "15": {
+          "title": "classical conditioning",
+          "id": 35,
+          "attr": {
+            "style": {
+              "background": "#F5F5DC"
+            }
+          }
+        },
+        "16": {
+          "title": "computational models",
+          "id": 36,
+          "attr": {
+            "style": {
+              "background": "#F5F5DC"
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {},
+        "position": [
+          246.71114561800016,
+          -253,
+          2
+        ]
+      }
+    }
+  },
+  "links": []
+}
