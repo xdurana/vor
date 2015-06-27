@@ -186,64 +186,114 @@
           "title": "Clopath model",
           "id": 34,
           "ideas": {
-            "3": {
-              "title": "extinction",
-              "id": 51,
-              "ideas": {
-                "1": {
-                  "title": "Second extinction component",
-                  "id": 50,
-                  "attr": {
-                    "style": {}
-                  }
-                },
-                "2": {
-                  "title": "Extinction is vestibular modulated",
-                  "id": 38,
-                  "attr": {
-                    "style": {}
-                  }
-                }
-              }
-            },
-            "4": {
-              "title": "implementation",
-              "id": 52,
-              "ideas": {
-                "1": {
-                  "title": "simple model",
-                  "id": 56,
-                  "ideas": {}
-                },
-                "2": {
-                  "title": "detailed model",
-                  "id": 59,
-                  "ideas": {}
-                },
-                "3": {
-                  "title": "NOI",
-                  "id": 75
-                }
-              }
-            },
-            "5": {
-              "title": "reproducibility",
-              "id": 69,
-              "ideas": {
-                "1": {
-                  "title": "phase reversal protocol",
-                  "id": 70,
-                  "ideas": {}
-                },
-                "2": {
-                  "title": "long light deprivation protocol",
-                  "id": 72
-                }
-              }
-            },
             "6": {
               "title": "assumptions",
-              "id": 73
+              "id": 73,
+              "ideas": {
+                "1": {
+                  "title": "extinction",
+                  "id": 51,
+                  "ideas": {
+                    "1": {
+                      "title": "Second extinction component",
+                      "id": 50,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Extinction is vestibular modulated",
+                      "id": 38,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "predictions",
+              "id": 79,
+              "ideas": {
+                "1": {
+                  "title": "gain less than one",
+                  "id": 80
+                }
+              }
+            },
+            "8": {
+              "title": "properties",
+              "id": 82,
+              "ideas": {
+                "1": {
+                  "title": "bottom-up",
+                  "id": 83
+                },
+                "2": {
+                  "title": "two sites of plasticity",
+                  "id": 84,
+                  "ideas": {
+                    "1": {
+                      "title": "cortical",
+                      "id": 85
+                    },
+                    "2": {
+                      "title": "brainstem",
+                      "id": 86
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "14": {
+          "title": "training protocols",
+          "id": 69,
+          "ideas": {
+            "1": {
+              "title": "phase reversal",
+              "id": 70,
+              "ideas": {}
+            },
+            "2": {
+              "title": "long light deprivation",
+              "id": 72,
+              "ideas": {}
+            },
+            "3": {
+              "title": "continuous training",
+              "id": 87
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "13.5": {
+          "title": "implementation",
+          "id": 52,
+          "ideas": {
+            "1": {
+              "title": "simple model",
+              "id": 56,
+              "ideas": {}
+            },
+            "2": {
+              "title": "detailed model",
+              "id": 59,
+              "ideas": {}
+            },
+            "3": {
+              "title": "NOI",
+              "id": 75
             }
           },
           "attr": {
@@ -256,18 +306,56 @@
       "title": "Results",
       "id": 62,
       "ideas": {
-        "1": {
-          "title": "extinction",
-          "id": 76,
+        "3": {
+          "title": "NOI",
+          "id": 93,
           "ideas": {
-            "1": {
-              "title": "explained",
-              "id": 77
-            },
-            "2": {
-              "title": "converges to initial state",
-              "id": 78
+            "4": {
+              "title": "extinction",
+              "id": 76,
+              "ideas": {
+                "3": {
+                  "title": "exponential decay",
+                  "id": 95
+                },
+                "13": {
+                  "title": "converges to initial state",
+                  "id": 78,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
             }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Clopath",
+          "id": 94,
+          "ideas": {
+            "2": {
+              "title": "extinction",
+              "id": 96,
+              "ideas": {
+                "1": {
+                  "title": "linear decay",
+                  "id": 97
+                },
+                "2": {
+                  "title": "not converges",
+                  "id": 99
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
           }
         }
       }
