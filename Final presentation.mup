@@ -149,20 +149,33 @@
               "title": "The NOI may have have this role: it can indirectly\ncontrol the cerebellar output amplitude by controlling\nthe amplitude of its teaching signal",
               "id": 21
             },
-            "5": {
-              "title": "Tradeoff",
-              "id": 31,
-              "attr": {
-                "style": {}
-              }
-            },
-            "6": {
-              "title": "Muhammad Ali",
-              "id": 32
-            },
             "7": {
               "title": "Control theory",
               "id": 33
+            },
+            "8": {
+              "title": "Function",
+              "id": 141,
+              "ideas": {
+                "1": {
+                  "title": "Muhammad Ali",
+                  "id": 32,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Tradeoff",
+                  "id": 31,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "@Najac2015",
+                  "id": 144
+                }
+              }
             }
           }
         },
@@ -452,8 +465,8 @@
           "attr": {
             "style": {},
             "position": [
-              86.5,
-              71.75,
+              141,
+              75,
               1
             ]
           },
@@ -463,12 +476,16 @@
               "id": 125,
               "ideas": {
                 "1": {
-                  "title": "long-term",
+                  "title": "persistent memory",
                   "id": 129
                 },
+                "2": {
+                  "title": "consolidation process",
+                  "id": 151
+                },
                 "0.5": {
-                  "title": "slow",
-                  "id": 130,
+                  "title": "slow time scale",
+                  "id": 150,
                   "attr": {
                     "style": {}
                   }
@@ -476,25 +493,33 @@
               },
               "attr": {
                 "position": [
-                  161,
-                  -56,
+                  218,
+                  31.5,
                   1
                 ],
                 "style": {}
               }
             },
-            "2": {
+            "0.5": {
               "title": "cortical",
               "id": 126,
               "ideas": {
                 "1": {
-                  "title": "quick",
+                  "title": "short time scale",
                   "id": 127
                 },
                 "2": {
-                  "title": "short-term",
+                  "title": "transient memory",
                   "id": 128
                 }
+              },
+              "attr": {
+                "style": {},
+                "position": [
+                  202,
+                  -66,
+                  2
+                ]
               }
             }
           }
@@ -506,6 +531,16 @@
             "1": {
               "title": "PCA",
               "id": 122
+            }
+          }
+        },
+        "18": {
+          "title": "Limitations",
+          "id": 136,
+          "ideas": {
+            "1": {
+              "title": "There's modulation on the PC",
+              "id": 137
             }
           }
         }
@@ -521,6 +556,34 @@
           3
         ],
         "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Transgenic cell lines",
+          "id": 131,
+          "ideas": {
+            "1": {
+              "title": "More detailed bottom-up models",
+              "id": 134,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "14": {
+          "title": "Computational models",
+          "id": 139,
+          "ideas": {
+            "1": {
+              "title": "Distributed plasticity",
+              "id": 133,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
       }
     }
   },
