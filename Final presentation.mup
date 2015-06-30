@@ -282,13 +282,6 @@
                     }
                   }
                 },
-                "4": {
-                  "title": "interneurons",
-                  "id": 109,
-                  "attr": {
-                    "style": {}
-                  }
-                },
                 "5": {
                   "title": "white noise",
                   "id": 110
@@ -316,6 +309,17 @@
                       "id": 86
                     }
                   }
+                },
+                "3": {
+                  "title": "delayed CF",
+                  "id": 160
+                },
+                "4": {
+                  "title": "interneurons",
+                  "id": 109,
+                  "attr": {
+                    "style": {}
+                  }
                 }
               }
             }
@@ -341,6 +345,10 @@
             "3": {
               "title": "continuous training",
               "id": 87
+            },
+            "4": {
+              "title": "reacquisition",
+              "id": 158
             }
           },
           "attr": {
@@ -381,16 +389,32 @@
           "title": "adaptation",
           "id": 154,
           "ideas": {
-            "2": {
-              "title": "gain less than one",
-              "id": 80,
-              "attr": {
-                "style": {}
-              }
-            },
             "3": {
               "title": "savings",
               "id": 155
+            },
+            "5": {
+              "title": "cost-error balance",
+              "id": 163,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "not perfect control",
+                  "id": 161,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "gain less than one",
+                  "id": 80,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
             }
           },
           "attr": {
@@ -425,7 +449,7 @@
                   }
                 },
                 "3": {
-                  "title": "knoi",
+                  "title": "fix knoi constant",
                   "id": 120,
                   "attr": {
                     "style": {}
@@ -460,7 +484,7 @@
               }
             },
             "16": {
-              "title": "NOI and vestibular",
+              "title": "mixed NOI and vestibular",
               "id": 102
             }
           },
@@ -550,6 +574,10 @@
             "1": {
               "title": "modulation on the PC",
               "id": 137
+            },
+            "2": {
+              "title": "there's always some nuclear transference",
+              "id": 156
             }
           }
         }
@@ -596,6 +624,22 @@
                 "style": {}
               }
             }
+          }
+        },
+        "7.5": {
+          "title": "NOI",
+          "id": 165,
+          "ideas": {
+            "1": {
+              "title": "more parsimonious explanation\n to extinction",
+              "id": 164,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
           }
         }
       }
