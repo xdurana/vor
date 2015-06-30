@@ -377,6 +377,31 @@
       "title": "Results",
       "id": 62,
       "ideas": {
+        "3": {
+          "title": "adaptation",
+          "id": 154,
+          "ideas": {
+            "2": {
+              "title": "gain less than one",
+              "id": 80,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "savings",
+              "id": 155
+            }
+          },
+          "attr": {
+            "position": [
+              43,
+              -322,
+              2
+            ],
+            "style": {}
+          }
+        },
         "6": {
           "title": "extinction",
           "id": 76,
@@ -437,22 +462,6 @@
             "16": {
               "title": "NOI and vestibular",
               "id": 102
-            }
-          },
-          "attr": {
-            "style": {}
-          }
-        },
-        "11": {
-          "title": "gain",
-          "id": 123,
-          "ideas": {
-            "1": {
-              "title": "less than one",
-              "id": 80,
-              "attr": {
-                "style": {}
-              }
             }
           },
           "attr": {
@@ -535,11 +544,11 @@
           }
         },
         "18": {
-          "title": "Limitations",
+          "title": "limitations",
           "id": 136,
           "ideas": {
             "1": {
-              "title": "There's modulation on the PC",
+              "title": "modulation on the PC",
               "id": 137
             }
           }
@@ -558,25 +567,30 @@
         "style": {}
       },
       "ideas": {
-        "1": {
-          "title": "Transgenic cell lines",
-          "id": 131,
+        "15": {
+          "title": "more detailed bottom-up models",
+          "id": 134,
+          "attr": {
+            "style": {}
+          },
           "ideas": {
             "1": {
-              "title": "More detailed bottom-up models",
-              "id": 134,
+              "title": "transgenic mouse lines",
+              "id": 131,
+              "ideas": {},
               "attr": {
                 "style": {}
               }
-            }
-          }
-        },
-        "14": {
-          "title": "Computational models",
-          "id": 139,
-          "ideas": {
-            "1": {
-              "title": "Distributed plasticity",
+            },
+            "2": {
+              "title": "better electrophysiological recordings",
+              "id": 153,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "distributed plasticity",
               "id": 133,
               "attr": {
                 "style": {}
