@@ -3,6 +3,232 @@
   "id": 1,
   "formatVersion": 2,
   "ideas": {
+    "1": {
+      "title": "Hypothesis",
+      "id": 37
+    },
+    "11": {
+      "title": "Methods",
+      "id": 41,
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "2": {
+          "title": "models",
+          "id": 49,
+          "ideas": {
+            "1": {
+              "title": "Clopath",
+              "id": 42,
+              "ideas": {
+                "1": {
+                  "title": "plasticity",
+                  "id": 44,
+                  "ideas": {
+                    "1": {
+                      "title": "cortex",
+                      "id": 45
+                    },
+                    "2": {
+                      "title": "brainstem",
+                      "id": 46
+                    }
+                  }
+                },
+                "2": {
+                  "title": "extinction",
+                  "id": 52,
+                  "ideas": {
+                    "1": {
+                      "title": "head movement",
+                      "id": 53,
+                      "ideas": {
+                        "1": {
+                          "title": "one direction",
+                          "id": 54
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "linear decay to baseline",
+                      "id": 56
+                    }
+                  }
+                },
+                "0.5": {
+                  "title": "bottom-up",
+                  "id": 47,
+                  "attr": {
+                    "position": [
+                      118,
+                      -57,
+                      1
+                    ],
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Clopath + NOI",
+              "id": 50,
+              "ideas": {
+                "1": {
+                  "title": "extinction",
+                  "id": 58,
+                  "ideas": {
+                    "1": {
+                      "title": "cortical",
+                      "id": 60
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "training protocols",
+          "id": 61,
+          "ideas": {
+            "1": {
+              "title": "phase revesal",
+              "id": 63
+            },
+            "2": {
+              "title": "long dark period",
+              "id": 64
+            }
+          },
+          "attr": {
+            "position": [
+              84,
+              90,
+              1
+            ],
+            "style": {}
+          }
+        }
+      }
+    },
+    "21": {
+      "title": "Results",
+      "id": 65,
+      "attr": {
+        "position": [
+          89,
+          221,
+          2
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Clopath",
+          "id": 66,
+          "ideas": {
+            "1": {
+              "title": "gain don't converge",
+              "id": 69
+            },
+            "2": {
+              "title": "linear decay",
+              "id": 70
+            }
+          }
+        },
+        "2": {
+          "title": "Clopath + NOI",
+          "id": 67,
+          "ideas": {
+            "1": {
+              "title": "gain converges",
+              "id": 71
+            },
+            "2": {
+              "title": "savings",
+              "id": 72
+            },
+            "1.5": {
+              "title": "exponential decay",
+              "id": 76,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "31": {
+      "title": "Conclusions",
+      "id": 77,
+      "attr": {
+        "position": [
+          108,
+          347,
+          4
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "VOR explains extinction",
+          "id": 79
+        },
+        "2": {
+          "title": "Savings",
+          "id": 80
+        },
+        "3": {
+          "title": "Limitations",
+          "id": 81,
+          "ideas": {
+            "1": {
+              "title": "modulated cortical signal",
+              "id": 89,
+              "ideas": {}
+            },
+            "2": {
+              "title": "always balances",
+              "id": 91
+            },
+            "0.5": {
+              "title": "non-perfect control",
+              "id": 92,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Further models",
+          "id": 82,
+          "ideas": {
+            "1": {
+              "title": "transgenic mouse lines",
+              "id": 83
+            },
+            "2": {
+              "title": "electro-physiological recordings",
+              "id": 85
+            },
+            "3": {
+              "title": "distributed plasticity",
+              "id": 86
+            }
+          }
+        }
+      }
+    },
     "-1": {
       "title": "VOR",
       "id": 4,
@@ -43,7 +269,7 @@
                   "id": 13
                 },
                 "3": {
-                  "title": "transference",
+                  "title": "balance",
                   "id": 18,
                   "ideas": {
                     "1": {
@@ -55,7 +281,7 @@
                       "id": 35
                     },
                     "4": {
-                      "title": "quicker cortical adaptation",
+                      "title": "quicker adaptation",
                       "id": 36
                     }
                   }
@@ -64,36 +290,12 @@
             }
           },
           "attr": {
-            "style": {}
-          }
-        },
-        "14": {
-          "title": "EBR",
-          "id": 26,
-          "ideas": {
-            "1": {
-              "title": "NOI",
-              "id": 16,
-              "ideas": {
-                "1": {
-                  "title": "cost tradeoff",
-                  "id": 29,
-                  "ideas": {
-                    "1": {
-                      "title": "aversive stimuli",
-                      "id": 30
-                    },
-                    "2": {
-                      "title": "unnecessari CR",
-                      "id": 31
-                    }
-                  }
-                }
-              },
-              "attr": {
-                "style": {}
-              }
-            }
+            "style": {},
+            "position": [
+              107,
+              38.8125,
+              4
+            ]
           }
         },
         "0.5": {
@@ -157,7 +359,89 @@
             ],
             "style": {}
           }
+        },
+        "0.75": {
+          "title": "cerebellar models",
+          "id": 87,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "distributed plasticity",
+              "id": 88
+            }
+          }
         }
+      }
+    },
+    "0.5": {
+      "title": "Problem statement",
+      "id": 38,
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "EBR",
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "cost tradeoff",
+              "id": 29,
+              "ideas": {
+                "1": {
+                  "title": "aversive stimuli",
+                  "id": 30
+                },
+                "2": {
+                  "title": "unnecessary CR",
+                  "id": 31
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    },
+    "0.75": {
+      "title": "Research question",
+      "id": 39,
+      "attr": {
+        "style": {}
+      },
+      "ideas": {}
+    },
+    "-3": {
+      "title": "NOI",
+      "id": 16,
+      "ideas": {
+        "3": {
+          "title": "cortical-dependant",
+          "id": 73
+        },
+        "4": {
+          "title": "retinal slip",
+          "id": 74
+        },
+        "5": {
+          "title": "OCNO loop",
+          "id": 75
+        }
+      },
+      "attr": {
+        "style": {},
+        "position": [
+          111,
+          68,
+          3
+        ]
       }
     }
   },
