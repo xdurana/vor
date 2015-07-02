@@ -1,0 +1,165 @@
+{
+  "title": "Presentation",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "-1": {
+      "title": "VOR",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "learning",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "cortical",
+              "id": 6,
+              "ideas": {
+                "1": {
+                  "title": "quick",
+                  "id": 9
+                },
+                "2": {
+                  "title": "short-term",
+                  "id": 10
+                },
+                "3": {
+                  "title": "error-based ",
+                  "id": 14,
+                  "ideas": {}
+                }
+              }
+            },
+            "2": {
+              "title": "nuclear",
+              "id": 7,
+              "ideas": {
+                "1": {
+                  "title": "slow",
+                  "id": 11
+                },
+                "2": {
+                  "title": "long-term",
+                  "id": 13
+                },
+                "3": {
+                  "title": "transference",
+                  "id": 18,
+                  "ideas": {
+                    "1": {
+                      "title": "cortical",
+                      "id": 33
+                    },
+                    "3": {
+                      "title": "savings",
+                      "id": 35
+                    },
+                    "4": {
+                      "title": "quicker cortical adaptation",
+                      "id": 36
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "14": {
+          "title": "EBR",
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "NOI",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "cost tradeoff",
+                  "id": 29,
+                  "ideas": {
+                    "1": {
+                      "title": "aversive stimuli",
+                      "id": 30
+                    },
+                    "2": {
+                      "title": "unnecessari CR",
+                      "id": 31
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "0.5": {
+          "title": "adaptive reflex",
+          "id": 19,
+          "ideas": {
+            "1": {
+              "title": "US",
+              "id": 20,
+              "ideas": {
+                "1": {
+                  "title": "head movement",
+                  "id": 23
+                }
+              }
+            },
+            "2": {
+              "title": "CR",
+              "id": 21,
+              "ideas": {
+                "1": {
+                  "title": "eye movement",
+                  "id": 22,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "1.5": {
+              "title": "CS",
+              "id": 24,
+              "ideas": {
+                "1": {
+                  "title": "retinal slip",
+                  "id": 25
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              50,
+              -272,
+              2
+            ],
+            "style": {}
+          }
+        },
+        "0.25": {
+          "title": "definition",
+          "id": 32,
+          "attr": {
+            "position": [
+              20,
+              -316,
+              3
+            ],
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": []
+}
