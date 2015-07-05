@@ -13,11 +13,11 @@
 %PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
 \usepackage{graphicx}
 
-%FONTS TIMES O GARAMOND, 
+%FONTS TIMES O GARAMOND,
 \usepackage{times}
 %\usepackage{garamond}
 
-%SENSE HEADINGS: NO MODIFICAR
+%SENSE HEADINGS: NO MODIFICAR 
 \pagestyle{plain}
 
 %PER A L'ÍNDEX DE MATÈRIES
@@ -52,10 +52,10 @@
 \cleardoublepage
 
 
-%%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
+%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
 %\noindent To my family
 %\cleardoublepage
-%%%%%% Final de dedicatòria
+%%%%% Final de dedicatòria
 
 %%%%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
 %\noindent {\Large \sffamily Acknowledgements}
@@ -85,9 +85,9 @@ This study speculates about the existence of the nucleo-olivary inhibition (NOI)
 \tableofcontents
 
 %INDEX DE FIGURES; NOMÉS ES POSA SI HI HA FIGURES
-%\listoffigures
+\listoffigures
 %Fa que aparegui al sumari
-%\addcontentsline{toc}{chapter}{Índex de figures}
+\addcontentsline{toc}{chapter}{Índex de figures}
 
 %INDEX DE TAULES; NOMÉS ES POSA SI HI HA TAULES
 %\listoftables
@@ -105,15 +105,21 @@ NOI\cite{Herreros2013b}.
 
 The cerebellum has a central role in motor learning\index{motor learning}, that is the process of improving the smoothness and accuracy of movements through practice. It is not only important for learning to perform complicated movements, like playing an instrument or a sport, but also for adaptation of simple movements like reflexes along the physical changes that may occur over time.
 
-The cerebellar cortex seems to have a uniform structure throughout the cerebellum. Its architecture is sometimes described as crystalline for it appears to be an homogeneous sheet of tissue, and is composed of repeated modules or microzones, that have the same cell types that are connected in the same manner and are the functional units of the cerebellar cortex. Depending on its functional role, different microzones receive different inputs and project to different targets. A microzone along with its related subcortical structures forms what's called a microcomplex \cite{Ito1982}, and it's considered to be a unit neuronal machine.
+The cerebellar cortex seems to have a uniform structure throughout the cerebellum. Its architecture is sometimes described as crystalline for it appears to be an homogeneous sheet of tissue, and is composed of repeated modules or microzones\index{microzone}, that have the same cell types that are connected in the same manner and are the functional units of the cerebellar cortex\index{cerebellar cortex}. Depending on its functional role, different microzones receive different inputs and project to different targets. A microzone along with its related subcortical structures forms what's called a microcomplex\index{microcomplex} \cite{Ito1982}, and it's considered to be a unit neuronal machine.
 
 The uniformity on the microcircuit of the cerebellar cortex has inspired the idea that there is a single cerebellar algorithm and that different microzones process signals they receive in a similar way. The study of the cerebellum during one specific learning task may help to generalize its function to be applied to many different tasks \cite{Boyden2004}.
 
-Vestibulo-ocular reflex (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks because of its properties: it's widespread in many species, it has well defined sensory inputs and quantifiable motor outputs, and the anatomy of circuitry is well localized \cite{Ito1982}.
+Vestibulo-ocular reflex\index{vestibulo-ocular reflex} (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks because of its properties: it's widespread in many species, it has well defined sensory inputs and quantifiable motor outputs, and the anatomy of circuitry is well localized \cite{Ito1982}.
 
 \subsection{Microcircuitry of the cerebellum}
 
-The three-neuronal pathway formed by mossy fibers, granule cells and Purkinje cells conforms the substrate of the multilayered computational networks of the cerebellum. Mossy fibers and climbing fibers are the inputs, and Purkinje cells are the sole output of the cerebellar cortex. As Purkinje cells project to and inhibit their target neurons in the vestibular and deep cerebellar nuclei, the entire output of the cerebellum is inhibitory.
+The three-neuronal pathway formed by mossy fibers, granule cells and Purkinje cells\index{purkinje cell} conforms the substrate of the multilayered computational networks of the cerebellum. Mossy fibers\index{mossy fiber} and climbing fibers\index{climbing fiber} are the inputs, and Purkinje cells are the sole output of the cerebellar cortex. As Purkinje cells project to and inhibit their target neurons in the vestibular and deep cerebellar nuclei, the entire output of the cerebellum is inhibitory.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=1]{images/circuit.jpg}
+  \caption[Microcircuit of the cerebellum]{Microcircuit of the cerebellum}
+\end{figure}
 
 Mossy fibers convey information from different sources and synapse to 400 to 600 granule cells, that are the smallest and numerous neurons in the brain \cite{Marr1969}. On the contrary, granule cells integrates only a small number of mossy fibers conforming sparse coding \cite{Ito2006}. Granule cell axons bifurcate and form parallel fibers which run along the surface of the cerebellum.
 
@@ -127,6 +133,12 @@ The flocculus, a small lobe situated on the vestibulocerebellum, is the main cer
 
 VOR is a compensatory eye movement that stabilizes retinal images during head movements by producing an eye movement in the opposite direction, thus preventing degradation of image processing. During lifetime, changes in vestibular processing or in the mechanical properties of the oculomotor plant (as muscles develop or weaken) can cause eye-movement inaccuracies. This poor calibration results in blurred vision and VOR needs to be adapted, and the same happens when a subject starts to wear glasses. VOR produces compensatory movements in response to horizontal, vertical and translational head movements.
 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.50]{images/vor.png}
+  \caption[VOR reflex]{VOR reflex}
+\end{figure}
+
 In terms of control theory, VOR is a feedforward or open-loop control system since the output of the reflex has no effect on the vestibular signals input \cite{Porrill2007}, and it's controlled by an adaptive mechanism of the cerebellum. This adaptation is materialized by changing the amplitude and timing of the VOR, expressed in gain and phase values respectively \cite{DeZeeuw2005}.
 
 In the laboratory VOR adaptation is induced in training sessions by providing visual stimuli in conflict with the vestibular stimulus. Typically screen and turntable rotation are combined to induce bidirectional gain changes in the animal VOR. Depending on the relative direction of the head and the image motion, gain and phase parameters can increase or decrease after the training periods.
@@ -136,7 +148,7 @@ An image motion in the opposite direction as the head induces
 \item gain increase while the image in the same direction induces
 \item gain decrease. In gain-decrease learning,
 \item VOR cancellation happens when the speed of the head and the image are the same, and
-\item phase-reversal learning when the image is faster.   
+\item phase-reversal learning when the image is faster.
 \end{enumerate}
 
 After training sessions, the performance of the VOR is measured in the dark to isolate the eye response due to head movements from that driven by visual stimuli. The persistence of the changes depends on the length of the training and the history of eye movement.
@@ -188,6 +200,24 @@ The model shows good learning behavior with delays below 100ms as in experimenta
 \section{Experimental design and set-up}
 
 \section{Procedures used to obtain data and results}
+
+\chapter{Results}
+
+\section{Data Analysis}
+
+\section{Description of Key results obtained in the study}
+
+\chapter{Discussion \& Conclusion}
+
+\section{How did the results address the problem defined}
+
+\section{What are the problems faced by the study}
+
+\section{Validity of the results}
+
+\section{Relevance with respect to state of the art}
+
+\section{Future steps}
 
 \bibliography{vor}
 

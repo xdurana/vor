@@ -1,0 +1,637 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"upda",
+				"updatedblock"
+			],
+			[
+				"closes",
+				"closestGhost"
+			],
+			[
+				"want",
+				"want-scooter"
+			],
+			[
+				"turn",
+				"turningSpeed"
+			],
+			[
+				"bi",
+				"biggestBlobArea"
+			],
+			[
+				"pla",
+				"playerc_blobfinder_blob_t"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/xavier/Dropbox/uoc/la/lrs/import.js",
+			"settings":
+			{
+				"buffer_size": 1908,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "doc/\n\n.Rproj.user\n",
+			"file": "/home/xavier/Dropbox/workspace/vor/.gitignore",
+			"file_size": 17,
+			"file_write_time": 130714096504056563,
+			"settings":
+			{
+				"buffer_size": 18,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/xavier/Dropbox/workspace/vor/midterm/midterm.Rmd",
+			"settings":
+			{
+				"buffer_size": 6968,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/xavier/Dropbox/workspace/vor/midterm/.gitignore",
+			"settings":
+			{
+				"buffer_size": 66,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/make.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 306.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"latex",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/xavier/Dropbox/workspace/vor/midterm",
+		"/home/xavier/Dropbox/workspace/vor/midterm/.Rproj.user/F19001AF",
+		"/home/xavier/Dropbox/uoc/la",
+		"/home/xavier/Dropbox/uoc/la/lrs"
+	],
+	"file_history":
+	[
+		"/home/xavier/Dropbox/photos/Vietnamita/metadata.json",
+		"/home/xavier/onyx/onyx-integration-test/src/main/webapp/WEB-INF/config/jade/messages_en.properties",
+		"/home/xavier/Dropbox/uoc/ftutorial/ft.txt",
+		"/home/xavier/Dropbox/uoc/ftutorial/parameters.yml",
+		"/home/xavier/Dropbox/uoc/ftutorial/parameters.yml.dist",
+		"/home/xavier/Dropbox/uoc/ftutorial/ftutorial.html",
+		"/home/xavier/Dropbox/uoc/la/query/index.js",
+		"/home/xavier/Dropbox/uoc/la/process/index.js",
+		"/home/xavier/Dropbox/uoc/la/query/indexmatricula.js",
+		"/home/xavier/Dropbox/uoc/la/process/index2.js",
+		"/home/xavier/Dropbox/workspace/vor/mtheme/demo.tex",
+		"/home/xavier/mtheme/Makefile",
+		"/usr/share/texlive/texmf-dist/tex/latex/base/latex209.def",
+		"/home/xavier/Dropbox/workspace/vor/thesis/vor.tex",
+		"/home/xavier/Dropbox/workspace/vor/midterm/midterm.tex",
+		"/home/xavier/Dropbox/workspace/vor/midterm/vor.bib",
+		"/home/xavier/Dropbox/workspace/vor/.gitignore",
+		"/home/xavier/Dropbox/workspace/vor/doc/midterm/midterm.Rmd",
+		"/home/xavier/texmf/tex/latex/mtheme/beamerthemem.sty",
+		"/home/xavier/.config/sublime-text-3/Packages/User/beamer.sublime-build",
+		"/home/xavier/Dropbox/workspace/vor/doc/midterm/midterm.pdf",
+		"/home/xavier/Downloads/medical implants",
+		"/home/xavier/Dropbox/workspace/ab/project/concepts.txt",
+		"/home/xavier/Dropbox/workspace/ab/project/my.txt",
+		"/home/xavier/Dropbox/uoc/thesis/vor.tex",
+		"/home/xavier/Dropbox/midterm/midterm.Rmd",
+		"/home/xavier/Dropbox/uoc/thesis/ExempleUsPlantillaA4.tex",
+		"/home/xavier/Dropbox/workspace/vor/soa/vor.tex",
+		"/home/xavier/Dropbox/uoc/thesis/tesi_upf.cls",
+		"/home/xavier/Downloads/indicadors.txt",
+		"/home/campus/nodejsHome/guaita/lib/services/aulaca.js",
+		"/home/xavier/.aws/credentials",
+		"/home/xavier/Dropbox/uoc/la/query/lrs.js",
+		"/home/xavier/Dropbox/uoc/la/query/app.js",
+		"/home/campus/nodejsHome/guaita/lib/models/widget.js",
+		"/home/campus/nodejsHome/guaita/lib/models/tercer.js",
+		"/home/campus/nodejsHome/guaita/lib/controllers/widget/index.js",
+		"/home/xavier/.juniper_networks/network_connect/config/.config",
+		"/home/campus/nodejsHome/guaita/lib/models/calendar.js",
+		"/home/campus/nodejsHome/guaita/lib/models/classroom.js",
+		"/home/xavier/Downloads/crides.txt",
+		"/etc/apt/sources.list",
+		"/home/xavier/Downloads/links.txt",
+		"/home/xavier/Dropbox/projectes/bioinformatics/Institut de Medicina Predictiva i Personalitzada del Càncer/cover.tex",
+		"/home/xavier/Dropbox/uoc/la/data/dynamodb/assignatures.csv",
+		"/home/xavier/Dropbox/uoc/la/data/dynamodb/estudis.csv",
+		"/home/campus/nodejsHome/guaita/lib/controllers/calendar/index.js",
+		"/home/campus/nodejsHome/guaita/lib/models/activity.js",
+		"/home/xavier/Dropbox/uoc/la/lrs/filters/accesaula.js",
+		"/home/xavier/Dropbox/uoc/la/data/dynamodb/1916bfd5-7a14-463a-9ec9-feb8368a8a5c-000000",
+		"/home/xavier/Dropbox/uoc/la/data/dynamodb/assignatures-aprovades.csv",
+		"/home/xavier/Dropbox/uoc/la/data/dynamodb/legend.txt",
+		"/home/xavier/Dropbox/uoc/la/lrs/import.js",
+		"/home/campus/nodejsHome/guaita/lib/controllers/monitor/index.js",
+		"/home/campus/nodejsHome/guaita/lib/models/subject.js",
+		"/home/xavier/Dropbox/uoc/monitor/lighttpd.conf",
+		"/home/xavier/public_html/monitor/lighttpd.conf",
+		"/home/xavier/Dropbox/uoc/la/lrs/node_modules/mongojs/node_modules/mongodb/node_modules/bson/browser_build/bson.js",
+		"/home/xavier/Dropbox/uoc/ftutorial/ftutorial-www/src/Drufony/UserBundle/Model/User.php",
+		"/home/xavier/Dropbox/uoc/ftutorial/ftutorial-www/src/Crononauta/UOCBundle/Controller/ListsController.php",
+		"/home/xavier/Dropbox/uoc/config/vpn.sh",
+		"/home/xavier/Dropbox/uoc/la/lrs/consolida.js",
+		"/home/xavier/Dropbox/uoc/la/lrs/filters/recursosassign.js",
+		"/home/xavier/Dropbox/uoc/la/lrs/filters/pladocent.js",
+		"/home/xavier/Dropbox/uoc/la/lrs/filters/acceseina.js",
+		"/home/xavier/Dropbox/uoc/la/lrs/filters/accesaula.log",
+		"/home/xavier/Dropbox/uoc/la/lrs/package.json",
+		"/home/xavier/Dropbox/uoc/la/process/processors/acceseina.js",
+		"/home/xavier/Dropbox/uoc/la/process/config/settings.js",
+		"/home/xavier/Dropbox/uoc/la/process/importers/acceseina.sh",
+		"/home/xavier/Dropbox/workspace/la/lrs/filters/acceseina.js",
+		"/home/xavier/Dropbox/workspace/la/lrs/filters/accesaula.js",
+		"/home/xavier/Dropbox/workspace/la/lrs/consolida.js",
+		"/home/xavier/Dropbox/workspace/la/lrs/import.js",
+		"/home/xavier/Dropbox/workspace/la/lrs/package.json",
+		"/home/xavier/Dropbox/workspace/la/lrs/lrs.sh",
+		"/home/xavier/Downloads/lrs.json",
+		"/home/xavier/Dropbox/workspace/la/process/importers/accesaula.js",
+		"/home/xavier/Dropbox/workspace/la/data/dynamodb/legend.txt",
+		"/home/xavier/Dropbox/workspace/la/data/dynamodb/0fe76080-8588-4952-944a-b86e098173a8-000001",
+		"/home/xavier/Dropbox/workspace/la/data/dynamodb/eb7523cd-bf09-4b2c-b086-dadfb1165822-000001",
+		"/home/xavier/Dropbox/workspace/la/data/dynamodb/eb7523cd-bf09-4b2c-b086-dadfb1165822-000000",
+		"/home/xavier/Dropbox/workspace/la/data/dynamodb/0fe76080-8588-4952-944a-b86e098173a8-000000",
+		"/home/xavier/Dropbox/workspace/la/data/dynamodb/1916bfd5-7a14-463a-9ec9-feb8368a8a5c-000000",
+		"/home/xavier/Dropbox/workspace/la/data/dynamodb/72e3edaa-d987-4d42-bb54-b20cf9c6362c-000000",
+		"/home/xavier/Dropbox/workspace/la/process/importers/accesaula.log",
+		"/etc/mongod.conf",
+		"/home/xavier/Dropbox/workspace/la/process/importers/acceseina.sh",
+		"/home/xavier/Dropbox/workspace/la/process/importers/accesaula.sh",
+		"/etc/mongodb.conf",
+		"/home/xavier/Dropbox/workspace/la/process/importers/acceseina.js",
+		"/home/xavier/Dropbox/workspace/la/process/importers/acceseina.log",
+		"/home/xavier/Dropbox/uoc/config/domains.csv",
+		"/home/campus/nodejsHome/guaita/bin/start-pre.sh",
+		"/home/xavier/Downloads/a4latex/ExempleUsPlantillaA4.tex",
+		"/home/xavier/Downloads/a4latex/ExempleUsPlantillaA4.toc",
+		"/home/campus/nodejsHome/guaita/bin/start-test.sh",
+		"/home/campus/nodejsHome/guaita/lib/views/widget_antic.html",
+		"/home/campus/configHome/guaita/config-test.json",
+		"/home/xavier/.filezilla/sitemanager.xml",
+		"/home/xavier/Dropbox/workspace/vor/simulations/detailed/report.m",
+		"/home/xavier/Dropbox/workspace/vor/simulations/detailed/DO_VOR_Clopath14.m",
+		"/home/xavier/Dropbox/workspace/vor/simulations/detailed/VOR_plot.m",
+		"/home/xavier/Downloads/0fe76080-8588-4952-944a-b86e098173a8-000000",
+		"/home/xavier/Downloads/0fe76080-8588-4952-944a-b86e098173a8-000001",
+		"/home/xavier/Dropbox/workspace/la/process/importers/eines62628.json",
+		"/home/xavier/Downloads/libs.txt",
+		"/home/xavier/Dropbox/workspace/vor/simulations/minimal/VOR_report.m",
+		"/home/xavier/Dropbox/workspace/vor/simulations/minimal/minimal_report.m",
+		"/home/xavier/Dropbox/workspace/la/process/consolida.js",
+		"/home/xavier/Dropbox/workspace/la/process/importers/eines100.json",
+		"/home/campus/configHome/guaita/config.json",
+		"/home/xavier/Dropbox/workspace/la/process/package.json",
+		"/home/xavier/Dropbox/workspace/la/process/processors/accesaula.js",
+		"/home/xavier/Dropbox/workspace/la/process/export.sh",
+		"/home/xavier/Dropbox/workspace/la/process/processors/acceseina.js",
+		"/home/xavier/Dropbox/workspace/la/process/eines.json",
+		"/home/xavier/Dropbox/workspace/la/eines.json",
+		"/etc/hosts",
+		"/home/xavier/Downloads/371176/Blue.Is.the.Warmest.Color.2013.720p.BluRay.x264-PSYCHD.srt",
+		"/home/xavier/Downloads/Blue Is the Warmest Color 2013 720p BluRay 1.2GB-Micromkv/Blue.Is.the.Warmest.Color.2013.SUBBED.WORKPRiNT-spa.srt",
+		"/home/xavier/Downloads/la.vie.dadele.(2013).spa.1cd.(5462848)/Blue.Is.the.Warmest.Color.2013.SUBBED.WORKPRiNT-spa.srt",
+		"/home/xavier/Downloads/Blue Is the Warmest Color 2013 720p BluRay 1.2GB-Micromkv/Blue Is the Warmest Color 2013 720p BluRay 1.2GB-Micromkv.srt",
+		"/home/xavier/Dropbox/projectes/bioinformatics/CNAG Full Stack Developer for Big Data/cover.tex",
+		"/home/xavier/Dropbox/projectes/bioinformatics/CNAG Database developer/cover.tex",
+		"/home/xavier/Dropbox/workspace/la/process/processors/accesaula.log",
+		"/home/xavier/Dropbox/workspace/la/process/config/settings.js",
+		"/home/xavier/.juniper_networks/network_connect/ncui.log"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/xavier/Dropbox/uoc/thesis",
+			"/home/campus/nodejsHome/guaita/lib",
+			"/home/campus/nodejsHome/guaita",
+			"/home/campus/nodejsHome/guaita/lib",
+			"/home/campus/nodejsHome/guaita",
+			"/home/campus/nodejsHome/guaita/lib",
+			"/home/xavier/.juniper_networks",
+			"/home/xavier/Dropbox/workspace/mymat",
+			"/home/campus/nodejsHome/guaita",
+			"/home/campus/nodejsHome/guaita/lib",
+			"/home/xavier/Dropbox/workspace/ftutorial/ftutorial-www/src",
+			"/home/xavier/Dropbox/workspace/ftutorial/ftutorial-www/src/Drufony",
+			"/home/xavier/Dropbox/workspace/autonomous-systems/pddl/pyperplan/benchmarks",
+			"/home/xavier/workspace/guaita",
+			"/home/xavier/Dropbox/upf/csim/as/Pacman/search"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\begin{frame}",
+			"%\\",
+			"brandi",
+			"zee",
+			"herrer",
+			"frame",
+			"number",
+			"},",
+			"lamport",
+			"chapter",
+			"Contents",
+			"contents",
+			"getLinkAula",
+			"preview",
+			"createWidget",
+			"aulaca.authorize",
+			"aulaca.permisos",
+			"permisos",
+			"getUserIdPerIdp",
+			"usuaris",
+			"connex",
+			"virtual",
+			"persona/",
+			"persona",
+			"persona/",
+			"persona",
+			"getWidgetAula",
+			"assignatures/%s/aules/%s/widget",
+			"getAulesAssignatura",
+			"assignatures/%s/aules",
+			"createWidget",
+			"authorize",
+			"persones/",
+			"createWidget",
+			"aulaca.authorize",
+			"persones/",
+			"authorizeDomainCode_",
+			"persones/",
+			"persona/",
+			"person",
+			"persona",
+			"getAulesEstudiant",
+			"estudiant/",
+			"widget",
+			"createWidget",
+			"aulaca.authorize",
+			"permisos",
+			"/data",
+			"chapter",
+			"bib",
+			"500_01",
+			"domainco",
+			"permis",
+			"filePath",
+			"id",
+			"obj",
+			"mongo",
+			"dynamodb",
+			"updateBlock",
+			"realm",
+			"b_connection_url",
+			"split",
+			".activa",
+			"token",
+			"replace",
+			"listMaterialsAjax",
+			"events.js",
+			"events",
+			"request",
+			"disable",
+			"ltp",
+			"ltd",
+			"retinal",
+			"retinal sli",
+			"lisber",
+			"LTD",
+			"interne",
+			"synaptic",
+			"mossy",
+			"blurred vision",
+			"motor lear",
+			"motor",
+			"391ce59c7052addb0040ec8a20eac0c2a159e101d42828148b703cfcd41e80186ba4d5cbc41a745172bac22a123e176208233995890e7645007ab567936c6276",
+			"pre",
+			"39eaf59db0b4ada7a0405c5720b9c0728160c1e5e4c1c84b6b794c8dd46310acab5ea550d47674dde21fa2cbe21087f68836b96b09f6f6d450f885cd235cd285",
+			"userOAuthLogin",
+			"console",
+			"distra",
+			"vestibu",
+			"climbing fiber",
+			"purkin",
+			"ltd",
+			"circu",
+			"adaptive fi",
+			"been inter",
+			"ltd",
+			"{}",
+			"retrie",
+			"url",
+			"plastici",
+			"implementation",
+			"apac",
+			"porrill2",
+			"dean2",
+			"dean",
+			"amir",
+			"ama",
+			"khe",
+			"kh",
+			"khe",
+			"kher",
+			"khera",
+			"vesti",
+			"url",
+			"free energy",
+			"adapt ",
+			"inference",
+			"action sele",
+			"sampling",
+			"generative model",
+			"inference",
+			"generative",
+			"af",
+			"titu",
+			"aep",
+			"aeprequest",
+			"aep",
+			"aeprequest"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"2014-09-12",
+			"2014-09-09"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/xavier/Dropbox/uoc/la/lrs/import.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1908,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								576,
+								576
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/xavier/Dropbox/workspace/vor/.gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/xavier/Dropbox/workspace/vor/midterm/midterm.Rmd",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 6968,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/xavier/Dropbox/workspace/vor/midterm/.gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 66,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 205.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mtheme.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 342.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

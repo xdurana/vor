@@ -5,16 +5,16 @@
 %% The original source files were:
 %%
 %% classes.dtx  (with options: `book')
-%% 
+%%
 %% This is a generated file.
-%% 
+%%
 %% Copyright 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006
 %% The LaTeX3 Project and any individual authors listed elsewhere
 %% in this file.
-%% 
+%%
 %% This file was generated from file(s) of the LaTeX base system.
 %% --------------------------------------------------------------
-%% 
+%%
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3c
 %% of this license or (at your option) any later version.
@@ -22,17 +22,17 @@
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.3c or later is part of all distributions of LaTeX
 %% version 2005/12/01 or later.
-%% 
+%%
 %% This file has the LPPL maintenance status "maintained".
-%% 
+%%
 %% This file may only be distributed together with a copy of the LaTeX
 %% base system. You may however distribute the LaTeX base system without
 %% such generated files.
-%% 
+%%
 %% The list of all files belonging to the LaTeX base distribution is
 %% given in the file `manifest.txt'. See also `legal.txt' for additional
 %% information.
-%% 
+%%
 %% The list of derived (unpacked) files belonging to the distribution
 %% and covered by LPPL is defined by the unpacking scripts (with
 %% extension .ins) which are part of the distribution.
@@ -52,7 +52,7 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{book}
+\ProvidesClass{tesi_upf}
               [2005/09/16 v1.4f
  Standard LaTeX document class]
 \newcommand\@ptsize{}
@@ -239,7 +239,7 @@
   \global\let\@date\@empty
   \global\let\@title\@empty
   %
-  \global\let\s@ubtitle\@empty 
+  \global\let\s@ubtitle\@empty
   %
   \global\let\title\relax
   \global\let\author\relax
@@ -317,8 +317,8 @@
 \renewcommand\thesubparagraph {\theparagraph.\@arabic\c@subparagraph}
 \newcommand\@chapapp{\chaptername}
 %%%
-%Pàgines en blanc
-%Fa que les pàgines en blanc no tinguin numeració
+%Pï¿½gines en blanc
+%Fa que les pï¿½gines en blanc no tinguin numeraciï¿½
 \let\origdoublepage\cleardoublepage
 \renewcommand{\cleardoublepage}{%
   \clearpage
