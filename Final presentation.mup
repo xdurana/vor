@@ -1,0 +1,649 @@
+{
+  "title": "Final presentation",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Definition of the project",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "Objective",
+          "id": 5,
+          "attr": {
+            "position": [
+              226,
+              -111,
+              1
+            ],
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Understanding the role of the NOI on the adaptation of the VOR",
+              "id": 29
+            }
+          }
+        },
+        "2": {
+          "title": "Context",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "VOR",
+              "id": 28,
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "There's a pathway between the cerebellar cortex and the inferior olive (NOI)",
+              "id": 27,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "OCNO loop",
+                  "id": 46
+                }
+              }
+            },
+            "12": {
+              "title": "NOI is not present on computational models of the VOR",
+              "id": 25,
+              "attr": {
+                "style": {}
+              }
+            },
+            "13": {
+              "title": "NOI is present on eye-blink reflex computational models",
+              "id": 30,
+              "ideas": {
+                "1": {
+                  "title": "extinction",
+                  "id": 47
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "title": "Research question",
+      "id": 8,
+      "ideas": {
+        "1": {
+          "title": "What's the role of the NOI on the adaptation of the VOR?",
+          "id": 23,
+          "attr": {
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "12": {
+      "title": "Hypothesis",
+      "id": 13,
+      "attr": {
+        "position": [
+          110,
+          103,
+          1
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "2": {
+          "title": "NOI",
+          "id": 111,
+          "ideas": {
+            "1": {
+              "title": "cost-minimization mechanism",
+              "id": 112
+            },
+            "4": {
+              "title": "extinction",
+              "id": 113,
+              "attr": {
+                "style": {}
+              }
+            },
+            "14": {
+              "title": "VOR",
+              "id": 114,
+              "ideas": {},
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "23": {
+      "title": "State of the Art",
+      "id": 7,
+      "ideas": {
+        "2": {
+          "title": "Nucleo-olivary inhibition in the eye-blink reflex",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "Acquired conditioned responses are extinguished once they\nbecome no longer necessary",
+              "id": 18
+            },
+            "2": {
+              "title": "Inactivation of the NOI prevents extinction",
+              "id": 19
+            },
+            "3": {
+              "title": "cost minimization requires\nthat the cerebellum controls the amplitude of its\nresponses",
+              "id": 20
+            },
+            "4": {
+              "title": "The NOI may have have this role: it can indirectly\ncontrol the cerebellar output amplitude by controlling\nthe amplitude of its teaching signal",
+              "id": 21
+            },
+            "7": {
+              "title": "Control theory",
+              "id": 33
+            },
+            "8": {
+              "title": "Function",
+              "id": 141,
+              "ideas": {
+                "1": {
+                  "title": "Muhammad Ali",
+                  "id": 32,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Tradeoff",
+                  "id": 31,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "@Najac2015",
+                  "id": 144
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "title": "VOR circuit",
+          "id": 48,
+          "ideas": {
+            "3": {
+              "title": "plasticity",
+              "id": 116,
+              "ideas": {
+                "1": {
+                  "title": "brainstem",
+                  "id": 68,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "others",
+                  "id": 117
+                },
+                "0.5": {
+                  "title": "cortex",
+                  "id": 65,
+                  "ideas": {},
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "NOI",
+              "id": 118,
+              "ideas": {
+                "1": {
+                  "title": "PC",
+                  "id": 119
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "position": [
+          130.5,
+          367,
+          2
+        ],
+        "style": {}
+      }
+    },
+    "-2": {
+      "title": "Methods",
+      "id": 39,
+      "ideas": {
+        "13": {
+          "title": "Clopath model",
+          "id": 34,
+          "ideas": {
+            "6": {
+              "title": "assumptions",
+              "id": 73,
+              "ideas": {
+                "1": {
+                  "title": "extinction",
+                  "id": 51,
+                  "ideas": {
+                    "1": {
+                      "title": "cortical weight decay",
+                      "id": 50,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "0.5": {
+                      "title": "vestibular modulated",
+                      "id": 38,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "cortical plasticity",
+                  "id": 106,
+                  "ideas": {
+                    "1": {
+                      "title": "clipped weights",
+                      "id": 107
+                    },
+                    "2": {
+                      "title": "slow decay to initial value",
+                      "id": 108
+                    }
+                  }
+                },
+                "5": {
+                  "title": "white noise",
+                  "id": 110
+                }
+              }
+            },
+            "8": {
+              "title": "properties",
+              "id": 82,
+              "ideas": {
+                "1": {
+                  "title": "bottom-up",
+                  "id": 83
+                },
+                "2": {
+                  "title": "two sites of plasticity",
+                  "id": 84,
+                  "ideas": {
+                    "1": {
+                      "title": "cortical",
+                      "id": 85
+                    },
+                    "2": {
+                      "title": "brainstem",
+                      "id": 86
+                    }
+                  }
+                },
+                "3": {
+                  "title": "delayed CF",
+                  "id": 160
+                },
+                "4": {
+                  "title": "interneurons",
+                  "id": 109,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "14": {
+          "title": "training protocols",
+          "id": 69,
+          "ideas": {
+            "1": {
+              "title": "phase reversal",
+              "id": 70,
+              "ideas": {}
+            },
+            "2": {
+              "title": "long light deprivation",
+              "id": 72,
+              "ideas": {}
+            },
+            "3": {
+              "title": "continuous training",
+              "id": 87
+            },
+            "4": {
+              "title": "reacquisition",
+              "id": 158
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "13.5": {
+          "title": "implementation",
+          "id": 52,
+          "ideas": {
+            "1": {
+              "title": "simple model",
+              "id": 56,
+              "ideas": {}
+            },
+            "2": {
+              "title": "detailed model",
+              "id": 59,
+              "ideas": {}
+            },
+            "3": {
+              "title": "NOI",
+              "id": 75,
+              "ideas": {}
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    },
+    "-3": {
+      "title": "Results",
+      "id": 62,
+      "ideas": {
+        "3": {
+          "title": "adaptation",
+          "id": 154,
+          "ideas": {
+            "3": {
+              "title": "savings",
+              "id": 155
+            },
+            "5": {
+              "title": "cost-error balance",
+              "id": 163,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "not perfect control",
+                  "id": 161,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "gain less than one",
+                  "id": 80,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              43,
+              -322,
+              2
+            ],
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "extinction",
+          "id": 76,
+          "ideas": {
+            "14": {
+              "title": "NOI",
+              "id": 93,
+              "ideas": {
+                "1": {
+                  "title": "converges to initial state",
+                  "id": 78,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "exponential decay",
+                  "id": 95,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "fix knoi constant",
+                  "id": 120,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "15": {
+              "title": "Clopath",
+              "id": 94,
+              "ideas": {
+                "3": {
+                  "title": "linear decay",
+                  "id": 97,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "not converges",
+                  "id": 99,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "16": {
+              "title": "mixed NOI and vestibular",
+              "id": 102
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "16": {
+          "title": "cortex-nuclei balance",
+          "id": 100,
+          "attr": {
+            "style": {},
+            "position": [
+              141,
+              75,
+              1
+            ]
+          },
+          "ideas": {
+            "1": {
+              "title": "nuclei ",
+              "id": 125,
+              "ideas": {
+                "1": {
+                  "title": "persistent memory",
+                  "id": 129
+                },
+                "2": {
+                  "title": "consolidation process",
+                  "id": 151
+                },
+                "0.5": {
+                  "title": "slow time scale",
+                  "id": 150,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  218,
+                  31.5,
+                  1
+                ],
+                "style": {}
+              }
+            },
+            "0.5": {
+              "title": "cortical",
+              "id": 126,
+              "ideas": {
+                "1": {
+                  "title": "short time scale",
+                  "id": 127
+                },
+                "2": {
+                  "title": "transient memory",
+                  "id": 128
+                }
+              },
+              "attr": {
+                "style": {},
+                "position": [
+                  202,
+                  -66,
+                  2
+                ]
+              }
+            }
+          }
+        },
+        "17": {
+          "title": "granule cells learning",
+          "id": 121,
+          "ideas": {
+            "1": {
+              "title": "PCA",
+              "id": 122
+            }
+          }
+        },
+        "18": {
+          "title": "limitations",
+          "id": 136,
+          "ideas": {
+            "1": {
+              "title": "modulation on the PC",
+              "id": 137
+            },
+            "2": {
+              "title": "there's always some nuclear transference",
+              "id": 156
+            }
+          }
+        }
+      }
+    },
+    "-13": {
+      "title": "Conclusion",
+      "id": 64,
+      "attr": {
+        "position": [
+          66.5,
+          357,
+          3
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "15": {
+          "title": "more detailed bottom-up models",
+          "id": 134,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "transgenic mouse lines",
+              "id": 131,
+              "ideas": {},
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "better electrophysiological recordings",
+              "id": 153,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "distributed plasticity",
+              "id": 133,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "7.5": {
+          "title": "NOI",
+          "id": 165,
+          "ideas": {
+            "1": {
+              "title": "more parsimonious explanation\n to extinction",
+              "id": 164,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": []
+}
