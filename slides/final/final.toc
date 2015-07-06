@@ -1,5 +1,5 @@
 \beamer@endinputifotherversion {3.33pt}
 \beamer@sectionintoc {1}{Methods}{9}{0}{1}
 \beamer@sectionintoc {2}{Results}{15}{0}{2}
-\beamer@sectionintoc {3}{Conclusions}{19}{0}{3}
-\beamer@sectionintoc {4}{References}{22}{0}{4}
+\beamer@sectionintoc {3}{Conclusions}{22}{0}{3}
+\beamer@sectionintoc {4}{References}{25}{0}{4}
