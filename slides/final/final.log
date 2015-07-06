@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.79.1 (TeX Live 2014/Debian) (rev 4971)  (format=lualatex 2015.4.1)  6 JUL 2015 16:04
+This is LuaTeX, Version beta-0.79.1 (TeX Live 2014/Debian) (rev 4971)  (format=lualatex 2015.4.1)  6 JUL 2015 23:14
  \write18 enabled.
  file:line:error style messages enabled.
 **final.tex
@@ -755,7 +755,7 @@ luatexbase-attr: luatexbase.attributes["luaotfload@cursbase"] = 6
 luatexbase-attr: luatexbase.attributes["luaotfload@curscurs"] = 7
 luatexbase-attr: luatexbase.attributes["luaotfload@cursdone"] = 8
 luatexbase-attr: luatexbase.attributes["luaotfload@state"] = 9
-luaotfload | main : fontloader loaded in 0.023 seconds
+luaotfload | main : fontloader loaded in 0.022 seconds
 luatexbase-mcb: inserting 'luaotfload.node_processor'
 at position 1 in 'pre_linebreak_filter'
 luatexbase-mcb: inserting 'luaotfload.node_processor'
@@ -1650,22 +1650,22 @@ luaotfload | load : Lookup/name: "FiraSans" -> "FiraSans-Regular.otf"
 luaotfload | load : Lookup/name: "FiraSansLight" -> "FiraSans-Light.otf"
 luaotfload | load : Lookup/name: "FiraSansExtraLight" -> "FiraSans-ExtraLight.otf" [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./final.vrb <images/vor.png, id=38, 599.23875pt x 173.64874pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./final.vrb <images/vor.png, id=34, 599.23875pt x 173.64874pt>
 File: images/vor.png Graphic file (type png)
  <use images/vor.png>
 Package pdftex.def Info: images/vor.png used on input line 2.
 (pdftex.def)             Requested size: 299.61864pt x 86.82416pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `EU2/FiraSansLight(0)/m/it' undefined
-(Font)              using `EU2/FiraSansLight(0)/m/n' instead on input line 3.
+(Font)              using `EU2/FiraSansLight(0)/m/n' instead on input line 4.
 
 luaotfload | load : Lookup/name: "FiraSansLight" -> "FiraSans-Light.otf"
 luaotfload | load : Lookup/name: "FiraSansLight" -> "FiraSans-Light.otf"
@@ -1680,31 +1680,31 @@ luaotfload | load : Lookup/name: "FiraSansLight" -> "FiraSans-Light.otf"
 luaotfload | load : Lookup/name: "FiraSans" -> "FiraSans-Regular.otf"
 luaotfload | load : Lookup/name: "FiraSansLight" -> "FiraSans-Light.otf" [2
 
-<./images/vor.png>] (./final.vrb <images/guo.png, id=49, 1772.6225pt x 487.8225pt>
-File: images/guo.png Graphic file (type png)
- <use images/guo.png>
-Package pdftex.def Info: images/guo.png used on input line 12.
-(pdftex.def)             Requested size: 265.8819pt x 73.17021pt.
+<./images/vor.png>] (./final.vrb <images/boyden.png, id=45, 513.92pt x 294.09875pt>
+File: images/boyden.png Graphic file (type png)
+ <use images/boyden.png>
+Package pdftex.def Info: images/boyden.png used on input line 6.
+(pdftex.def)             Requested size: 205.56435pt x 117.6374pt.
 ) [3
 
-<./images/guo.png>] (./final.vrb) [4
-
-] (./final.vrb <images/noi.jpg, id=68, 241.11319pt x 168.20363pt>
-File: images/noi.jpg Graphic file (type jpg)
- <use images/noi.jpg>
-Package pdftex.def Info: images/noi.jpg used on input line 9.
-(pdftex.def)             Requested size: 144.66902pt x 100.92294pt.
-
-Overfull \hbox (2.40524pt too wide) in paragraph at lines 9--10
-[][][]  
- []
-
-) [5
-
-<./images/noi.jpg>] (./final.vrb
-luaotfload | load : Lookup/name: "FiraSansLight" -> "FiraSans-Light.otf") [6
+<./images/boyden.png>] (./final.vrb) [4
 
 ] (./final.vrb
+luaotfload | load : Lookup/name: "FiraSansLight" -> "FiraSans-Light.otf") [5
+
+] (./final.vrb <images/schonewille-ebc.png, id=67, 531.9875pt x 437.635pt>
+File: images/schonewille-ebc.png Graphic file (type png)
+ <use images/schonewille-ebc.png>
+Package pdftex.def Info: images/schonewille-ebc.png used on input line 4.
+(pdftex.def)             Requested size: 159.59747pt x 131.2915pt.
+luaotfload | load : Lookup/name: "FiraSans" -> "FiraSans-Regular.otf")
+Overfull \vbox (11.39967pt too high) detected at line 71
+ []
+
+[6
+
+<./images/schonewille-ebc.png>] (./final.vrb
+luaotfload | load : Lookup/name: "FiraSans" -> "FiraSans-Italic.otf"
 luaotfload | load : Lookup/name: "FiraSans" -> "FiraSans-Regular.otf") [7
 
 ] (./final.vrb) [8
@@ -1713,11 +1713,20 @@ luaotfload | load : Lookup/name: "FiraSans" -> "FiraSans-Regular.otf") [7
 
 ] (./final.vrb) [10
 
-] (./final.vrb) [11
+] (./final.vrb <images/okr_memory.png, id=107, 823.075pt x 340.27126pt>
+File: images/okr_memory.png Graphic file (type png)
+ <use images/okr_memory.png>
+Package pdftex.def Info: images/okr_memory.png used on input line 8.
+(pdftex.def)             Requested size: 246.9244pt x 102.08215pt.
+)
+Overfull \vbox (13.33018pt too high) detected at line 126
+ []
 
-] (./final.vrb) [12
+[11
 
-] (./final.vrb <images/vor_adaptation.png, id=124, 684.5575pt x 415.5525pt>
+<./images/okr_memory.png>] (./final.vrb) [12
+
+] (./final.vrb <images/vor_adaptation.png, id=123, 684.5575pt x 415.5525pt>
 File: images/vor_adaptation.png Graphic file (type png)
  <use images/vor_adaptation.png>
 Package pdftex.def Info: images/vor_adaptation.png used on input line 2.
@@ -1733,102 +1742,116 @@ Package pdftex.def Info: images/vor_adaptation.png used on input line 2.
 
 ] [15
 
-] (./final.vrb <images/gain.png, id=145, 565.11125pt x 484.81125pt>
+] (./final.vrb <images/gain.png, id=144, 565.11125pt x 484.81125pt>
 File: images/gain.png Graphic file (type png)
  <use images/gain.png>
 Package pdftex.def Info: images/gain.png used on input line 5.
 (pdftex.def)             Requested size: 141.27747pt x 121.20251pt.
-luaotfload | load : Lookup/name: "FiraSans" -> "FiraSans-Regular.otf" <images/longnoi_12.png, id=146, 411.136pt x 308.352pt>
+ <images/longnoi_12.png, id=145, 411.136pt x 308.352pt>
 File: images/longnoi_12.png Graphic file (type png)
  <use images/longnoi_12.png>
 Package pdftex.def Info: images/longnoi_12.png used on input line 10.
-(pdftex.def)             Requested size: 102.78374pt x 77.0878pt.
- <images/longnoi_13.png, id=147, 411.136pt x 308.352pt>
+(pdftex.def)             Requested size: 143.89975pt x 107.9248pt.
+ <images/longnoi_13.png, id=146, 411.136pt x 308.352pt>
 File: images/longnoi_13.png Graphic file (type png)
  <use images/longnoi_13.png>
 Package pdftex.def Info: images/longnoi_13.png used on input line 12.
-(pdftex.def)             Requested size: 102.78374pt x 77.0878pt.
-) [16
+(pdftex.def)             Requested size: 143.89975pt x 107.9248pt.
+)
+Overfull \vbox (18.18907pt too high) detected at line 173
+ []
 
-<./images/gain.png><./images/longnoi_12.png><./images/longnoi_13.png>] (./final.vrb <images/longnoi_19.png, id=153, 411.136pt x 308.352pt>
+[16
+
+<./images/gain.png><./images/longnoi_12.png><./images/longnoi_13.png>] (./final.vrb <images/longnoi_19.png, id=152, 411.136pt x 308.352pt>
 File: images/longnoi_19.png Graphic file (type png)
  <use images/longnoi_19.png>
 Package pdftex.def Info: images/longnoi_19.png used on input line 3.
-(pdftex.def)             Requested size: 164.45148pt x 123.33861pt.
+(pdftex.def)             Requested size: 205.56749pt x 154.17561pt.
 ) [17
 
-<./images/longnoi_19.png>] (./final.vrb <images/longnoi_20.png, id=160, 411.136pt x 308.352pt>
+<./images/longnoi_19.png>] (./final.vrb <images/longnoi_20.png, id=158, 411.136pt x 308.352pt>
 File: images/longnoi_20.png Graphic file (type png)
  <use images/longnoi_20.png>
 Package pdftex.def Info: images/longnoi_20.png used on input line 3.
-(pdftex.def)             Requested size: 164.45148pt x 123.33861pt.
+(pdftex.def)             Requested size: 205.56749pt x 154.17561pt.
 ) [18
 
-<./images/longnoi_20.png>] (./final.vrb <images/longnoi_21.png, id=166, 411.136pt x 308.352pt>
+<./images/longnoi_20.png>] (./final.vrb <images/longnoi_21.png, id=165, 411.136pt x 308.352pt>
 File: images/longnoi_21.png Graphic file (type png)
-
-<use images/longnoi_21.png>
+ <use images/longnoi_21.png>
 Package pdftex.def Info: images/longnoi_21.png used on input line 3.
-(pdftex.def)             Requested size: 164.45148pt x 123.33861pt.
+(pdftex.def)             Requested size: 205.56749pt x 154.17561pt.
 ) [19
 
-<./images/longnoi_21.png>] (./final.vrb) [20
+<./images/longnoi_21.png>] (./final.vrb <images/longnoi_22.png, id=171, 411.136pt x 308.352pt>
+File: images/longnoi_22.png Graphic file (type png)
+ <use images/longnoi_22.png>
+Package pdftex.def Info: images/longnoi_22.png used on input line 3.
+(pdftex.def)             Requested size: 205.56749pt x 154.17561pt.
+) [20
 
-] (./final.vrb <images/longnoi_11.png, id=177, 227.249pt x 250.536pt>
-File: images/longnoi_11.png Graphic file (type png)
- <use images/longnoi_11.png>
-Package pdftex.def Info: images/longnoi_11.png used on input line 5.
-(pdftex.def)             Requested size: 136.35043pt x 150.32274pt.
-) [21
+<./images/longnoi_22.png>] (./final.vrb) [21
 
-<./images/longnoi_11.png>] [22
+] [22
 
 ] (./final.vrb) [23
 
-] (./final.vrb) [24
-
-] [25
-
-] (./final.vrb) (./final.bbl)
-Overfull \vbox (266.01767pt too high) detected at line 287
+] (./final.vrb <images/uusisaari.png, id=193, 527.9725pt x 529.98pt>
+File: images/uusisaari.png Graphic file (type png)
+ <use images/uusisaari.png>
+Package pdftex.def Info: images/uusisaari.png used on input line 3.
+(pdftex.def)             Requested size: 158.39296pt x 158.99521pt.
+)
+Overfull \vbox (5.47954pt too high) detected at line 262
  []
 
-[26
+[24
 
-</usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>] [27
+<./images/uusisaari.png>] (./final.vrb) [25
+
+] [26
+
+] (./final.vrb)
+Overfull \vbox (9.1938pt too high) detected at line 331
+ []
+
+[27
+
+</usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>] (./final.vrb) [28
 
 ]
 \tf@nav=\write8
 \tf@toc=\write9
 \tf@snm=\write10
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
  (./final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
 Package rerunfilecheck Info: File `final.out' has not changed.
-(rerunfilecheck)             Checksum: 6C6F2DA1C82CB65F8002E9AEEB2C56DF;175.
+(rerunfilecheck)             Checksum: 0417252E2F196C02BD9515DD4324904B;130.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
 )
 
 Here is how much of LuaTeX's memory you used:
- 43773 strings out of 493788
+ 43811 strings out of 493788
  125200,1144653 words of node,token memory allocated
- 910 words of node memory still in use:
-   12 hlist, 6 vlist, 2 rule, 19 glue, 3 kern, 8 penalty, 8 glyph, 39 attribute, 67 glue_spec, 30 attribute_list, 3 write, 1 local_par, 6 pdf_colorstack nodes
-   avail lists: 1:2,2:4580,3:228,4:1197,5:347,6:2674,7:49,8:18,9:251,10:218
- 45512 multiletter control sequences out of 65536+600000
- 76 fonts using 10851263 bytes
+ 11962 words of node memory still in use:
+   51 hlist, 9 vlist, 3 rule, 53 disc, 182 glue, 79 kern, 36 penalty, 673 glyph, 1519 attribute, 146 glue_spec, 776 attribute_list, 3 write, 11 local_par, 3 pdf_refximage, 3 pdf_dest, 46 pdf_colorstack nodes
+   avail lists: 1:1,2:3998,3:190,4:773,5:248,6:1889,7:49,8:13,9:173,10:146
+ 45527 multiletter control sequences out of 65536+600000
+ 77 fonts using 11171079 bytes
  68i,13n,95p,919b,886s stack positions out of 5000i,500n,10000p,200000b,100000s
-</home/xavier/.fonts/FiraMono-Regular.otf></home/xavier/.fonts/FiraSans-Light.otf></home/xavier/.fonts/FiraSans-ExtraLight.otf></home/xavier/.fonts/FiraSans-Regular.otf>
-Output written on final.pdf (27 pages, 442315 bytes).
+</home/xavier/.fonts/FiraSans-Italic.otf></home/xavier/.fonts/FiraMono-Regular.otf></home/xavier/.fonts/FiraSans-Light.otf></home/xavier/.fonts/FiraSans-ExtraLight.otf></home/xavier/.fonts/FiraSans-Regular.otf>
+Output written on final.pdf (28 pages, 666801 bytes).
 
-PDF statistics: 255 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
- 67 named destinations out of 1000 (max. 131072)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 270 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 70 named destinations out of 1000 (max. 131072)
+ 40 words of extra memory for PDF output out of 10000 (max. 10000000)
 

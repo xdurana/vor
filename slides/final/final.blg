@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: final.aux
 The style file: apalike.bst
 Database file #1: vornoi.bib
-Warning--empty journal in Najac2015
-You've used 8 entries,
+You've used 10 entries,
             1935 wiz_defined-function locations,
-            539 strings with 5240 characters,
-and the built_in function-call counts, 3526 in all, are:
-= -- 350
-> -- 154
+            558 strings with 5939 characters,
+and the built_in function-call counts, 4761 in all, are:
+= -- 458
+> -- 255
 < -- 2
-+ -- 52
-- -- 52
-* -- 334
-:= -- 611
-add.period$ -- 24
-call.type$ -- 8
-change.case$ -- 66
-chr.to.int$ -- 8
-cite$ -- 9
-duplicate$ -- 112
-empty$ -- 241
-format.name$ -- 64
-if$ -- 671
++ -- 90
+- -- 90
+* -- 463
+:= -- 836
+add.period$ -- 30
+call.type$ -- 10
+change.case$ -- 95
+chr.to.int$ -- 10
+cite$ -- 10
+duplicate$ -- 140
+empty$ -- 299
+format.name$ -- 104
+if$ -- 896
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 43
-num.names$ -- 24
-pop$ -- 50
+missing$ -- 10
+newline$ -- 53
+num.names$ -- 30
+pop$ -- 73
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 95
 quote$ -- 0
-skip$ -- 83
+skip$ -- 103
 stack$ -- 0
-substring$ -- 299
-swap$ -- 7
+substring$ -- 366
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
-warning$ -- 1
-while$ -- 32
+type$ -- 60
+warning$ -- 0
+while$ -- 39
 width$ -- 0
-write$ -- 105
-(There was 1 warning)
+write$ -- 132

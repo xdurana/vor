@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[Boyden et~al., 2004]{Boyden2004}
+Boyden, E.~S., Katoh, A., and Raymond, J.~L. (2004).
+\newblock {Cerebellum-dependent learning: the role of multiple plasticity
+  mechanisms.}
+\newblock {\em Annu. Rev. Neurosci.}, 27:581--609.
+
 \bibitem[Clopath et~al., 2014]{Clopath2014}
 Clopath, C., Badura, A., {De Zeeuw}, C.~I., and Brunel, N. (2014).
 \newblock {A cerebellar learning model of vestibulo-ocular reflex adaptation in
@@ -23,12 +29,6 @@ Gao, Z., van Beugen, B.~J., and {De Zeeuw}, C.~I. (2012).
 \newblock {Distributed synergistic plasticity and cerebellar learning.}
 \newblock {\em Nat. Rev. Neurosci.}, 13(9):619--35.
 
-\bibitem[Guo et~al., 2014]{Guo2014}
-Guo, C.~C., Ke, M.~C., and Raymond, J.~L. (2014).
-\newblock {Cerebellar Encoding of Multiple Candidate Error Cues in the Service
-  of Motor Learning}.
-\newblock {\em J. Neurosci.}, 34(30):9880--9890.
-
 \bibitem[Herreros and Verschure, 2013]{Herreros2013b}
 Herreros, I. and Verschure, P. F. M.~J. (2013).
 \newblock {Nucleo-olivary inhibition balances the interaction between the
@@ -41,10 +41,25 @@ Medina, J.~F., Nores, W.~L., and Mauk, M.~D. (2002).
   conditioned eyelid responses.}
 \newblock {\em Nature}, 416(6878):330--333.
 
-\bibitem[Najac and Raman, 2015]{Najac2015}
-Najac, M. and Raman, I.~M. (2015).
-\newblock {Integration of Purkinje Cell Inhibition by Cerebellar Nucleo-Olivary
-  Neurons}.
-\newblock 35(2):544--549.
+\bibitem[Schonewille et~al., 2010]{Schonewille2010}
+Schonewille, M., Belmeguenai, a., Koekkoek, S.~K., Houtman, S.~H., Boele,
+  H.~J., van Beugen, B.~J., Gao, Z., Badura, a., Ohtsuki, G., Amerika, W.~E.,
+  Hosy, E., Hoebeek, F.~E., Elgersma, Y., Hansel, C., and {De Zeeuw}, C.~I.
+  (2010).
+\newblock {Purkinje cell-specific knockout of the protein phosphatase PP2B
+  impairs potentiation and cerebellar motor learning.}
+\newblock {\em Neuron}, 67(4):618--28.
+
+\bibitem[Uusisaari and Kn\"{o}pfel, 2011]{Uusisaari2011}
+Uusisaari, M. and Kn\"{o}pfel, T. (2011).
+\newblock {Functional classification of neurons in the mouse lateral Cerebellar
+  Nuclei}.
+\newblock {\em Cerebellum}, 10(4):637--646.
+
+\bibitem[Yamazaki et~al., 2015]{Yamazaki2015}
+Yamazaki, T., Nagao, S., Lennon, W., and Tanaka, S. (2015).
+\newblock {Modeling memory consolidation during posttraining periods in
+  cerebellovestibular learning}.
+\newblock {\em Proc. Natl. Acad. Sci.}, 112(11):201413798.
 
 \end{thebibliography}
