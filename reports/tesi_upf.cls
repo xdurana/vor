@@ -156,7 +156,8 @@
 \def\department#1{\def\@department{#1}}
 \def\@supervisor{}
 \def\supervisor#1{\def\@supervisor{#1}}
-
+\def\@director{}
+\def\director#1{\def\@director{#1}}
 
 
 %%%
@@ -215,17 +216,24 @@
     {\Large \sffamily \@subtitle \par}%
     \vskip 2cm%
     {\large
-     \lineskip .75em%
-      \begin{tabular}[t]{c}%
-       {\Huge  \@author}
-      \end{tabular}\par}%
+      {\Huge  \@author}
       \rule{\linewidth}{1mm} \par
-      \vskip 1cm%
+    }
+    % \lineskip .75em%
+    %  \begin{tabular}[t]{c}%
+    %   {\Huge  \@author}
+    %  \end{tabular}\par}%
+    %  \rule{\linewidth}{1mm} \par
+    \vskip 1cm%
     {\large MASTER THESIS UPF / \@thyear}\\[2cm]
     {\normalsize THESIS SUPERVISOR}\par
     {\large \@supervisor}\par
+    \vskip 0.5cm%
+    {\normalsize THESIS DIRECTOR}\par
+    {\large \@director}\par
+    \vskip 0.5cm%
     {\large \@department} \par
-    \vspace{3cm}
+    \vspace{2cm}
     \includegraphics[scale=4]{logo_upf.png}
    \end{flushleft}\par
 %  \@thanks

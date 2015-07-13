@@ -8,7 +8,9 @@
 \usepackage[catalan,english]{babel}
 
 %NOMÉS PER A OBTENIR INDICACIÓ DEL MARC EN MIDA A4
-\usepackage[cam,a4,center,frame]{crop}
+%\usepackage[cam,a4,center,frame]{crop}
+
+\usepackage[toc,page]{appendix}
 
 %PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
 \usepackage{graphicx}
@@ -17,15 +19,17 @@
 \usepackage{times}
 %\usepackage{garamond}
 
-%SENSE HEADINGS: NO MODIFICAR 
+%SENSE HEADINGS: NO MODIFICAR
 \pagestyle{plain}
 
 %PER A L'ÍNDEX DE MATÈRIES
-\usepackage{makeidx}
-\makeindex
+%\usepackage{makeidx}
+%\makeindex
 
 %ESTIL DE BIBLIOGRAFIA
 \bibliographystyle{apalike}
+
+\renewcommand\appendixpage{}
 
 
 %AQUEST DOCUMENT ÉS EN CATALÀ
@@ -35,32 +39,35 @@
 \addto\captionscatalan
   {\renewcommand{\contentsname}{\Large \sffamily Table of contents}}
 
+\newcommand{\keyword}[1]{\textit{#1}}
 
 %AFEGIU EN AQUESTA PART LES VOSTRES DADES
-\title{Applying a biological model of the vestibulo-ocular reflex to control gaze stabilitzation in a humanoid robot}
+\title{Nucleo-olivary inhibition explains extinction on a computational model of the vestibulo-ocular reflex}
 \author{Xavier Duran Albareda}
 \thyear{2015}
-\department{Synthetic Perceptive, Emotive and Cognitive Systems group}
-\supervisor{Ivan Herreros}
+\department{Synthetic Perceptive, Emotive and Cognitive Systems (SPECS)}
+\supervisor{Dr. Ivan Herreros}
+\director{Prof. Dr. Paul F.M.J Verschure}
 
 \begin{document}
 
 
 \frontmatter
 
+\maketitle
 
 \cleardoublepage
 
 
-%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
+%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
 %\noindent To my family
 %\cleardoublepage
-%%%%% Final de dedicatòria
+%%%% Final de dedicatòria
 
-%%%%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
+%%%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
 %\noindent {\Large \sffamily Acknowledgements}
 %\cleardoublepage
-%%%%%% Final dels agraïments
+%%%%% Final dels agraïments
 
 \vspace*{\fill}
 \section*{\Large \sffamily  Abstract}
@@ -71,6 +78,10 @@ The state of the art computational models of the VOR model extinction in the dar
 
 This study speculates about the existence of the nucleo-olivary inhibition (NOI), an alternative connection that would be the responsible to the extinction of the reflex that hasn't been proved yet on to exist on the physiological level. The aim is to show if the behavior of the modified model is coherent with the behavioral experiments.
 
+\vskip 1cm
+
+Keywords: \keyword{vestibulo-ocular reflex}, \keyword{cerebellum}, \keyword{nucleo-olivary inhibition}, \keyword{extinction}, \keyword{reflex}
+
 \vspace*{\fill}
 
 \cleardoublepage
@@ -78,7 +89,7 @@ This study speculates about the existence of the nucleo-olivary inhibition (NOI)
 
 %PREFACI OPCIONAL. SI NO ES VOL, COMENTEU FINS EL FINAL DE PREFACI
 %{\bf Prefaci}
-%\cleardoublepage
+\cleardoublepage
 %FINAL DE PREFACI
 
 %TAULA DE CONTINGUTS: OBLIGATÒRIA
@@ -99,37 +110,21 @@ This study speculates about the existence of the nucleo-olivary inhibition (NOI)
 
 \section{Problem statement}
 
-NOI\cite{Herreros2013b}.
+Praesent at mauris elementum, congue lacus malesuada, porta magna. Nam ex magna, sagittis nec nulla at, viverra tincidunt ipsum. Integer imperdiet non justo vel dictum. Nullam gravida, erat quis tincidunt lacinia, libero ex imperdiet orci, et rutrum justo enim at dui. Vivamus ligula nibh, imperdiet vel consequat ullamcorper, fringilla ut tortor. Vivamus turpis libero, volutpat nec ex id, scelerisque pretium mi. Integer vel ligula laoreet, vulputate orci quis, suscipit nulla. Fusce ut urna sit amet magna volutpat vehicula eget vel mi. Mauris nisi lectus, porta sit amet hendrerit quis, fermentum et magna. In maximus metus a mollis aliquet. Donec iaculis id arcu egestas semper. Aenean ultricies dui vel lorem sodales, a fringilla orci vestibulum. Etiam quam nisi, finibus eget pharetra eu, imperdiet vitae neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum nisi ligula, fringilla a rhoncus blandit, placerat vitae libero.
+
+Maecenas tempus tortor eu porta condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ultricies hendrerit nibh in rutrum. Nullam hendrerit ultrices sapien eget elementum. Donec lacinia accumsan consequat. Morbi ac placerat velit, sed dictum orci. Morbi euismod aliquet dolor, et malesuada lectus maximus vel. Mauris fermentum ornare lacus dictum dictum. Vivamus scelerisque consequat vehicula. Nulla id magna lacus. Nulla nunc nisl, aliquam sit amet dignissim eget, tincidunt vel massa. Vestibulum magna dolor, ultricies a porta tincidunt, eleifend sit amet elit. Maecenas tincidunt a metus vel maximus. \cite{Herreros2013b}.
 
 \section{State of the art}
 
-The cerebellum has a central role in motor learning\index{motor learning}, that is the process of improving the smoothness and accuracy of movements through practice. It is not only important for learning to perform complicated movements, like playing an instrument or a sport, but also for adaptation of simple movements like reflexes along the physical changes that may occur over time.
+The cerebellum has a central role in motor learning, that is the process of improving the smoothness and accuracy of movements through practice. It is not only important for learning to perform complicated movements, like playing an instrument or a sport, but also for adaptation of simple movements like reflexes along the physical changes that may occur over time.
 
-The cerebellar cortex seems to have a uniform structure throughout the cerebellum. Its architecture is sometimes described as crystalline for it appears to be an homogeneous sheet of tissue, and is composed of repeated modules or microzones\index{microzone}, that have the same cell types that are connected in the same manner and are the functional units of the cerebellar cortex\index{cerebellar cortex}. Depending on its functional role, different microzones receive different inputs and project to different targets. A microzone along with its related subcortical structures forms what's called a microcomplex\index{microcomplex} \cite{Ito1982}, and it's considered to be a unit neuronal machine.
+The cerebellar cortex seems to have a uniform structure throughout the cerebellum. Its architecture is sometimes described as crystalline for it appears to be an homogeneous sheet of tissue, and is composed of repeated modules or microzones, that have the same cell types that are connected in the same manner and are the functional units of the cerebellar cortex. Depending on its functional role, different microzones receive different inputs and project to different targets. A microzone along with its related subcortical structures forms what's called a microcomplex \cite{Ito1982}, and it's considered to be a unit neuronal machine.
 
 The uniformity on the microcircuit of the cerebellar cortex has inspired the idea that there is a single cerebellar algorithm and that different microzones process signals they receive in a similar way. The study of the cerebellum during one specific learning task may help to generalize its function to be applied to many different tasks \cite{Boyden2004}.
 
-Vestibulo-ocular reflex\index{vestibulo-ocular reflex} (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks because of its properties: it's widespread in many species, it has well defined sensory inputs and quantifiable motor outputs, and the anatomy of circuitry is well localized \cite{Ito1982}.
+Vestibulo-ocular reflex (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks because of its properties: it's widespread in many species, it has well defined sensory inputs and quantifiable motor outputs, and the anatomy of circuitry is well localized \cite{Ito1982}.
 
-\subsection{Microcircuitry of the cerebellum}
-
-The three-neuronal pathway formed by mossy fibers, granule cells and Purkinje cells\index{purkinje cell} conforms the substrate of the multilayered computational networks of the cerebellum. Mossy fibers\index{mossy fiber} and climbing fibers\index{climbing fiber} are the inputs, and Purkinje cells are the sole output of the cerebellar cortex. As Purkinje cells project to and inhibit their target neurons in the vestibular and deep cerebellar nuclei, the entire output of the cerebellum is inhibitory.
-
-\begin{figure}
-  \centering
-  \includegraphics[scale=1]{images/circuit.jpg}
-  \caption[Microcircuit of the cerebellum]{Microcircuit of the cerebellum}
-\end{figure}
-
-Mossy fibers convey information from different sources and synapse to 400 to 600 granule cells, that are the smallest and numerous neurons in the brain \cite{Marr1969}. On the contrary, granule cells integrates only a small number of mossy fibers conforming sparse coding \cite{Ito2006}. Granule cell axons bifurcate and form parallel fibers which run along the surface of the cerebellum.
-
-Purkinje cells receive two very different types of input that have different electrophisiological effects. Parallel fibers synapse extensively on Purkinje cells and cause them to produce normal action potentials or simple spikes. Each Purkinje cell is also innervated by a single climbing fiber, arising from the inferior olive, that forms numerous synaptic contacts with the Purkinje cell dendrites. This is one of the most powerful synaptic junctions existing on the central nervous system, and every time climbing fibers fires the innervated Purkinje cell triggers a complex spike.
-
-Parallel fibers also synapse to basket and stellate cells, the two types of interneurons of the molecular layer. They inhibit Purkinje cells and are contacted by climbing fibers. Because they are seldom differenced they are collectively called inhibitory interneurons \cite{Jorntell2010}.
-
-\subsection{VOR adaptation task}
-
-The flocculus, a small lobe situated on the vestibulocerebellum, is the main cerebellar region that is responsible of the control of eye movements. Its role is to optimize ocular motor performance so that the image remains still enough on the fovea so the brain is able to interpret the scene in real time \cite{Kheradmand2011}. The flocculus receives visual and vestibular information and uses it to control gaze stabilization. Vestibulo-ocular reflex, optokinetic nystagmus and smooth pursuit are under the control of the floccular region of the cerebellum.
+\subsection{Vestibulo-ocular reflex (VOR)}
 
 VOR is a compensatory eye movement that stabilizes retinal images during head movements by producing an eye movement in the opposite direction, thus preventing degradation of image processing. During lifetime, changes in vestibular processing or in the mechanical properties of the oculomotor plant (as muscles develop or weaken) can cause eye-movement inaccuracies. This poor calibration results in blurred vision and VOR needs to be adapted, and the same happens when a subject starts to wear glasses. VOR produces compensatory movements in response to horizontal, vertical and translational head movements.
 
@@ -139,7 +134,11 @@ VOR is a compensatory eye movement that stabilizes retinal images during head mo
   \caption[VOR reflex]{VOR reflex}
 \end{figure}
 
+The flocculus, a small lobe situated on the vestibulocerebellum, is the main cerebellar region that is responsible of the control of eye movements. Its role is to optimize ocular motor performance so that the image remains still enough on the fovea so the brain is able to interpret the scene in real time \cite{Kheradmand2011}. The flocculus receives visual and vestibular information and uses it to control gaze stabilization. Vestibulo-ocular reflex, optokinetic nystagmus and smooth pursuit are under the control of the floccular region of the cerebellum.
+
 In terms of control theory, VOR is a feedforward or open-loop control system since the output of the reflex has no effect on the vestibular signals input \cite{Porrill2007}, and it's controlled by an adaptive mechanism of the cerebellum. This adaptation is materialized by changing the amplitude and timing of the VOR, expressed in gain and phase values respectively \cite{DeZeeuw2005}.
+
+\subsubsection{VOR adaptation}
 
 In the laboratory VOR adaptation is induced in training sessions by providing visual stimuli in conflict with the vestibular stimulus. Typically screen and turntable rotation are combined to induce bidirectional gain changes in the animal VOR. Depending on the relative direction of the head and the image motion, gain and phase parameters can increase or decrease after the training periods.
 
@@ -155,7 +154,107 @@ After training sessions, the performance of the VOR is measured in the dark to i
 
 The flocculus or the entire cerebellum is not critical for generating the VOR, as it is still present in animals with the complete ablation of it, but it remains necessary for its adaptation. Lesions on the inferior olive also ended with the same result \cite{Ito2006}.
 
-\subsection{Marr-Albus classical models}
+\subsection{Extinction of the learned adaptation}
+
+Aenean ac est non justo feugiat consequat vel et eros. Nam gravida mauris justo, in molestie lorem mattis quis. Integer in accumsan nisl, a varius lorem. Morbi ornare eget odio a ultricies. Nullam neque enim, congue quis ante ut, mattis ullamcorper velit. Sed condimentum sem eget molestie fermentum. Cras non tempor elit, a elementum ipsum. Sed nec fermentum leo. Duis hendrerit, augue ut interdum placerat, dolor lectus scelerisque risus, ut dignissim ex nibh eget lorem. Nam sed varius lorem, a ullamcorper odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. In dapibus erat vel sem fermentum, finibus consequat sapien finibus. Duis ornare lorem pulvinar finibus rutrum. Maecenas aliquet auctor nisl vitae cursus. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+In ac nisi hendrerit eros finibus pretium. Vestibulum euismod lectus et leo molestie, iaculis viverra erat ullamcorper. Aliquam non dapibus massa. Nullam sed luctus dui. Nulla bibendum enim vel libero consectetur dictum. Nullam et bibendum tortor. Cras aliquet metus at turpis faucibus, eu interdum elit blandit. Donec tincidunt blandit leo, vitae efficitur lectus maximus placerat. Etiam bibendum vulputate varius. Donec consequat diam vel ipsum faucibus sagittis. Etiam at nulla purus. Aenean pellentesque augue tellus, et porttitor massa molestie nec. Vestibulum ante ex, condimentum a mollis quis, molestie ac leo.
+
+\subsubsection{Nucleo-olivary inhibition (NOI): a candidate signal}
+
+Maecenas tempus tortor eu porta condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ultricies hendrerit nibh in rutrum. Nullam hendrerit ultrices sapien eget elementum. Donec lacinia accumsan consequat. Morbi ac placerat velit, sed dictum orci. Morbi euismod aliquet dolor, et malesuada lectus maximus vel. Mauris fermentum ornare lacus dictum dictum. Vivamus scelerisque consequat vehicula. Nulla id magna lacus. Nulla nunc nisl, aliquam sit amet dignissim eget, tincidunt vel massa. Vestibulum magna dolor, ultricies a porta tincidunt, eleifend sit amet elit. Maecenas tincidunt a metus vel maximus.
+
+\subsection{Computational models of the VOR}
+
+Aenean ac est non justo feugiat consequat vel et eros. Nam gravida mauris justo, in molestie lorem mattis quis. Integer in accumsan nisl, a varius lorem. Morbi ornare eget odio a ultricies. Nullam neque enim, congue quis ante ut, mattis ullamcorper velit. Sed condimentum sem eget molestie fermentum. Cras non tempor elit, a elementum ipsum. Sed nec fermentum leo. Duis hendrerit, augue ut interdum placerat, dolor lectus scelerisque risus, ut dignissim ex nibh eget lorem. Nam sed varius lorem, a ullamcorper odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. In dapibus erat vel sem fermentum, finibus consequat sapien finibus. Duis ornare lorem pulvinar finibus rutrum. Maecenas aliquet auctor nisl vitae cursus. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+In ac nisi hendrerit eros finibus pretium. Vestibulum euismod lectus et leo molestie, iaculis viverra erat ullamcorper. Aliquam non dapibus massa. Nullam sed luctus dui. Nulla bibendum enim vel libero consectetur dictum. Nullam et bibendum tortor. Cras aliquet metus at turpis faucibus, eu interdum elit blandit. Donec tincidunt blandit leo, vitae efficitur lectus maximus placerat. Etiam bibendum vulputate varius. Donec consequat diam vel ipsum faucibus sagittis. Etiam at nulla purus. Aenean pellentesque augue tellus, et porttitor massa molestie nec. Vestibulum ante ex, condimentum a mollis quis, molestie ac leo.
+
+
+
+\chapter{Methods}
+
+\section{Research Question}
+
+In urna dui, scelerisque non tempus vel, pharetra quis mauris. Curabitur in justo id purus suscipit finibus nec in urna. Nam eget urna et nibh egestas auctor ut aliquam libero. Aliquam vitae feugiat urna, vel dictum mi. Praesent tincidunt tincidunt laoreet. Phasellus eu bibendum dui. Maecenas vel ultrices nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis lacinia nunc in dolor bibendum, nec imperdiet mauris efficitur. Quisque vel bibendum diam. Pellentesque at neque at nisi tempus ornare. Fusce tincidunt finibus lacus, in facilisis mauris bibendum id. Donec sed risus massa.
+
+\section{Hypotheses}
+
+Sed ac laoreet justo, at vulputate mauris. Sed felis diam, blandit et mollis ut, vestibulum eget purus. Vestibulum accumsan urna nec lacus faucibus elementum. Ut elementum libero est, sit amet dictum ex porta et. Donec at sapien diam. Vestibulum tincidunt erat urna, et tincidunt urna interdum eu. Maecenas consectetur pretium turpis, condimentum ultricies dolor gravida a. Vestibulum pellentesque sagittis aliquam.
+
+\section{General Methodology Applied}
+
+Phasellus aliquet iaculis magna a finibus. Praesent consectetur vitae elit congue bibendum. Donec eu scelerisque turpis. Donec sagittis finibus est at bibendum. Pellentesque vel purus at mauris sagittis semper. Curabitur mauris felis, auctor ut mauris ut, rhoncus ullamcorper sapien. Etiam id fermentum enim. In ultrices ut felis non lobortis. Aliquam blandit iaculis varius. Sed at lacus porta, laoreet purus nec, laoreet sapien. Integer lacinia congue urna sit amet convallis.
+
+Donec at porttitor nibh. Duis lobortis nec eros sed laoreet. Donec id hendrerit elit. Phasellus id mi vehicula, posuere sem ac, mollis sapien. Pellentesque sed suscipit lacus, at cursus lacus. Nam blandit leo sapien, at laoreet massa pulvinar id. Phasellus dapibus enim et fringilla ultrices. In nec massa hendrerit, hendrerit est id, vulputate neque. Proin volutpat risus nec neque porttitor aliquet. Nullam laoreet nulla id elementum volutpat.
+
+\section{Design \& Development criteria and strategies of Artifact}
+
+Sed ac laoreet justo, at vulputate mauris. Sed felis diam, blandit et mollis ut, vestibulum eget purus. Vestibulum accumsan urna nec lacus faucibus elementum. Ut elementum libero est, sit amet dictum ex porta et. Donec at sapien diam. Vestibulum tincidunt erat urna, et tincidunt urna interdum eu. Maecenas consectetur pretium turpis, condimentum ultricies dolor gravida a. Vestibulum pellentesque sagittis aliquam.
+
+\section{Experimental design and set-up}
+
+Nunc vel dapibus eros, non scelerisque velit. Sed vitae elit malesuada, dignissim magna nec, accumsan tortor. Quisque vel velit et tellus ullamcorper tristique sit amet ac tortor. Morbi mi turpis, porttitor at congue vitae, consequat eu massa. Vestibulum convallis orci fringilla lorem auctor, eget condimentum nulla iaculis. Nam vehicula dui vitae risus pretium, id vulputate enim cursus. Nullam fermentum neque vulputate tellus condimentum, id posuere lorem elementum. Ut dolor lorem, aliquet vel quam et, pulvinar interdum tellus. Donec quis velit non tortor imperdiet dictum. Duis et diam ipsum. Praesent id dolor eu eros laoreet viverra.
+
+\section{Procedures used to obtain data and results}
+
+Nam at mi nec dui pellentesque varius. Duis eu rhoncus ante, sed molestie nunc. Nulla gravida turpis justo, ut ullamcorper nisl ornare et. Integer fermentum scelerisque luctus. Etiam molestie libero quis purus ultrices, et pharetra augue tempus. Curabitur venenatis efficitur dapibus. Aenean ultrices, purus consequat accumsan finibus, tellus erat ultrices enim, ut facilisis lacus tortor et mi. Maecenas magna nulla, elementum eu libero at, suscipit placerat sem. Morbi lacus nisl, venenatis ac lorem non, ultrices sagittis nibh. Praesent a nulla sagittis, fringilla lacus id, fringilla massa.
+
+\chapter{Results}
+
+\section{Data Analysis}
+
+Duis vitae neque a odio porta iaculis. Vivamus lacinia tincidunt velit. Ut porta consectetur quam quis sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur tincidunt condimentum venenatis. Nunc sodales lacus nisi, in mollis lacus posuere ut. Duis tristique eu magna vitae suscipit. Integer nec lacinia lectus. Mauris tempus varius sem quis faucibus. Duis ac est nisi. Ut luctus lacus eget leo pulvinar, non vehicula quam ornare. Pellentesque porttitor, ante ut vestibulum vehicula, turpis felis facilisis nulla, eget aliquet nisi lectus consequat nisl. Praesent dignissim maximus porta. Proin ligula lectus, fringilla a condimentum in, suscipit id risus.
+
+\section{Description of Key results obtained in the study}
+
+Proin dignissim posuere nibh. Integer sed consectetur lacus, ac venenatis felis. Quisque eleifend arcu vel nulla fringilla sollicitudin. Praesent eu efficitur dui. Vivamus faucibus ac mauris quis pellentesque. Praesent vel nisl sed arcu volutpat consectetur eu non risus. Maecenas laoreet leo vitae varius finibus. Integer posuere rutrum viverra. Mauris dapibus maximus augue a accumsan. Nulla tortor urna, lobortis nec nibh non, fringilla auctor risus. Curabitur vehicula tincidunt mi vitae venenatis. Cras ultricies nulla a eros laoreet, venenatis porta dui interdum. Cras at varius est.
+
+\chapter{Discussion \& Conclusion}
+
+Duis vitae neque a odio porta iaculis. Vivamus lacinia tincidunt velit. Ut porta consectetur quam quis sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur tincidunt condimentum venenatis. Nunc sodales lacus nisi, in mollis lacus posuere ut. Duis tristique eu magna vitae suscipit. Integer nec lacinia lectus. Mauris tempus varius sem quis faucibus. Duis ac est nisi. Ut luctus lacus eget leo pulvinar, non vehicula quam ornare. Pellentesque porttitor, ante ut vestibulum vehicula, turpis felis facilisis nulla, eget aliquet nisi lectus consequat nisl. Praesent dignissim maximus porta. Proin ligula lectus, fringilla a condimentum in, suscipit id risus.
+
+\section{How did the results address the problem defined}
+
+Pellentesque non commodo magna, nec cursus purus. Integer metus mauris, gravida vulputate dui a, placerat mollis quam. Phasellus malesuada suscipit magna accumsan suscipit. Nulla accumsan dui ac felis egestas, pharetra porta justo lacinia. Fusce a turpis tincidunt, egestas tortor a, congue diam. Proin molestie justo ligula, molestie tempor magna accumsan et. Duis a volutpat nulla. Fusce non metus ultricies, porta libero a, sollicitudin tortor. Nunc vitae imperdiet mauris. Sed dignissim, felis non rhoncus dignissim, enim nisl pulvinar ligula, lobortis porta eros neque quis lorem. Pellentesque sit amet commodo ligula, a rutrum sapien. Aenean ultricies iaculis est vitae consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent feugiat urna vel enim pellentesque fringilla. Suspendisse mattis, libero sit amet finibus aliquam, dui neque suscipit diam, ut viverra libero sapien sed ipsum.
+
+\section{What are the problems faced by the study}
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id ligula quis dui suscipit faucibus ut ut dui. Suspendisse eu tellus ac ante euismod aliquam non sodales sapien. Phasellus urna sem, efficitur nec est vel, gravida fermentum sem. Quisque vitae commodo tortor, et rutrum leo. Aenean maximus nisi enim, ac placerat est lacinia ut. Suspendisse sapien ex, pellentesque ut nulla vestibulum, accumsan varius massa.
+
+\section{Validity of the results}
+
+Sed ornare interdum lorem quis tristique. Maecenas cursus nunc ut vehicula molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ac ipsum vel enim sagittis sagittis. Morbi vulputate nec leo lacinia malesuada. Cras a nulla diam. Quisque blandit efficitur leo vel vestibulum. Integer ex dui, facilisis a pellentesque ut, semper sit amet velit. Mauris volutpat magna tempus lectus convallis facilisis. Nunc fringilla augue vel quam iaculis molestie. Praesent sit amet dui sit amet dolor faucibus ultricies. Aliquam et porttitor velit. Etiam consectetur enim a ipsum ultrices, non aliquam leo lacinia. Nulla id lectus sit amet metus vehicula lacinia. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam aliquam lobortis velit in maximus.
+
+\section{Relevance with respect to state of the art}
+
+Nunc maximus consectetur arcu, sit amet porta metus tempor a. Integer est nisi, facilisis vitae lectus in, mattis porta magna. Nam non nibh pulvinar, ornare turpis id, tempus sapien. Mauris neque nisi, dictum molestie mi ut, consectetur ullamcorper leo. In facilisis orci eget lacus porttitor scelerisque. Donec dignissim ultricies sapien, nec interdum nulla scelerisque ut. In rutrum urna erat, et mattis sapien porttitor quis. Aliquam eleifend diam orci, vitae ornare ipsum malesuada a. Donec facilisis lacinia congue. Etiam lobortis semper eros, vitae porta neque faucibus nec. Proin ac sem tellus. Pellentesque maximus sem tortor, eu accumsan odio lobortis at. Proin tincidunt odio id lectus bibendum, sed posuere nibh finibus. Sed dui dolor, porta ac elementum nec, mattis vitae arcu. Nulla pharetra, orci non blandit semper, nisl ligula eleifend magna, eu vehicula mi risus sed purus.
+
+\section{Future steps}
+
+Donec hendrerit dui ligula, non scelerisque ex elementum non. Suspendisse potenti. Quisque ligula ante, tempor vitae tincidunt et, varius vitae odio. Duis risus elit, convallis tempus nisl vel, pharetra fermentum lorem. Nullam vel enim velit. Curabitur ligula velit, sollicitudin id mi mattis, ullamcorper hendrerit mi. Maecenas a sapien sapien. Proin lobortis ullamcorper viverra. Fusce fermentum malesuada libero nec congue. Suspendisse vel consequat neque, luctus ullamcorper arcu. Maecenas suscipit, dolor nec porta ultrices, libero sem interdum ex, in molestie ligula turpis in tellus. Proin hendrerit nulla massa, sit amet finibus massa iaculis ut. Phasellus in sapien tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus malesuada elit at luctus.
+
+\begin{appendices}
+
+\chapter{Appendix}
+
+\section{Microcircuitry of the cerebellum}
+
+The three-neuronal pathway formed by mossy fibers, granule cells and Purkinje cells conforms the substrate of the multilayered computational networks of the cerebellum. Mossy fibers and climbing fibers are the inputs, and Purkinje cells are the sole output of the cerebellar cortex. As Purkinje cells project to and inhibit their target neurons in the vestibular and deep cerebellar nuclei, the entire output of the cerebellum is inhibitory.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=1]{images/circuit.jpg}
+  \caption[Microcircuit of the cerebellum]{Microcircuit of the cerebellum}
+\end{figure}
+
+Mossy fibers convey information from different sources and synapse to 400 to 600 granule cells, that are the smallest and numerous neurons in the brain \cite{Marr1969}. On the contrary, granule cells integrates only a small number of mossy fibers conforming sparse coding \cite{Ito2006}. Granule cell axons bifurcate and form parallel fibers which run along the surface of the cerebellum.
+
+Purkinje cells receive two very different types of input that have different electrophisiological effects. Parallel fibers synapse extensively on Purkinje cells and cause them to produce normal action potentials or simple spikes. Each Purkinje cell is also innervated by a single climbing fiber, arising from the inferior olive, that forms numerous synaptic contacts with the Purkinje cell dendrites. This is one of the most powerful synaptic junctions existing on the central nervous system, and every time climbing fibers fires the innervated Purkinje cell triggers a complex spike.
+
+Parallel fibers also synapse to basket and stellate cells, the two types of interneurons of the molecular layer. They inhibit Purkinje cells and are contacted by climbing fibers. Because they are seldom differenced they are collectively called inhibitory interneurons \cite{Jorntell2010}.
+
+\section{Marr-Albus classical models}
 
 Different models have been developed on the last forty years to explain the role of the cerebellum on motor learning tasks, most of them deriving from the classical Marr-Albus theory \cite{Marr1969,Albus1971}. The idea of the theory arises from the observation that two very different signals affect indirectly the output of the cerebellum: thousands of weak inputs from parallel fibers are integrated on the Purkinje cell to generate simple spikes; and complex spikes are provoked by the strength of a single climbing fiber synapse. The basic concept is that learning involves plasticity at the parallel fiber to Purkinje cell synapses under control of the climbing fiber that provides an error or teaching signal as in classical supervised learning paradigms. The discovery of cerebellar long-term depression (LTD) of parallel fiber synapses onto Purkinje cells \cite{Ito1982} drove to a reinterpretation of the theory where LTD was the single plasticity mechanism of cerebellar learning.
 
@@ -163,7 +262,7 @@ In VOR adaptation, this teaching signal is assumed to be the retinal slip, that 
 
 To solve the motor-error problem, Dean and Porril define a decorrelation rule that minimizes correlations between eye movements as a predictor variable and retinal slip as a target variable \cite{Dean2002}. The cerebellum receives information from the mossy fibers that is integrated onto Purkinje cells and decorrelated from the retinal slip. The output signal from the Purkinje cells is added to the vestibular information of the head movements to produce the new motor command. Depending whether the information conveyed by mossy fibers inputs to the cerebellum is vestibular or efferent copies of the motor commands, VOR adaptation forms a recurrent or a feedback architecture \cite{Porrill2004}.
 
-\subsection{Adaptive filter models}
+\section{Adaptive filter models}
 
 The idea that the cerebellum's role in adaptation could be understood in terms of control theory led to the theory of the cerebellum as an adaptive filter. The mossy fiber signal input is analyzed in granule cells, then weighted in parallel fibers and Purkinje cells (PF-PC) synapses and finally recombined to produce the output of the filter. The adaptation consists on the bidirectional adjustment of the weights on the PF-PC, that are reduced through LTD when the parallel fiber signal is correlated with the error, and are increased through long-term potentiation (LTP) when the correlation is negative \cite{Dean2010}.
 
@@ -171,7 +270,7 @@ One of the predictions of the adaptive filter model that are accomplished is tha
 
 The adaptive filter model shows accurate learning on VOR adaptation when the retinal slip is not delayed. The problem is that physiological experiments show that retinal slip error signal arrives at the flocculus with a delay of 100ms. The delay causes an impairment on learning on the model at frequencies up to 10Hz achieved with an eligibility trace, but humans can perform accurately up to 25Hz \cite{Porrill2007}. This questions that cortical plasticity may be not enough for VOR adaptation task.
 
-\subsection{Plasticity on the brainstem}
+\section{Plasticity on the brainstem}
 
 The Miles-Lisberger was an alternative model where the role of the cerebellum was not to store the motor memory but rather to compute the instructive signal, carried by Purkinje cells, guiding the induction of plasticity in the vestibular nucleus \cite{Lac1995}.
 
@@ -179,7 +278,7 @@ For some time the two models could explain partially physiological observations 
 
 There's a question whether learning starts on the cerebellar cortex or on the brainstem. It seems that cerebellar cortex starts learning early in VOR adaptation and progressively the gain learned is transfered to the brainstem. The task of the brainstem would be to learn a simple gain to keep the cerebellar cortex plasticity free for tasks that need a quicker adaptation.
 
-\subsection{A detailed model}
+\section{A detailed model}
 
 Improvements on electrophysiological recordings and on the creation of different mutant mice lines with cell-specific impairments allows to control and observe much better the contributions of the different parts of the VOR circuit. A recent and more detailed model has summed up some of the physiological and behavioral data that has been acquired during the last years \cite{Clopath2014}. This model reproduces successfully the results of a phase-reversal VOR adaptation experiment with wild-type and mutant mice \cite{Wulff2009a}.
 
@@ -187,42 +286,12 @@ The adaptive-filter is the initial point where plasticity on the brainstem and c
 
 The model shows good learning behavior with delays below 100ms as in experimentation, where models without brainstem plasticity and interneurons didn't. Clopath's detailed model may be a good baseline to work with and include further electrophysiological details available from now on.
 
-\chapter{Methods}
-
-\section{Research Question}
-
-\section{Hypotheses}
-
-\section{General Methodology Applied}
-
-\section{Design \& Development criteria and strategies of Artifact}
-
-\section{Experimental design and set-up}
-
-\section{Procedures used to obtain data and results}
-
-\chapter{Results}
-
-\section{Data Analysis}
-
-\section{Description of Key results obtained in the study}
-
-\chapter{Discussion \& Conclusion}
-
-\section{How did the results address the problem defined}
-
-\section{What are the problems faced by the study}
-
-\section{Validity of the results}
-
-\section{Relevance with respect to state of the art}
-
-\section{Future steps}
+\end{appendices}
 
 \bibliography{vor}
 
 \backmatter
-\printindex
+%\printindex
 
 \end{document}
 
@@ -237,11 +306,11 @@ The model shows good learning behavior with delays below 100ms as in experimenta
 
 %MUTIPLES ÍNDEX
 %En el preàmbul
-\usepackage{multind}
-\makeindex{authors}
+%\usepackage{multind}
+%\makeindex{authors}
 %Introducció d'entrades la forma
-\index{authors}{Einstein}
+%\index{authors}{Einstein}
 %Situació de l'Índex
-\printindex{authors}{Author index}
+%\printindex{authors}{Author index}
 %Cal eliminar les comandes \usepakage{makeidx} \makeindex \printindex
 %cal exacutar des de la línia de comandes makeindex authors
