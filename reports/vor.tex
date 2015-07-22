@@ -2,7 +2,9 @@
 
 %CODIFICACIÓ
 \usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
 
+\usepackage{url}
 
 %IDIOMES
 \usepackage[catalan,english]{babel}
@@ -14,6 +16,21 @@
 
 %PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
 \usepackage{graphicx}
+
+\usepackage[autostyle]{csquotes}
+\usepackage{breakcites}
+\usepackage{quotchap}
+
+%PER CODI FONT
+%\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionType{mycapequ}[][List of equations]
+\captionsetup[mycapequ]{labelformat=empty}
+%\captionsetup[lstlisting]{font={small,tt}}
+
+%\usepackage{hyperref}
+
+\usepackage[section]{placeins}
 
 %FONTS TIMES O GARAMOND,
 \usepackage{times}
@@ -59,24 +76,34 @@
 \cleardoublepage
 
 
-%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
-%\noindent To my family
-%\cleardoublepage
-%%%% Final de dedicatòria
+%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
+\noindent Your hemoglobin molecules, your antibodies, your neurons, your vestibulo-ocular reflex machinery\textemdash at every level of analysis we find machinery that dumbly does a wonderful, elegantly designed job.
+\cleardoublepage
+%%% Final de dedicatòria
 
-%%%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
-%\noindent {\Large \sffamily Acknowledgements}
-%\cleardoublepage
-%%%%% Final dels agraïments
+%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
+\noindent {\Large \sffamily Acknowledgements}
+\newline
+
+I want to acknowledge my thesis supervisor, Ivan Herreros for his guidance and support during this project, Paul Verschure, Armin Duff, Riccardo Zucca and Anna Mura for their inspiring lectures and all the CSIMers for this shared experience.
+
+\cleardoublepage
+%%% Final dels agraïments
 
 \vspace*{\fill}
-\section*{\Large \sffamily  Abstract}
+\section*{\Large \sffamily Abstract}
 
-Vestibulo-ocular reflex (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks. It is used to provide insight about the connections and the coding of the circuitry of the cerebellum. Classical models used to explain motor learning with a single site of plasticity on the cerebellar cortex, but on the last decade a growing body of evidence has shown that plasticity on the brainstem is also needed for the adaptation.
+Vestibulo-ocular reflex (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks. It is used to provide insight about the connections and the coding of the circuitry of the cerebellum. The state of the art computational models of the VOR don't define accurately the extinction of the reflex, that is modeled in the dark as in-phase with the vestibular information when no evidences have shown. This predicts a linear decay of the adaptation gain of the reflex, when an exponential decay has shown experimentally.
 
-The state of the art computational models of the VOR model extinction in the dark as in-phase with the vestibular information. This predicts a linear decay of the adaptation gain of the reflex, when an exponential decay has shown experimentally.
+This study shows that nucleo-olivary inhibition (NOI) gives a more parsimonious explanation for the extinction of the acquired adaptation in VOR, exponential decay to the baseline gain.
 
-This study speculates about the existence of the nucleo-olivary inhibition (NOI), an alternative connection that would be the responsible to the extinction of the reflex that hasn't been proved yet on to exist on the physiological level. The aim is to show if the behavior of the modified model is coherent with the behavioral experiments.
+
+Extinction is triggered when vestibular information is available
+Teaching or error signal is modulated by cerebellar output
+Savings
+
+Classical models used to explain motor learning with a single site of plasticity on the cerebellar cortex, but on the last decade a growing body of evidence has shown that plasticity on the brainstem is also needed for the adaptation.
+
 
 \vskip 1cm
 
@@ -110,31 +137,43 @@ Keywords: \keyword{vestibulo-ocular reflex}, \keyword{cerebellum}, \keyword{nucl
 
 \section{Problem statement}
 
-Praesent at mauris elementum, congue lacus malesuada, porta magna. Nam ex magna, sagittis nec nulla at, viverra tincidunt ipsum. Integer imperdiet non justo vel dictum. Nullam gravida, erat quis tincidunt lacinia, libero ex imperdiet orci, et rutrum justo enim at dui. Vivamus ligula nibh, imperdiet vel consequat ullamcorper, fringilla ut tortor. Vivamus turpis libero, volutpat nec ex id, scelerisque pretium mi. Integer vel ligula laoreet, vulputate orci quis, suscipit nulla. Fusce ut urna sit amet magna volutpat vehicula eget vel mi. Mauris nisi lectus, porta sit amet hendrerit quis, fermentum et magna. In maximus metus a mollis aliquet. Donec iaculis id arcu egestas semper. Aenean ultricies dui vel lorem sodales, a fringilla orci vestibulum. Etiam quam nisi, finibus eget pharetra eu, imperdiet vitae neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum nisi ligula, fringilla a rhoncus blandit, placerat vitae libero.
+Vestibulo-ocular reflex (VOR) is one of the most studied cerebellar dependent motor learning tasks, and its study is used to provide insight about the connections and the coding of the circuitry of the cerebellum. The funcion of the VOR is to stabilize the images on the retina during head movement by producing eye movements in the opposite direction to that head movement. Thanks to this reflex, the image remains on the center of the visual field.
 
-Maecenas tempus tortor eu porta condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ultricies hendrerit nibh in rutrum. Nullam hendrerit ultrices sapien eget elementum. Donec lacinia accumsan consequat. Morbi ac placerat velit, sed dictum orci. Morbi euismod aliquet dolor, et malesuada lectus maximus vel. Mauris fermentum ornare lacus dictum dictum. Vivamus scelerisque consequat vehicula. Nulla id magna lacus. Nulla nunc nisl, aliquam sit amet dignissim eget, tincidunt vel massa. Vestibulum magna dolor, ultricies a porta tincidunt, eleifend sit amet elit. Maecenas tincidunt a metus vel maximus. \cite{Herreros2013b}.
+VOR is naturally adapted during lifetime due to multiple reasons. Growth, changes in the body or wearing glasses are among them and may cause variations on the parameters of the reflex to adapt to the new situation.
+
+When the adaptation is no longer needed, there is an extinction of the reflex. The mechanisms of this extinction are poorly understood and have not been suitably described on computational models of the VOR. The problem is that state of the art computational models of the vestibulo-ocular reflex don't define an existing physiological mechanism for extinction. Instead of this, they try to reproduce the behavior of the reflex by introducing artificial extinction mechanisms.
+
+This study gives a more parsimonious explanation of the extinction phenomena by means of the nucleo-olivary inhibition (NOI), a physiological connection that has been shown to work as an extinction of the adaptation on eye-blink reflex conditioning  \cite{Emken2007, Herreros2013b}, a reflex whose cerebellar circuitry is very similar to VOR's.
 
 \section{State of the art}
 
-The cerebellum has a central role in motor learning, that is the process of improving the smoothness and accuracy of movements through practice. It is not only important for learning to perform complicated movements, like playing an instrument or a sport, but also for adaptation of simple movements like reflexes along the physical changes that may occur over time.
+The cerebellum has a central role in motor learning, that is the process of improving the smoothness and accuracy of movements through practice. It is not only important for learning to perform complicated movements, like playing an instrument or a sport, but also for adaptation of simple movements like reflexes along the physical changes that may occur over time. This role was early discovered studying patients with ataxia, a sensori-motor syndrome related to cerebellar malfunction and diseases \cite{Mapelli2015}.
 
 The cerebellar cortex seems to have a uniform structure throughout the cerebellum. Its architecture is sometimes described as crystalline for it appears to be an homogeneous sheet of tissue, and is composed of repeated modules or microzones, that have the same cell types that are connected in the same manner and are the functional units of the cerebellar cortex. Depending on its functional role, different microzones receive different inputs and project to different targets. A microzone along with its related subcortical structures forms what's called a microcomplex \cite{Ito1982}, and it's considered to be a unit neuronal machine.
 
 The uniformity on the microcircuit of the cerebellar cortex has inspired the idea that there is a single cerebellar algorithm and that different microzones process signals they receive in a similar way. The study of the cerebellum during one specific learning task may help to generalize its function to be applied to many different tasks \cite{Boyden2004}.
 
-Vestibulo-ocular reflex (VOR) adaptation is one of the most studied cerebellar dependent motor learning tasks because of its properties: it's widespread in many species, it has well defined sensory inputs and quantifiable motor outputs, and the anatomy of circuitry is well localized \cite{Ito1982}.
+The flocculus, a small lobe situated on the vestibulocerebellum, is the main cerebellar region that is responsible of the control of eye movements. Its role is to optimize ocular motor performance so that the image remains still enough on the fovea so the brain is able to interpret the scene in real time \cite{Kheradmand2011}. The flocculus receives visual and vestibular information and uses it to control gaze stabilization. Vestibulo-ocular reflex, optokinetic nystagmus and smooth pursuit are under the control of the floccular region of the cerebellum.
 
 \subsection{Vestibulo-ocular reflex (VOR)}
 
-VOR is a compensatory eye movement that stabilizes retinal images during head movements by producing an eye movement in the opposite direction, thus preventing degradation of image processing. During lifetime, changes in vestibular processing or in the mechanical properties of the oculomotor plant (as muscles develop or weaken) can cause eye-movement inaccuracies. This poor calibration results in blurred vision and VOR needs to be adapted, and the same happens when a subject starts to wear glasses. VOR produces compensatory movements in response to horizontal, vertical and translational head movements.
+VOR is a compensatory eye movement that stabilizes retinal images during head movements by producing an eye movement in the opposite direction, thus preventing degradation of image processing. During lifetime, changes in vestibular processing or in the mechanical properties of the oculomotor plant (as muscles develop or weaken) can cause eye-movement inaccuracies. This poor calibration results in blurred vision and VOR needs to be adapted, and the same happens when a subject starts to wear glasses. VOR produces compensatory movements in response to horizontal, vertical and translational head movements (Figure \ref {fig:vor}).
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.50]{images/vor.png}
+  \includegraphics[scale=0.70]{images/vor.png}
   \caption[VOR reflex]{VOR reflex}
+  \label{fig:vor}
 \end{figure}
 
-The flocculus, a small lobe situated on the vestibulocerebellum, is the main cerebellar region that is responsible of the control of eye movements. Its role is to optimize ocular motor performance so that the image remains still enough on the fovea so the brain is able to interpret the scene in real time \cite{Kheradmand2011}. The flocculus receives visual and vestibular information and uses it to control gaze stabilization. Vestibulo-ocular reflex, optokinetic nystagmus and smooth pursuit are under the control of the floccular region of the cerebellum.
+The cerebellar cortex receives two differents sensory signals: head movement or vestibular information and retinal slip or visual information \cite{Boyden2004}, and outputs a motor command to generate the compensatory eye movements (Figure \ref {fig:vorboyden}).
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.70]{images/boyden.png}
+  \caption[Simplified schema of VOR reflex circuitry on the cerebellum]{Simplified schema of VOR reflex circuitry on the cerebellum}
+  \label{fig:vorboyden}
+\end{figure}
 
 In terms of control theory, VOR is a feedforward or open-loop control system since the output of the reflex has no effect on the vestibular signals input \cite{Porrill2007}, and it's controlled by an adaptive mechanism of the cerebellum. This adaptation is materialized by changing the amplitude and timing of the VOR, expressed in gain and phase values respectively \cite{DeZeeuw2005}.
 
@@ -142,97 +181,181 @@ In terms of control theory, VOR is a feedforward or open-loop control system sin
 
 In the laboratory VOR adaptation is induced in training sessions by providing visual stimuli in conflict with the vestibular stimulus. Typically screen and turntable rotation are combined to induce bidirectional gain changes in the animal VOR. Depending on the relative direction of the head and the image motion, gain and phase parameters can increase or decrease after the training periods.
 
-An image motion in the opposite direction as the head induces
-\begin{enumerate}
-\item gain increase while the image in the same direction induces
-\item gain decrease. In gain-decrease learning,
-\item VOR cancellation happens when the speed of the head and the image are the same, and
-\item phase-reversal learning when the image is faster.
-\end{enumerate}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.50]{images/vor_adaptation.png}
+  \caption[VOR reflex phase reversal adaptation protocol]{VOR reflex phase reversal adaptation protocol \cite{Gao2012a}}
+  \label{fig:voradaptation}
+\end{figure}
 
-After training sessions, the performance of the VOR is measured in the dark to isolate the eye response due to head movements from that driven by visual stimuli. The persistence of the changes depends on the length of the training and the history of eye movement.
+An image motion in the opposite direction as the head induces gain increase while the image in the same direction induces gain decrease. In gain-decrease learning, VOR cancellation happens when the speed of the head and the image are the same, and phase-reversal learning when the image is faster (Figure \ref {fig:voradaptation}).
 
-The flocculus or the entire cerebellum is not critical for generating the VOR, as it is still present in animals with the complete ablation of it, but it remains necessary for its adaptation. Lesions on the inferior olive also ended with the same result \cite{Ito2006}.
+After training sessions, the performance of the VOR is measured in the dark to isolate the eye response due to head movements from that driven by visual stimuli. The persistence of the changes depends on the length of the training and the history of eye movement. VOR adaptation is trained with light and measured in the dark \cite{Boyden2004}.
+
+The flocculus or the entire cerebellum is not critical for generating the VOR, as it is still present in animals with the complete ablation of it, but it remains necessary for its adaptation. Lesions on the inferior olive also ended with the same result \cite{Ito2006}. This shows that the olivo-cerebellum is necessary for the adaptation of the reflex.
 
 \subsection{Extinction of the learned adaptation}
 
-Aenean ac est non justo feugiat consequat vel et eros. Nam gravida mauris justo, in molestie lorem mattis quis. Integer in accumsan nisl, a varius lorem. Morbi ornare eget odio a ultricies. Nullam neque enim, congue quis ante ut, mattis ullamcorper velit. Sed condimentum sem eget molestie fermentum. Cras non tempor elit, a elementum ipsum. Sed nec fermentum leo. Duis hendrerit, augue ut interdum placerat, dolor lectus scelerisque risus, ut dignissim ex nibh eget lorem. Nam sed varius lorem, a ullamcorper odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. In dapibus erat vel sem fermentum, finibus consequat sapien finibus. Duis ornare lorem pulvinar finibus rutrum. Maecenas aliquet auctor nisl vitae cursus. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Head movements in the absence of visual stimulation cause a loss of the learned eye movement response. This loss is measured by changes in the amplitude of the eye movements, defined as the gain of the VOR. When neither visual nor vestibular information is present, the gain of the VOR remains stable.
 
-In ac nisi hendrerit eros finibus pretium. Vestibulum euismod lectus et leo molestie, iaculis viverra erat ullamcorper. Aliquam non dapibus massa. Nullam sed luctus dui. Nulla bibendum enim vel libero consectetur dictum. Nullam et bibendum tortor. Cras aliquet metus at turpis faucibus, eu interdum elit blandit. Donec tincidunt blandit leo, vitae efficitur lectus maximus placerat. Etiam bibendum vulputate varius. Donec consequat diam vel ipsum faucibus sagittis. Etiam at nulla purus. Aenean pellentesque augue tellus, et porttitor massa molestie nec. Vestibulum ante ex, condimentum a mollis quis, molestie ac leo.
+This means that the extinction of the learned adaptation is mediated by an active, extinction-like process and not by passive forgetting \cite{Cohen2004}.
 
 \subsubsection{Nucleo-olivary inhibition (NOI): a candidate signal}
 
-Maecenas tempus tortor eu porta condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ultricies hendrerit nibh in rutrum. Nullam hendrerit ultrices sapien eget elementum. Donec lacinia accumsan consequat. Morbi ac placerat velit, sed dictum orci. Morbi euismod aliquet dolor, et malesuada lectus maximus vel. Mauris fermentum ornare lacus dictum dictum. Vivamus scelerisque consequat vehicula. Nulla id magna lacus. Nulla nunc nisl, aliquam sit amet dignissim eget, tincidunt vel massa. Vestibulum magna dolor, ultricies a porta tincidunt, eleifend sit amet elit. Maecenas tincidunt a metus vel maximus.
+Nucleo-olivary inhibition is an inhibitory synaptic connection between a population of neurons on the cerebellar nuclei and the inferior olive. This connection causes the inhibition of the climbing fibres, the neurons that carry the retinal slip, and serves as a teaching signal for extinction \cite{Medina2002} on the inferior olive, so that the inactivation of the NOI prevents extinction.
 
-\subsection{Computational models of the VOR}
+On the eye-blink reflex adaptation paradigm, when the acquired conditioned response is no longer necessary, nucleo-olivary inhibition has been described to work as a cost minimization mechanism between the cost of the aversive stimuli and that of the unnecesary avoidance \cite{Brandi2013}, thus balancing the cost between adaptive and reactive reflexes.
 
-Aenean ac est non justo feugiat consequat vel et eros. Nam gravida mauris justo, in molestie lorem mattis quis. Integer in accumsan nisl, a varius lorem. Morbi ornare eget odio a ultricies. Nullam neque enim, congue quis ante ut, mattis ullamcorper velit. Sed condimentum sem eget molestie fermentum. Cras non tempor elit, a elementum ipsum. Sed nec fermentum leo. Duis hendrerit, augue ut interdum placerat, dolor lectus scelerisque risus, ut dignissim ex nibh eget lorem. Nam sed varius lorem, a ullamcorper odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. In dapibus erat vel sem fermentum, finibus consequat sapien finibus. Duis ornare lorem pulvinar finibus rutrum. Maecenas aliquet auctor nisl vitae cursus. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Similarities between eye-blink conditioning (Figure \ref {fig:eyeblinkcircuitry}) and VOR reflex (Figure \ref {fig:vorcircuitry}) circuitry are well known. This fact suggests the possibility of NOI having an active role in extinction on VOR.
 
-In ac nisi hendrerit eros finibus pretium. Vestibulum euismod lectus et leo molestie, iaculis viverra erat ullamcorper. Aliquam non dapibus massa. Nullam sed luctus dui. Nulla bibendum enim vel libero consectetur dictum. Nullam et bibendum tortor. Cras aliquet metus at turpis faucibus, eu interdum elit blandit. Donec tincidunt blandit leo, vitae efficitur lectus maximus placerat. Etiam bibendum vulputate varius. Donec consequat diam vel ipsum faucibus sagittis. Etiam at nulla purus. Aenean pellentesque augue tellus, et porttitor massa molestie nec. Vestibulum ante ex, condimentum a mollis quis, molestie ac leo.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.50]{images/schonewille-ebc.png}
+  \caption[Neuroanatomical circuitry involved in eyeblink conditioning]{Neuroanatomical circuitry involved in eyeblink conditioning \cite{Schonewille2011}}
+  \label{fig:eyeblinkcircuitry}
+\end{figure}
 
-
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.50]{images/schonewille.png}
+  \caption[Neuroanatomical circuitry involved in VOR]{Neuroanatomical circuitry involved in VOR \cite{Schonewille2011}}
+  \label{fig:vorcircuitry}
+\end{figure}
 
 \chapter{Methods}
 
 \section{Research Question}
 
-In urna dui, scelerisque non tempus vel, pharetra quis mauris. Curabitur in justo id purus suscipit finibus nec in urna. Nam eget urna et nibh egestas auctor ut aliquam libero. Aliquam vitae feugiat urna, vel dictum mi. Praesent tincidunt tincidunt laoreet. Phasellus eu bibendum dui. Maecenas vel ultrices nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis lacinia nunc in dolor bibendum, nec imperdiet mauris efficitur. Quisque vel bibendum diam. Pellentesque at neque at nisi tempus ornare. Fusce tincidunt finibus lacus, in facilisis mauris bibendum id. Donec sed risus massa.
+Would nucleo-olivary inhibition explain extinction in the vestibulo-ocular reflex computational models?
+
+\subsubsection{In direct evidence}
+
+There is extinction of the adaptive response in the absence of peripheral error.
+
+NOI has a role in the eye-blink reflex. The gain of the NOI is what determines the amplitude of the response on adaptive reflexes \cite{Emken2007, Herreros2013b}
 
 \section{Hypotheses}
 
-Sed ac laoreet justo, at vulputate mauris. Sed felis diam, blandit et mollis ut, vestibulum eget purus. Vestibulum accumsan urna nec lacus faucibus elementum. Ut elementum libero est, sit amet dictum ex porta et. Donec at sapien diam. Vestibulum tincidunt erat urna, et tincidunt urna interdum eu. Maecenas consectetur pretium turpis, condimentum ultricies dolor gravida a. Vestibulum pellentesque sagittis aliquam.
+Adding nucleo-olivary inhibition on a vestibulo-ocular reflex computational model would explain extinction as in the experimental behavior of the reflex.
 
 \section{General Methodology Applied}
 
-Phasellus aliquet iaculis magna a finibus. Praesent consectetur vitae elit congue bibendum. Donec eu scelerisque turpis. Donec sagittis finibus est at bibendum. Pellentesque vel purus at mauris sagittis semper. Curabitur mauris felis, auctor ut mauris ut, rhoncus ullamcorper sapien. Etiam id fermentum enim. In ultrices ut felis non lobortis. Aliquam blandit iaculis varius. Sed at lacus porta, laoreet purus nec, laoreet sapien. Integer lacinia congue urna sit amet convallis.
+To validate our hypothesis we have selected a detailed state of the art computational model of the VOR \cite{Clopath2014} and reproduced the results of VOR phase reversal adaptation behavioral experiments described on \cite{Wulff2009a}.
 
-Donec at porttitor nibh. Duis lobortis nec eros sed laoreet. Donec id hendrerit elit. Phasellus id mi vehicula, posuere sem ac, mollis sapien. Pellentesque sed suscipit lacus, at cursus lacus. Nam blandit leo sapien, at laoreet massa pulvinar id. Phasellus dapibus enim et fringilla ultrices. In nec massa hendrerit, hendrerit est id, vulputate neque. Proin volutpat risus nec neque porttitor aliquet. Nullam laoreet nulla id elementum volutpat.
+The artificial mechanisms of exctinction of the model have been detected and simulated with the VOR phase reversal adaptation protocol to prove that they led to a linear decay that's not compatible with exponential decay observed on experimental behaviour of the reflex.
 
-\section{Design \& Development criteria and strategies of Artifact}
+Those extinction mechanisms from the original model have been replaced with the candidate signal, the nucleo-olivary inhibition, integrated only by cortical information. Simulations with the same paradigm have been performed to observe that the extinction of the reflex behaves as it is experimentally described, thus offering a more parsimonious explanation of the behaviour.
 
-Sed ac laoreet justo, at vulputate mauris. Sed felis diam, blandit et mollis ut, vestibulum eget purus. Vestibulum accumsan urna nec lacus faucibus elementum. Ut elementum libero est, sit amet dictum ex porta et. Donec at sapien diam. Vestibulum tincidunt erat urna, et tincidunt urna interdum eu. Maecenas consectetur pretium turpis, condimentum ultricies dolor gravida a. Vestibulum pellentesque sagittis aliquam.
+\section{A state of the art computational model of the VOR}
 
-\section{Experimental design and set-up}
+The computational model that has been selected is made bottom-up from physiological and behavioral observations. Improvements on electrophysiological recordings and on the creation of different mutant mice lines with cell-specific impairments allows to control and observe much better the contributions of the different parts of the VOR circuit. A recent and more detailed model has summed up some of the physiological and behavioral data that has been acquired during the last years \cite{Clopath2014}. This model reproduces successfully the results of a phase-reversal VOR adaptation experiment with wild-type and mutant mice \cite{Wulff2009a}.
 
-Nunc vel dapibus eros, non scelerisque velit. Sed vitae elit malesuada, dignissim magna nec, accumsan tortor. Quisque vel velit et tellus ullamcorper tristique sit amet ac tortor. Morbi mi turpis, porttitor at congue vitae, consequat eu massa. Vestibulum convallis orci fringilla lorem auctor, eget condimentum nulla iaculis. Nam vehicula dui vitae risus pretium, id vulputate enim cursus. Nullam fermentum neque vulputate tellus condimentum, id posuere lorem elementum. Ut dolor lorem, aliquet vel quam et, pulvinar interdum tellus. Donec quis velit non tortor imperdiet dictum. Duis et diam ipsum. Praesent id dolor eu eros laoreet viverra.
+The adaptive-filter is the initial point where plasticity on the brainstem and contribution of interneurons are added. In the model mossy fibers encode the head velocity as a sinusoidal \cite{Manuscript2009} and synapse on a network of 100 granule cells, each one distributed on different phase shifts relative to mossy fibers. Purkinje cells add up the inhibitory effect of the interneurons, that is proportional to the average activity in the granule cell network, and the excitation from the projection of granule cells on parallel fibers. The activity on the brainstem generates the motor command, and depends on the excitatory input of the mossy fibers and the inhibitory contribution of the Purkinje cells. Plasticity on the brainstem is defined by the correlation of the activity of the mossy fibers and Purkinje cells \cite{Menzies2010}, and plasticity on the PF-PC as a decorrelation rule between the vestibular information and the retinal slip \cite{Dean2002} with an added slow decay rate to the initial value of the weights.
 
-\section{Procedures used to obtain data and results}
+The model shows good learning behavior with delays below 100ms as in experimentation, where models without brainstem plasticity and interneurons didn't. Clopath's detailed model may be a good baseline to work with and include further electrophysiological details available from now on.
 
-Nam at mi nec dui pellentesque varius. Duis eu rhoncus ante, sed molestie nunc. Nulla gravida turpis justo, ut ullamcorper nisl ornare et. Integer fermentum scelerisque luctus. Etiam molestie libero quis purus ultrices, et pharetra augue tempus. Curabitur venenatis efficitur dapibus. Aenean ultrices, purus consequat accumsan finibus, tellus erat ultrices enim, ut facilisis lacus tortor et mi. Maecenas magna nulla, elementum eu libero at, suscipit placerat sem. Morbi lacus nisl, venenatis ac lorem non, ultrices sagittis nibh. Praesent a nulla sagittis, fringilla lacus id, fringilla massa.
+\section{Design \& implementation of the computational model}
+
+The computational model has been implemented in Matlab, adapted from the published model from \cite{Clopath2014}.
+
+Extinction on Clopath's model defines two mechanisms that affect extinction. First, inferior olive afferents are weakly modulated by head movement (vestibular signal) (Equation \ref {eq:cnvestibular}) and second, weights on cortical plasticity decay linearly to their initial value.
+
+\begin{mycapequ}[!ht]
+  \begin{equation}
+    \begin{split}
+      extinction = H(M(t) - M_0) \\
+      C(t) = \nu_{CF} - L(V(t- \delta) - V_t(t-\delta)) - extinction
+    \end{split}
+  \end{equation}
+  \caption[Extinction modulated by head movement]{Extinction modulated by head movement}
+  \label{eq:cnvestibular}
+\end{mycapequ}
+
+\begin{mycapequ}[!ht]
+  \begin{equation}
+    \begin{split}
+      decay = \alpha_{d}(w_{PG}^{ini}(t) - w_{PGi}(t)) \\
+      \dot w_{PGi}(t) = [\alpha_{PG}(\nu_{CF} - C(t)) + \sqrt{\alpha_{PG}}\sigma\xi(t)]G(t) + decay
+    \end{split}
+  \end{equation}
+  \caption[Cortical weight decay mechanism]{Cortical weight decay mechanism}
+  \label{eq:weightdecay}
+\end{mycapequ}
+
+This two mechanisms have been removed and inferior olive afferents have been defined as proportional to cerebellar cortex output, that is, the output from the Purkinje cell (Equation \ref {eq:cncortical}). This is a simpler mechanism and consistent with physiological observations (Figure \ref {fig:uusisaari}).
+
+\begin{mycapequ}[!ht]
+  \begin{equation}
+    extinction = H(k_{noi}P(t))
+  \end{equation}
+  \caption[Extinction modulated by cortical output]{Extinction modulated by cortical output}
+  \label{eq:cncortical}
+\end{mycapequ}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.50]{images/uusisaari.png}
+  \caption[GAD+IO neuron populations receive signals from cerebellar output]{GAD+IO neuron populations receive signals from cerebellar output \cite{Uusisaari2011}}
+  \label{fig:uusisaari}
+\end{figure}
+
+\section{Experimental design and simulations}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.50]{images/vvor.png}
+  \caption[VOR phase reversal adaptation protocol]{VOR phase reversal adaptation protocol as in \cite{Wulff2009a}}
+  \label{fig:vvor}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.50]{images/gain.png}
+  \caption[Wulff results on the VOR phase reversal adaptation protocol]{Wulff results on the VOR phase reversal adaptation protocol \cite{Wulff2009a}. Blue lines on the plots correspond to wild type mice behavior, that is what simulations of the model have to reproduce}
+  \label{fig:wulffresults}
+\end{figure}
+
+Simulations of the VOR phase reversal adaptation protocol  (Figure \ref {fig:vvor}) have been made with Clopath's original model and with the NOI variation to reproduce experimental behavior in mice as in (Figure \ref {fig:wulffresults}).
 
 \chapter{Results}
 
-\section{Data Analysis}
+\section{Simulations an reproducibility}
 
-Duis vitae neque a odio porta iaculis. Vivamus lacinia tincidunt velit. Ut porta consectetur quam quis sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur tincidunt condimentum venenatis. Nunc sodales lacus nisi, in mollis lacus posuere ut. Duis tristique eu magna vitae suscipit. Integer nec lacinia lectus. Mauris tempus varius sem quis faucibus. Duis ac est nisi. Ut luctus lacus eget leo pulvinar, non vehicula quam ornare. Pellentesque porttitor, ante ut vestibulum vehicula, turpis felis facilisis nulla, eget aliquet nisi lectus consequat nisl. Praesent dignissim maximus porta. Proin ligula lectus, fringilla a condimentum in, suscipit id risus.
+Source code and reports of the simulations have been made available on a GitHub repository at http://xdurana.github.io/vor/ for reproducibility purposes.
 
-\section{Description of Key results obtained in the study}
+\section{Nucleo-olivary inhibition model explains extinction}
 
-Proin dignissim posuere nibh. Integer sed consectetur lacus, ac venenatis felis. Quisque eleifend arcu vel nulla fringilla sollicitudin. Praesent eu efficitur dui. Vivamus faucibus ac mauris quis pellentesque. Praesent vel nisl sed arcu volutpat consectetur eu non risus. Maecenas laoreet leo vitae varius finibus. Integer posuere rutrum viverra. Mauris dapibus maximus augue a accumsan. Nulla tortor urna, lobortis nec nibh non, fringilla auctor risus. Curabitur vehicula tincidunt mi vitae venenatis. Cras ultricies nulla a eros laoreet, venenatis porta dui interdum. Cras at varius est.
+Simulations of Clopath's detailed model (Figure \ref {fig:clopathgain}) and NOI model (Figure \ref {fig:longnoigain}) show that both are capable to adapt to different target gains after enough time on training sessions. Retinal slip, the error signal, is minimized after the training and the normalized gain is close to the target gain in both models.
+
+The difference between the two models is at the behavior on the light deprivation pauses between training sessions. Clopath model learning on cerebellar cortex decays linearly without converging to an initial value or baseline, but NOI model makes cerebellar learning converge to a baseline exponentially. This behaviour is what's been shown experimentally.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{images/clopath_11.png}
+  \caption[Gain evolution on Clopath's model]{Gain evolution on Clopath's model}
+  \label{fig:clopathgain}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{images/longnoi_12.png}
+  \caption[Gain evolution on the NOI model]{Gain evolution on the NOI model}
+  \label{fig:longnoigain}
+\end{figure}
 
 \chapter{Discussion \& Conclusion}
 
-Duis vitae neque a odio porta iaculis. Vivamus lacinia tincidunt velit. Ut porta consectetur quam quis sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur tincidunt condimentum venenatis. Nunc sodales lacus nisi, in mollis lacus posuere ut. Duis tristique eu magna vitae suscipit. Integer nec lacinia lectus. Mauris tempus varius sem quis faucibus. Duis ac est nisi. Ut luctus lacus eget leo pulvinar, non vehicula quam ornare. Pellentesque porttitor, ante ut vestibulum vehicula, turpis felis facilisis nulla, eget aliquet nisi lectus consequat nisl. Praesent dignissim maximus porta. Proin ligula lectus, fringilla a condimentum in, suscipit id risus.
+\section{Complexity of the computational models of the VOR}
 
-\section{How did the results address the problem defined}
-
-Pellentesque non commodo magna, nec cursus purus. Integer metus mauris, gravida vulputate dui a, placerat mollis quam. Phasellus malesuada suscipit magna accumsan suscipit. Nulla accumsan dui ac felis egestas, pharetra porta justo lacinia. Fusce a turpis tincidunt, egestas tortor a, congue diam. Proin molestie justo ligula, molestie tempor magna accumsan et. Duis a volutpat nulla. Fusce non metus ultricies, porta libero a, sollicitudin tortor. Nunc vitae imperdiet mauris. Sed dignissim, felis non rhoncus dignissim, enim nisl pulvinar ligula, lobortis porta eros neque quis lorem. Pellentesque sit amet commodo ligula, a rutrum sapien. Aenean ultricies iaculis est vitae consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent feugiat urna vel enim pellentesque fringilla. Suspendisse mattis, libero sit amet finibus aliquam, dui neque suscipit diam, ut viverra libero sapien sed ipsum.
-
-\section{What are the problems faced by the study}
-
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id ligula quis dui suscipit faucibus ut ut dui. Suspendisse eu tellus ac ante euismod aliquam non sodales sapien. Phasellus urna sem, efficitur nec est vel, gravida fermentum sem. Quisque vitae commodo tortor, et rutrum leo. Aenean maximus nisi enim, ac placerat est lacinia ut. Suspendisse sapien ex, pellentesque ut nulla vestibulum, accumsan varius massa.
-
-\section{Validity of the results}
-
-Sed ornare interdum lorem quis tristique. Maecenas cursus nunc ut vehicula molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ac ipsum vel enim sagittis sagittis. Morbi vulputate nec leo lacinia malesuada. Cras a nulla diam. Quisque blandit efficitur leo vel vestibulum. Integer ex dui, facilisis a pellentesque ut, semper sit amet velit. Mauris volutpat magna tempus lectus convallis facilisis. Nunc fringilla augue vel quam iaculis molestie. Praesent sit amet dui sit amet dolor faucibus ultricies. Aliquam et porttitor velit. Etiam consectetur enim a ipsum ultrices, non aliquam leo lacinia. Nulla id lectus sit amet metus vehicula lacinia. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam aliquam lobortis velit in maximus.
+Computational models of the cerebellum have grown in complexity for the last decade due to the technical improvements on physiological measurements and experimental paradigms. This implies that every now and then bottom-up models have to be revised to include the findings and top-down or more functional models fail to describe the complexity of the circuitry.
 
 \section{Relevance with respect to state of the art}
 
-Nunc maximus consectetur arcu, sit amet porta metus tempor a. Integer est nisi, facilisis vitae lectus in, mattis porta magna. Nam non nibh pulvinar, ornare turpis id, tempus sapien. Mauris neque nisi, dictum molestie mi ut, consectetur ullamcorper leo. In facilisis orci eget lacus porttitor scelerisque. Donec dignissim ultricies sapien, nec interdum nulla scelerisque ut. In rutrum urna erat, et mattis sapien porttitor quis. Aliquam eleifend diam orci, vitae ornare ipsum malesuada a. Donec facilisis lacinia congue. Etiam lobortis semper eros, vitae porta neque faucibus nec. Proin ac sem tellus. Pellentesque maximus sem tortor, eu accumsan odio lobortis at. Proin tincidunt odio id lectus bibendum, sed posuere nibh finibus. Sed dui dolor, porta ac elementum nec, mattis vitae arcu. Nulla pharetra, orci non blandit semper, nisl ligula eleifend magna, eu vehicula mi risus sed purus.
+We have added the nucleo-olivary inhibition as an existing physiological connection on a state of the art computational model and we have shown that simulations reproduce more parsimoniously experimental behaviour on VOR adaptation. This extinction mechanism on VOR hasn't been modeled as NOI so far.
 
 \section{Future steps}
 
-Donec hendrerit dui ligula, non scelerisque ex elementum non. Suspendisse potenti. Quisque ligula ante, tempor vitae tincidunt et, varius vitae odio. Duis risus elit, convallis tempus nisl vel, pharetra fermentum lorem. Nullam vel enim velit. Curabitur ligula velit, sollicitudin id mi mattis, ullamcorper hendrerit mi. Maecenas a sapien sapien. Proin lobortis ullamcorper viverra. Fusce fermentum malesuada libero nec congue. Suspendisse vel consequat neque, luctus ullamcorper arcu. Maecenas suscipit, dolor nec porta ultrices, libero sem interdum ex, in molestie ligula turpis in tellus. Proin hendrerit nulla massa, sit amet finibus massa iaculis ut. Phasellus in sapien tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus malesuada elit at luctus.
+To finally assess the validity of the results, the implementation of the model on closed-loop robotic simulations with the different adaptation paradigms would be necessary to determine the effectiveness of the model.
 
 \begin{appendices}
 
@@ -274,17 +397,12 @@ The adaptive filter model shows accurate learning on VOR adaptation when the ret
 
 The Miles-Lisberger was an alternative model where the role of the cerebellum was not to store the motor memory but rather to compute the instructive signal, carried by Purkinje cells, guiding the induction of plasticity in the vestibular nucleus \cite{Lac1995}.
 
-For some time the two models could explain partially physiological observations of the experimentation until a growing body of evidence due to experimental improvements showed that additional sites of plasticity appear to contribute to motor adaptation \cite{Gao2012}. Some VOR experiments with monkeys pointed to a site of synaptic plasticity not in cerebellar cortex but in the brainstem \cite{Lisberger2009}, and consensus emerged that plasticity is required for VOR adaptation both at brainstem and cerebellar cortical sites. Other studies have reported motor learning in VOR adaptation task when eliminating the climbing fiber instructive signal, suggesting that both cortical and brainstem signals produce an additive effect when both are present but neither are indispensable for motor learning \cite{Ke2009a}.
+For some time the two models could explain partially physiological observations of the experimentation until a growing body of evidence due to experimental improvements showed that additional sites of plasticity appear to contribute to motor adaptation \cite{Gao2012a}. Some VOR experiments with monkeys pointed to a site of synaptic plasticity not in cerebellar cortex but in the brainstem \cite{Lisberger2009a}, and consensus emerged that plasticity is required for VOR adaptation both at brainstem and cerebellar cortical sites. Other studies have reported motor learning in VOR adaptation task when eliminating the climbing fiber instructive signal, suggesting that both cortical and brainstem signals produce an additive effect when both are present but neither are indispensable for motor learning \cite{Ke2009a}.
 
 There's a question whether learning starts on the cerebellar cortex or on the brainstem. It seems that cerebellar cortex starts learning early in VOR adaptation and progressively the gain learned is transfered to the brainstem. The task of the brainstem would be to learn a simple gain to keep the cerebellar cortex plasticity free for tasks that need a quicker adaptation.
 
-\section{A detailed model}
-
-Improvements on electrophysiological recordings and on the creation of different mutant mice lines with cell-specific impairments allows to control and observe much better the contributions of the different parts of the VOR circuit. A recent and more detailed model has summed up some of the physiological and behavioral data that has been acquired during the last years \cite{Clopath2014}. This model reproduces successfully the results of a phase-reversal VOR adaptation experiment with wild-type and mutant mice \cite{Wulff2009a}.
-
-The adaptive-filter is the initial point where plasticity on the brainstem and contribution of interneurons are added. In the model mossy fibers encode the head velocity as a sinusoidal \cite{Manuscript2009} and synapse on a network of 100 granule cells, each one distributed on different phase shifts relative to mossy fibers. Purkinje cells add up the inhibitory effect of the interneurons, that is proportional to the average activity in the granule cell network, and the excitation from the projection of granule cells on parallel fibers. The activity on the brainstem generates the motor command, and depends on the excitatory input of the mossy fibers and the inhibitory contribution of the Purkinje cells. Plasticity on the brainstem is defined by the correlation of the activity of the mossy fibers and Purkinje cells \cite{Menzies2010}, and plasticity on the PF-PC as a decorrelation rule between the vestibular information and the retinal slip \cite{Dean2002} with an added slow decay rate to the initial value of the weights.
-
-The model shows good learning behavior with delays below 100ms as in experimentation, where models without brainstem plasticity and interneurons didn't. Clopath's detailed model may be a good baseline to work with and include further electrophysiological details available from now on.
+%\chapter{Source code}
+%\lstinputlisting[language=Matlab]{../simulations/parametric/VOR.m}
 
 \end{appendices}
 

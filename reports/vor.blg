@@ -3,47 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: vor.aux
 The style file: apalike.bst
 Database file #1: vor.bib
-Warning--I didn't find a database entry for "Gao2012"
-Warning--I didn't find a database entry for "Lisberger2009"
-You've used 19 entries,
+You've used 28 entries,
             1935 wiz_defined-function locations,
-            622 strings with 7035 characters,
-and the built_in function-call counts, 7954 in all, are:
-= -- 790
-> -- 343
-< -- 10
-+ -- 116
-- -- 116
-* -- 720
-:= -- 1390
-add.period$ -- 57
-call.type$ -- 19
-change.case$ -- 153
-chr.to.int$ -- 19
-cite$ -- 19
-duplicate$ -- 273
-empty$ -- 537
-format.name$ -- 145
-if$ -- 1524
+            680 strings with 8849 characters,
+and the built_in function-call counts, 12179 in all, are:
+= -- 1205
+> -- 554
+< -- 14
++ -- 190
+- -- 190
+* -- 1119
+:= -- 2117
+add.period$ -- 84
+call.type$ -- 28
+change.case$ -- 235
+chr.to.int$ -- 28
+cite$ -- 28
+duplicate$ -- 408
+empty$ -- 807
+format.name$ -- 232
+if$ -- 2334
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 98
-num.names$ -- 57
-pop$ -- 108
+missing$ -- 28
+newline$ -- 143
+num.names$ -- 84
+pop$ -- 171
 preamble$ -- 1
-purify$ -- 153
+purify$ -- 235
 quote$ -- 0
-skip$ -- 214
+skip$ -- 319
 stack$ -- 0
-substring$ -- 608
-swap$ -- 28
-text.length$ -- 1
+substring$ -- 933
+swap$ -- 46
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
+type$ -- 168
 warning$ -- 0
-while$ -- 72
+while$ -- 109
 width$ -- 0
-write$ -- 249
-(There were 2 warnings)
+write$ -- 366
